@@ -2037,8 +2037,8 @@ var plugins = [{
   plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-manifest/gatsby-ssr */ "./node_modules/gatsby-plugin-manifest/gatsby-ssr.js"),
   options: {
     "plugins": [],
-    "name": "London",
-    "short_name": "London",
+    "name": "Valiant Creative",
+    "short_name": "Valiant Creative",
     "start_url": "/",
     "background_color": "#ffffff",
     "theme_color": "#663399",

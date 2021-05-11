@@ -210,9 +210,9 @@ body {
 
 .site-head-logo img {
     display: block;
-    margin-top: 2px;
+    margin: 10px;
     width: auto;
-    height: 28px;
+    height: 225px;
 }
 
 .site-head-right {

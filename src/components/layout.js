@@ -38,8 +38,11 @@ const Layout = props => {
             </ul>
           </nav>
           <div className="site-head-center">
-            <Link className="site-head-logo" to={`/`}>
-              {title}
+            <Link className="site-head-logo">
+              {/* {title} */}
+                <a href="/">
+                  <img src="/logos/logo-horiz-white.svg" height={100} alt="valiant creative" />
+                </a>
             </Link>
           </div>
           <div className="site-head-right">
