@@ -272,12 +272,12 @@ body {
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    -moz-font-feature-settings: "liga" on;
+    /* -moz-font-feature-settings: "liga" on; */
 }
 
 ::selection {
     text-shadow: none;
-    background: #cbeafb;
+    background: #222224;
 }
 
 hr {

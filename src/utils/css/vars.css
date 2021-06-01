@@ -6,10 +6,10 @@
 :root {
 
     /* Colours */
-    --color-primary: #3eb0ef;
-    --color-base: #f8f8f8; 
-    --color-border: #ddd;
-    --color-bg: #131313;
+    --color-primary: #498AC8;
+    --color-base: #0032A1; 
+    --color-border: #222224;
+    --color-bg: white;
 
     /* Fonts */
     --font-sans-serif: 'Muli', sans-serif;

@@ -41,7 +41,7 @@ const Layout = props => {
             <Link className="site-head-logo">
               {/* {title} */}
                 <a href="/">
-                  <img src="/logos/logo-horiz-white.svg" height={100} alt="valiant creative" />
+                  <img src="/logos/logo-color-horiz.svg" height={50} alt="valiant creative" />
                 </a>
             </Link>
           </div>

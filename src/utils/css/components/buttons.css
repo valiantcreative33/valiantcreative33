@@ -20,7 +20,7 @@ button,
     text-decoration: none;
     white-space: nowrap;
     appearance: none;
-    transition: 0.4s ease;
+    transition: 0.5s ease;
 }
 
 input[type="submit"].fit,
@@ -65,7 +65,7 @@ button:disabled,
 .button.disabled,
 .button:disabled {
     pointer-events: none;
-    opacity: 0.4;
+    /* opacity: 0.4; */
 }
 
 

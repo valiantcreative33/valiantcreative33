@@ -174,14 +174,15 @@ body {
     display: block;
     margin: 0;
     padding: 10px 12px;
-    color: var(--color-base);
+    color: var(--color-border);
     font-weight: 600;
-    opacity: 0.4;
+    /* opacity: 0.4; */
 }
 
 .nav-current a,
 .site-head a:hover {
     text-decoration: none;
+    color: var(--color-primary);
     opacity: 1;
 }
 
@@ -212,7 +213,7 @@ body {
     display: block;
     margin: 10px;
     width: auto;
-    height: 225px;
+    height: 60px;
 }
 
 .site-head-right {
@@ -303,8 +304,8 @@ body {
         line-height: 1.15em;
         font-weight: 200;
         opacity: 0;
-        transition: transform 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99),
-        opacity 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+        transition: transform 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+        /* opacity 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99); */
         transform: scale(1.1) translateY(-25px);
     }
     .site-head-right a {
