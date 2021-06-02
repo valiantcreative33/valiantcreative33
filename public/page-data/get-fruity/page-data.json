@@ -1,0 +1,47 @@
+{
+  "componentChunkName": "component---src-templates-blog-post-js",
+  "path": "/get-fruity/",
+  "result": {
+    "data": {
+      "site": {
+        "siteMetadata": {
+          "title": "Valiant Creative",
+          "author": "Ruben Matamoros"
+        }
+      },
+      "markdownRemark": {
+        "id": "c7b6601e-0eb9-5cb8-8cb2-b625b8b66f2a",
+        "excerpt": "",
+        "html": "<p>\n  <a\n    class=\"gatsby-resp-image-link\"\n    href=\"/static/7cba2b8e617762f18b27ff0f2581601b/cbe2c/mike-dorner-173503-unsplash.jpg\"\n    style=\"display: block\"\n    target=\"_blank\"\n    rel=\"noopener\"\n  >\n  \n  <span\n    class=\"gatsby-resp-image-wrapper\"\n    style=\"position: relative; display: block; margin: 7vw 0; max-width: 1360px; margin-left: auto; margin-right: auto;\"\n  >\n    <span\n      class=\"gatsby-resp-image-background-image\"\n      style=\"padding-bottom: 61.76470588235294%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAMABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQBBf/EABUBAQEAAAAAAAAAAAAAAAAAAAID/9oADAMBAAIQAxAAAAHpS1KRNI//xAAYEAACAwAAAAAAAAAAAAAAAAAAAgEDIP/aAAgBAQABBQIh3azH/8QAFhEAAwAAAAAAAAAAAAAAAAAAEBEh/9oACAEDAQE/AYh//8QAFhEAAwAAAAAAAAAAAAAAAAAAEBEh/9oACAECAQE/Aax//8QAGBAAAgMAAAAAAAAAAAAAAAAAAREAIDH/2gAIAQEABj8CiSA2v//EABgQAQEAAwAAAAAAAAAAAAAAAAERACAx/9oACAEBAAE/IVhy5MzqH//aAAwDAQACAAMAAAAQex//xAAWEQEBAQAAAAAAAAAAAAAAAAARIRD/2gAIAQMBAT8QYFz/xAAXEQADAQAAAAAAAAAAAAAAAAAQESFB/9oACAECAQE/ENXB/8QAGxABAAICAwAAAAAAAAAAAAAAARAhADERQXH/2gAIAQEAAT8QuBLQHeJElZuvZANHEf/Z'); background-size: cover; display: block;\"\n    >\n      <picture>\n        <source\n          srcset=\"/static/7cba2b8e617762f18b27ff0f2581601b/51a8e/mike-dorner-173503-unsplash.webp 340w,\n/static/7cba2b8e617762f18b27ff0f2581601b/713b7/mike-dorner-173503-unsplash.webp 680w,\n/static/7cba2b8e617762f18b27ff0f2581601b/54376/mike-dorner-173503-unsplash.webp 1360w,\n/static/7cba2b8e617762f18b27ff0f2581601b/521a5/mike-dorner-173503-unsplash.webp 2000w\"\n          sizes=\"(max-width: 1360px) 100vw, 1360px\"\n          type=\"image/webp\"\n        />\n        <source\n          srcset=\"/static/7cba2b8e617762f18b27ff0f2581601b/2e524/mike-dorner-173503-unsplash.jpg 340w,\n/static/7cba2b8e617762f18b27ff0f2581601b/d330d/mike-dorner-173503-unsplash.jpg 680w,\n/static/7cba2b8e617762f18b27ff0f2581601b/6c26c/mike-dorner-173503-unsplash.jpg 1360w,\n/static/7cba2b8e617762f18b27ff0f2581601b/cbe2c/mike-dorner-173503-unsplash.jpg 2000w\"\n          sizes=\"(max-width: 1360px) 100vw, 1360px\"\n          type=\"image/jpeg\"\n        />\n        <img\n          class=\"gatsby-resp-image-image\"\n          style=\"width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;\"\n          src=\"/static/7cba2b8e617762f18b27ff0f2581601b/6c26c/mike-dorner-173503-unsplash.jpg\"\n          alt=\"Fruits\"\n          title=\"\"\n          src=\"/static/7cba2b8e617762f18b27ff0f2581601b/6c26c/mike-dorner-173503-unsplash.jpg\"\n        />\n      </picture>\n      </span>\n  </span>\n  \n  </a>\n    </p>\n<div class=\"kg-card kg-image-card kg-width-wide\">\n<p>\n  <a\n    class=\"gatsby-resp-image-link\"\n    href=\"/static/43d2b2b81944659e9a957960de8c4113/cbe2c/mike-dorner-173504-unsplash.jpg\"\n    style=\"display: block\"\n    target=\"_blank\"\n    rel=\"noopener\"\n  >\n  \n  <span\n    class=\"gatsby-resp-image-wrapper\"\n    style=\"position: relative; display: block; margin: 7vw 0; max-width: 1360px; margin-left: auto; margin-right: auto;\"\n  >\n    <span\n      class=\"gatsby-resp-image-background-image\"\n      style=\"padding-bottom: 61.76470588235294%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAMABQDASIAAhEBAxEB/8QAFwABAAMAAAAAAAAAAAAAAAAAAAMEBf/EABYBAQEBAAAAAAAAAAAAAAAAAAEDBP/aAAwDAQACEAMQAAAB0YLDHYB//8QAGRAAAQUAAAAAAAAAAAAAAAAAAQIDEiAh/9oACAEBAAEFAjgQ7Kv/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAXEAEAAwAAAAAAAAAAAAAAAAABACAx/9oACAEBAAY/ApiNf//EABgQAQEAAwAAAAAAAAAAAAAAABEBACCB/9oACAEBAAE/IbWiZAzka//aAAwDAQACAAMAAAAQd+//xAAVEQEBAAAAAAAAAAAAAAAAAAAQIf/aAAgBAwEBPxCn/8QAFxEAAwEAAAAAAAAAAAAAAAAAARARQf/aAAgBAgEBPxATV//EABoQAQABBQAAAAAAAAAAAAAAAAERACAxQXH/2gAIAQEAAT8QUtITBun3UyMge2//2Q=='); background-size: cover; display: block;\"\n    >\n      <picture>\n        <source\n          srcset=\"/static/43d2b2b81944659e9a957960de8c4113/51a8e/mike-dorner-173504-unsplash.webp 340w,\n/static/43d2b2b81944659e9a957960de8c4113/713b7/mike-dorner-173504-unsplash.webp 680w,\n/static/43d2b2b81944659e9a957960de8c4113/54376/mike-dorner-173504-unsplash.webp 1360w,\n/static/43d2b2b81944659e9a957960de8c4113/521a5/mike-dorner-173504-unsplash.webp 2000w\"\n          sizes=\"(max-width: 1360px) 100vw, 1360px\"\n          type=\"image/webp\"\n        />\n        <source\n          srcset=\"/static/43d2b2b81944659e9a957960de8c4113/2e524/mike-dorner-173504-unsplash.jpg 340w,\n/static/43d2b2b81944659e9a957960de8c4113/d330d/mike-dorner-173504-unsplash.jpg 680w,\n/static/43d2b2b81944659e9a957960de8c4113/6c26c/mike-dorner-173504-unsplash.jpg 1360w,\n/static/43d2b2b81944659e9a957960de8c4113/cbe2c/mike-dorner-173504-unsplash.jpg 2000w\"\n          sizes=\"(max-width: 1360px) 100vw, 1360px\"\n          type=\"image/jpeg\"\n        />\n        <img\n          class=\"gatsby-resp-image-image\"\n          style=\"width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;\"\n          src=\"/static/43d2b2b81944659e9a957960de8c4113/6c26c/mike-dorner-173504-unsplash.jpg\"\n          alt=\"Fruits\"\n          title=\"\"\n          src=\"/static/43d2b2b81944659e9a957960de8c4113/6c26c/mike-dorner-173504-unsplash.jpg\"\n        />\n      </picture>\n      </span>\n  </span>\n  \n  </a>\n    </p>\n</div>",
+        "frontmatter": {
+          "title": "Get fruity",
+          "date": "May 02, 2019",
+          "description": "A deep investigation into the pastel properties of colourful fruit and their psychological effects on hamsters",
+          "thumbnail": {
+            "childImageSharp": {
+              "fluid": {
+                "base64": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAMABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIDBf/EABcBAAMBAAAAAAAAAAAAAAAAAAABAgP/2gAMAwEAAhADEAAAAdONlndgGf/EABgQAQADAQAAAAAAAAAAAAAAAAEAEBMC/9oACAEBAAEFApoaUchX/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGRAAAgMBAAAAAAAAAAAAAAAAARAAAiFR/9oACAEBAAY/AoK9eAL/xAAaEAEAAgMBAAAAAAAAAAAAAAABEBEAQVFh/9oACAEBAAE/Icay28alKxPhH//aAAwDAQACAAMAAAAQa9//xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAwEBPxBn/8QAFhEAAwAAAAAAAAAAAAAAAAAAEBEh/9oACAECAQE/EKx//8QAHBABAAIBBQAAAAAAAAAAAAAAAQAREDFBUWGh/9oACAEBAAE/EFAtaIESR5W2v3CCUlncTsWqA4//2Q==",
+                "aspectRatio": 1.619047619047619,
+                "src": "/static/5dc3b87c18e7ae99cc4415ead1d003bd/ac53a/mike-dorner-173502-unsplash.jpg",
+                "srcSet": "/static/5dc3b87c18e7ae99cc4415ead1d003bd/722c4/mike-dorner-173502-unsplash.jpg 340w,\n/static/5dc3b87c18e7ae99cc4415ead1d003bd/1d671/mike-dorner-173502-unsplash.jpg 680w,\n/static/5dc3b87c18e7ae99cc4415ead1d003bd/ac53a/mike-dorner-173502-unsplash.jpg 1360w,\n/static/5dc3b87c18e7ae99cc4415ead1d003bd/a41d1/mike-dorner-173502-unsplash.jpg 2000w",
+                "sizes": "(max-width: 1360px) 100vw, 1360px"
+              }
+            }
+          }
+        }
+      }
+    },
+    "pageContext": {
+      "slug": "/get-fruity/",
+      "previous": {
+        "fields": { "slug": "/fur/" },
+        "frontmatter": { "title": "The fur series" }
+      },
+      "next": {
+        "fields": { "slug": "/green/" },
+        "frontmatter": { "title": "Green" }
+      }
+    }
+  },
+  "staticQueryHashes": ["63159454"]
+}

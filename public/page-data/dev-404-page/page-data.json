@@ -1,1 +1,31 @@
-{"componentChunkName":"component---cache-dev-404-page-js","path":"/dev-404-page/","result":{"data":{"allSiteFunction":{"nodes":[{"apiRoute":"FAKE"}]},"allSitePage":{"nodes":[{"path":"/darkness/"},{"path":"/dont-stop/"},{"path":"/its-all-blue/"},{"path":"/clean-lines/"},{"path":"/all-spikes/"},{"path":"/green/"},{"path":"/get-fruity/"},{"path":"/fur/"},{"path":"/hi-folks/"},{"path":"/my-second-post/"},{"path":"/hello-world/"},{"path":"/404/"},{"path":"/about/"},{"path":"/elements/"},{"path":"/"},{"path":"/404.html"}]}},"pageContext":{}},"staticQueryHashes":[]}
+{
+  "componentChunkName": "component---cache-dev-404-page-js",
+  "path": "/dev-404-page/",
+  "result": {
+    "data": {
+      "allSiteFunction": { "nodes": [{ "functionRoute": "FAKE" }] },
+      "allSitePage": {
+        "nodes": [
+          { "path": "/darkness/" },
+          { "path": "/dont-stop/" },
+          { "path": "/its-all-blue/" },
+          { "path": "/clean-lines/" },
+          { "path": "/all-spikes/" },
+          { "path": "/green/" },
+          { "path": "/get-fruity/" },
+          { "path": "/fur/" },
+          { "path": "/hi-folks/" },
+          { "path": "/my-second-post/" },
+          { "path": "/hello-world/" },
+          { "path": "/404.html" },
+          { "path": "/404/" },
+          { "path": "/about/" },
+          { "path": "/elements/" },
+          { "path": "/" }
+        ]
+      }
+    },
+    "pageContext": {}
+  },
+  "staticQueryHashes": []
+}
