@@ -1,8 +1,8 @@
 ---
-title: Get fruity
+title: AirAsia Magazine Ad
 date: "2019-05-02"
-thumbnail: ./mike-dorner-173502-unsplash.jpg
-description: A deep investigation into the pastel properties of colourful fruit and their psychological effects on hamsters
+thumbnail: ./AFHS_AirAsia_Featured_Image.jpg
+description: Ashley Furniture HomeStore Asia
 ---
 
 ![Fruits](./mike-dorner-173503-unsplash.jpg)

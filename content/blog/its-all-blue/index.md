@@ -1,10 +1,10 @@
 ---
-title: It's all blue
+title: VendXOR White Paper Lite
 date: "2019-05-06"
-thumbnail: ./cody-davis-253928-unsplash.jpg
-description: What if everything you knew was turned to blue?
+thumbnail: ./vendXOR-feature-image.jpg
+description: VendXOR of Priatek
 ---
 
-![It's all blue](./cody-davis-253925-unsplash.jpg)
+![VendXOR White Paper Lite](./vendXOR-feature-image.jpg)
 
-![It's all blue](./cody-davis-259003-unsplash.jpg)
+![VendXOR White Paper Lite](./vendXOR-feature-image.jpg)

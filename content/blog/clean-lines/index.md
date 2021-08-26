@@ -1,8 +1,8 @@
 ---
-title: Clean lines
+title: Pull-Up Banner
 date: "2019-05-05"
-thumbnail: ./matthew-hamilton-351641-unsplash.jpg
-description: Let your hair down and paint the town red
+thumbnail: ./Pullup-Banner-CTA-Featured-Image.jpg
+description: Carillon Tower Advisors of Raymond James Financial
 ---
 
 ![Clean lines](./clem-onojeghuo-207792-unsplash.jpg)

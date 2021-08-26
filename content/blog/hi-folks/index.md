@@ -1,8 +1,8 @@
 ---
-title: New Beginnings
+title: 2fitfitness Web Design
 date: "2015-05-28T22:40:32.169Z"
-description: This is a custom description for SEO and Open Graph purposes, rather than the default generated excerpt. Simply add a description field to the frontmatter.
-thumbnail: ./bbbb.jpg
+description: UI/UX Design for a father & son fitness website
+thumbnail: ./2fitfitness-feature-image.jpg
 ---
 
 Far far away, behind the word mountains, far from the countries Vokalia and

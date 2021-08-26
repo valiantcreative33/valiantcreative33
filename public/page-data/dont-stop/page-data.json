@@ -35,7 +35,7 @@
       "slug": "/dont-stop/",
       "previous": {
         "fields": { "slug": "/its-all-blue/" },
-        "frontmatter": { "title": "It's all blue" }
+        "frontmatter": { "title": "VendXOR White Paper Lite" }
       },
       "next": {
         "fields": { "slug": "/darkness/" },

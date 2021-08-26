@@ -58,15 +58,15 @@
             "fields": { "slug": "/its-all-blue/" },
             "frontmatter": {
               "date": "May 06, 2019",
-              "title": "It's all blue",
-              "description": "What if everything you knew was turned to blue?",
+              "title": "VendXOR White Paper Lite",
+              "description": "VendXOR of Priatek",
               "thumbnail": {
                 "childImageSharp": {
                   "fluid": {
-                    "base64": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAIBBP/EABYBAQEBAAAAAAAAAAAAAAAAAAEEBf/aAAwDAQACEAMQAAAB59TZnyov/8QAGBAAAgMAAAAAAAAAAAAAAAAAARAAESH/2gAIAQEAAQUChGKl/8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQMBAT8BJ//EABURAQEAAAAAAAAAAAAAAAAAAAEQ/9oACAECAQE/AWf/xAAWEAADAAAAAAAAAAAAAAAAAAAAIDH/2gAIAQEABj8CKv8A/8QAGBAAAwEBAAAAAAAAAAAAAAAAARARMQD/2gAIAQEAAT8h4AuLccDAv//aAAwDAQACAAMAAAAQVw//xAAWEQEBAQAAAAAAAAAAAAAAAAABEQD/2gAIAQMBAT8QQWmu/8QAFhEBAQEAAAAAAAAAAAAAAAAAAREQ/9oACAECAQE/EAsjM//EABoQAQEBAAMBAAAAAAAAAAAAAAEAESExQVH/2gAIAQEAAT8QDyDvZj7k5s2NWAs93//Z",
-                    "aspectRatio": 1.497797356828194,
-                    "src": "/static/69bca3d44a5cf8f939baf81ce1df2d11/ac53a/cody-davis-253928-unsplash.jpg",
-                    "srcSet": "/static/69bca3d44a5cf8f939baf81ce1df2d11/722c4/cody-davis-253928-unsplash.jpg 340w,\n/static/69bca3d44a5cf8f939baf81ce1df2d11/1d671/cody-davis-253928-unsplash.jpg 680w,\n/static/69bca3d44a5cf8f939baf81ce1df2d11/ac53a/cody-davis-253928-unsplash.jpg 1360w,\n/static/69bca3d44a5cf8f939baf81ce1df2d11/a41d1/cody-davis-253928-unsplash.jpg 2000w",
+                    "base64": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAIDBP/EABUBAQEAAAAAAAAAAAAAAAAAAAIB/9oADAMBAAIQAxAAAAFpPQpSTH//xAAcEAEAAQQDAAAAAAAAAAAAAAABAwACBBExMjP/2gAIAQEAAQUCNSNsqLzk9Tzr/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGxABAAICAwAAAAAAAAAAAAAAAQARAxASIUH/2gAIAQEABj8C7Kqcco14miGv/8QAGhABAAIDAQAAAAAAAAAAAAAAAQAREDFRIf/aAAgBAQABPyEDaOtwKgvIgCBs7CDHajQzWsf/2gAMAwEAAgADAAAAEFD/AP/EABURAQEAAAAAAAAAAAAAAAAAAAEQ/9oACAEDAQE/EGf/xAAWEQEBAQAAAAAAAAAAAAAAAAABEDH/2gAIAQIBAT8QDJ//xAAfEAACAQQCAwAAAAAAAAAAAAABEQAhMUFREGGx0eH/2gAIAQEAAT8QCiOrC5uX98wiVkBJfXq8QjjRE4ABHBkahlkw7Jb4/9k=",
+                    "aspectRatio": 1.8279569892473118,
+                    "src": "/static/00cf75fcaafb089aa712793e27c88c41/ac53a/vendXOR-feature-image.jpg",
+                    "srcSet": "/static/00cf75fcaafb089aa712793e27c88c41/722c4/vendXOR-feature-image.jpg 340w,\n/static/00cf75fcaafb089aa712793e27c88c41/1d671/vendXOR-feature-image.jpg 680w,\n/static/00cf75fcaafb089aa712793e27c88c41/ac53a/vendXOR-feature-image.jpg 1360w,\n/static/00cf75fcaafb089aa712793e27c88c41/4f4f6/vendXOR-feature-image.jpg 1700w",
                     "sizes": "(max-width: 1360px) 100vw, 1360px"
                   }
                 }
@@ -80,16 +80,16 @@
             "fields": { "slug": "/clean-lines/" },
             "frontmatter": {
               "date": "May 05, 2019",
-              "title": "Clean lines",
-              "description": "Let your hair down and paint the town red",
+              "title": "Pull-Up Banner",
+              "description": "Carillon Tower Advisors of Raymond James Financial",
               "thumbnail": {
                 "childImageSharp": {
                   "fluid": {
-                    "base64": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAeABQDASIAAhEBAxEB/8QAGAABAQADAAAAAAAAAAAAAAAABAABAwX/xAAXAQEAAwAAAAAAAAAAAAAAAAADAQIF/9oADAMBAAIQAxAAAAHBliDRLUgd0Kzm5rXWj//EABsQAAMAAwEBAAAAAAAAAAAAAAABAgMREiET/9oACAEBAAEFAmi/DZlrid9KvXklXPz5GdFMbP/EABcRAAMBAAAAAAAAAAAAAAAAAAABERD/2gAIAQMBAT8BKxKZ/8QAFREBAQAAAAAAAAAAAAAAAAAAASD/2gAIAQIBAT8BI//EABoQAAICAwAAAAAAAAAAAAAAAAARAjEQIKH/2gAIAQEABj8Cyxy4UhF6/wD/xAAdEAADAQABBQAAAAAAAAAAAAAAAREhMRBBUWGR/9oACAEBAAE/IRSB6OBa3ENPAbO4q0eiLj9OW0IqPo9D/9oADAMBAAIAAwAAABBfPA//xAAXEQEBAQEAAAAAAAAAAAAAAAABABEh/9oACAEDAQE/EN0UnTk0Uv/EABcRAAMBAAAAAAAAAAAAAAAAAAABETH/2gAIAQIBAT8QR6Irwh//xAAbEAEAAwEBAQEAAAAAAAAAAAABABExIWFBUf/aAAgBAQABPxDnkFFhXlUA9BkTKqfifHksSVzAi1U7YNH9gdClZUG+REjUxLz/2Q==",
-                    "aspectRatio": 0.6666666666666666,
-                    "src": "/static/9a5b90562a8c29097cffdb45cece34df/ac53a/matthew-hamilton-351641-unsplash.jpg",
-                    "srcSet": "/static/9a5b90562a8c29097cffdb45cece34df/722c4/matthew-hamilton-351641-unsplash.jpg 340w,\n/static/9a5b90562a8c29097cffdb45cece34df/1d671/matthew-hamilton-351641-unsplash.jpg 680w,\n/static/9a5b90562a8c29097cffdb45cece34df/ac53a/matthew-hamilton-351641-unsplash.jpg 1360w,\n/static/9a5b90562a8c29097cffdb45cece34df/a41d1/matthew-hamilton-351641-unsplash.jpg 2000w",
-                    "sizes": "(max-width: 1360px) 100vw, 1360px"
+                    "base64": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAOABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEAQL/xAAVAQEBAAAAAAAAAAAAAAAAAAADAv/aAAwDAQACEAMQAAABs5ahAvMIX//EABsQAAMAAgMAAAAAAAAAAAAAAAECAxITAAQz/9oACAEBAAEFArM3Ho2iBJjQjF8dHX8f/8QAFhEBAQEAAAAAAAAAAAAAAAAAAQAx/9oACAEDAQE/AUYy/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQACMf/aAAgBAgEBPwE0T2//xAAdEAACAgEFAAAAAAAAAAAAAAAAAQIDERIhMTJC/9oACAEBAAY/Ao4k+pW9T3E2RyvJXyRP/8QAGhABAQEBAAMAAAAAAAAAAAAAAREAITFBUf/aAAgBAQABPyEdAIWODINVuZRV9u+kBr8o7Mjn4m//2gAMAwEAAgADAAAAEJff/8QAGREAAgMBAAAAAAAAAAAAAAAAAAERITFB/9oACAEDAQE/EL7T4ZSf/8QAFhEBAQEAAAAAAAAAAAAAAAAAAQAR/9oACAECAQE/EMJshSX/xAAbEAEBAQEBAAMAAAAAAAAAAAABEQAhMUFRcf/aAAgBAQABPxAPzkBV+cSWUHTLqr2VKvXPsdHHw+s6BNiSncCR6S/rv//Z",
+                    "aspectRatio": 1.4345991561181435,
+                    "src": "/static/c63220ce4d39ea6a914aa54032b0968b/c6ea7/Pullup-Banner-CTA-Featured-Image.jpg",
+                    "srcSet": "/static/c63220ce4d39ea6a914aa54032b0968b/722c4/Pullup-Banner-CTA-Featured-Image.jpg 340w,\n/static/c63220ce4d39ea6a914aa54032b0968b/1d671/Pullup-Banner-CTA-Featured-Image.jpg 680w,\n/static/c63220ce4d39ea6a914aa54032b0968b/c6ea7/Pullup-Banner-CTA-Featured-Image.jpg 980w",
+                    "sizes": "(max-width: 980px) 100vw, 980px"
                   }
                 }
               }
@@ -102,15 +102,15 @@
             "fields": { "slug": "/all-spikes/" },
             "frontmatter": {
               "date": "May 04, 2019",
-              "title": "All spikes",
-              "description": "A cactus doesn't live in the desert because it likes the desert; it lives there because the desert hasn't killed it yet.",
+              "title": "CIFF Shanghai, China Indoor & Outdoor Signage",
+              "description": "Ashley Furniture Industries",
               "thumbnail": {
                 "childImageSharp": {
                   "fluid": {
-                    "base64": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAcABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQBA//EABcBAQEBAQAAAAAAAAAAAAAAAAECBAX/2gAMAwEAAhADEAAAAbyXnaahLy4141oJ/8QAGxAAAQQDAAAAAAAAAAAAAAAAAwABESASIjL/2gAIAQEAAQUCpnJkTkbbU//EABgRAAIDAAAAAAAAAAAAAAAAAAEQAhEh/9oACAEDAQE/ASaQli//xAAWEQADAAAAAAAAAAAAAAAAAAABEBH/2gAIAQIBAT8BAqq//8QAGBAAAgMAAAAAAAAAAAAAAAAAAREgMEH/2gAIAQEABj8CghlH/8QAGhABAAMAAwAAAAAAAAAAAAAAAQAQMSFRcf/aAAgBAQABPyG8gjbih31AfNgGAV//2gAMAwEAAgADAAAAEMPjPP/EABYRAQEBAAAAAAAAAAAAAAAAABEQAf/aAAgBAwEBPxDAQAT/xAAYEQADAQEAAAAAAAAAAAAAAAABEBEhYf/aAAgBAgEBPxA9cQxF/8QAHBABAAICAwEAAAAAAAAAAAAAAREhABBRYaGx/9oACAEBAAE/ENqCVA7cBGkzDTV+/NCrkHAbBWaDSCQgneeOBGv/2Q==",
-                    "aspectRatio": 0.7142857142857143,
-                    "src": "/static/817bc40442b38b1928e4c01d97eaf83d/ac53a/charles-deluvio-695732-unsplash.jpg",
-                    "srcSet": "/static/817bc40442b38b1928e4c01d97eaf83d/722c4/charles-deluvio-695732-unsplash.jpg 340w,\n/static/817bc40442b38b1928e4c01d97eaf83d/1d671/charles-deluvio-695732-unsplash.jpg 680w,\n/static/817bc40442b38b1928e4c01d97eaf83d/ac53a/charles-deluvio-695732-unsplash.jpg 1360w,\n/static/817bc40442b38b1928e4c01d97eaf83d/a41d1/charles-deluvio-695732-unsplash.jpg 2000w",
+                    "base64": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEAv/EABUBAQEAAAAAAAAAAAAAAAAAAAIA/9oADAMBAAIQAxAAAAGR6XlYKxX/xAAZEAACAwEAAAAAAAAAAAAAAAAAAQIDERP/2gAIAQEAAQUCxxFXq4nPCuKxtQP/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAwEBPwGI/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAEh/9oACAECAQE/AU1//8QAGhAAAwEAAwAAAAAAAAAAAAAAAAERMQJBgf/aAAgBAQAGPwJ4zpemotZCLij/xAAcEAEAAwACAwAAAAAAAAAAAAABABEhMUFRgeH/2gAIAQEAAT8hNADMg2nJ3F/pKFOVZ6gBQb8xXMJ//9oADAMBAAIAAwAAABA/3//EABcRAQEBAQAAAAAAAAAAAAAAAAEAESH/2gAIAQMBAT8QGznl/8QAFxEBAQEBAAAAAAAAAAAAAAAAAREAIf/aAAgBAgEBPxC8uCKb/8QAHBABAAMAAgMAAAAAAAAAAAAAAQARIUFRMWGB/9oACAEBAAE/EEzkCqRy8SJOPLZ8MyC2i7zCQXCidHr3EWV+RbfcNGEO3P/Z",
+                    "aspectRatio": 1.497797356828194,
+                    "src": "/static/80ae37a8e42789e44df74433a46a1d7a/ac53a/AFI-CIFF-Shanghai-Feature-Image.jpg",
+                    "srcSet": "/static/80ae37a8e42789e44df74433a46a1d7a/722c4/AFI-CIFF-Shanghai-Feature-Image.jpg 340w,\n/static/80ae37a8e42789e44df74433a46a1d7a/1d671/AFI-CIFF-Shanghai-Feature-Image.jpg 680w,\n/static/80ae37a8e42789e44df74433a46a1d7a/ac53a/AFI-CIFF-Shanghai-Feature-Image.jpg 1360w,\n/static/80ae37a8e42789e44df74433a46a1d7a/6eda9/AFI-CIFF-Shanghai-Feature-Image.jpg 2040w,\n/static/80ae37a8e42789e44df74433a46a1d7a/69755/AFI-CIFF-Shanghai-Feature-Image.jpg 2048w",
                     "sizes": "(max-width: 1360px) 100vw, 1360px"
                   }
                 }
@@ -124,16 +124,16 @@
             "fields": { "slug": "/green/" },
             "frontmatter": {
               "date": "May 03, 2019",
-              "title": "Green",
-              "description": "For in the true nature of things, if we rightly consider, every green tree is far more glorious than if it were made of gold and silver.",
+              "title": "Email Teasers for Ashley Furniture Industries",
+              "description": "Guangzhou, China's International Furniture Fair of 2017",
               "thumbnail": {
                 "childImageSharp": {
                   "fluid": {
-                    "base64": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAZABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAIBAwQF/8QAFwEBAQEBAAAAAAAAAAAAAAAAAAECA//aAAwDAQACEAMQAAAB6ddmXnjUSUqMquVif//EABsQAAEEAwAAAAAAAAAAAAAAAAECEBESACAx/9oACAEBAAEFAjiiZZBux5UJE6f/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AR//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AR//xAAbEAABBAMAAAAAAAAAAAAAAAABABARIRIgUf/aAAgBAQAGPwJCBL5GK49a/wD/xAAbEAEAAgMBAQAAAAAAAAAAAAABEBEAIUFR4f/aAAgBAQABPyFNgGDCt1i6V4GbiW0hd0r5hUV35yTH/9oADAMBAAIAAwAAABA8MQ//xAAVEQEBAAAAAAAAAAAAAAAAAAABIP/aAAgBAwEBPxBj/8QAFhEBAQEAAAAAAAAAAAAAAAAAEBEB/9oACAECAQE/ELpD/8QAGxABAAIDAQEAAAAAAAAAAAAAAQARITFRYRD/2gAIAQEAAT8QDYr2vIOBKzVUSKvasKy6hRDz7HcTBhWkSx4mD4s4hbvsemP1/9k=",
-                    "aspectRatio": 0.8,
-                    "src": "/static/b3d12ea3767298b8f0e55d9d26fa818a/ac53a/dose-juice-1184429-unsplash.jpg",
-                    "srcSet": "/static/b3d12ea3767298b8f0e55d9d26fa818a/722c4/dose-juice-1184429-unsplash.jpg 340w,\n/static/b3d12ea3767298b8f0e55d9d26fa818a/1d671/dose-juice-1184429-unsplash.jpg 680w,\n/static/b3d12ea3767298b8f0e55d9d26fa818a/ac53a/dose-juice-1184429-unsplash.jpg 1360w,\n/static/b3d12ea3767298b8f0e55d9d26fa818a/a41d1/dose-juice-1184429-unsplash.jpg 2000w",
-                    "sizes": "(max-width: 1360px) 100vw, 1360px"
+                    "base64": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAMEAv/EABYBAQEBAAAAAAAAAAAAAAAAAAEAAv/aAAwDAQACEAMQAAABpKmgcDWrnWTcOf/EABwQAAICAgMAAAAAAAAAAAAAAAECAAMEEhQiQv/aAAgBAQABBQJ2paXXAQM81AybTqnIMRtrPNQ6f//EABcRAQADAAAAAAAAAAAAAAAAAAABEBH/2gAIAQMBAT8Bamv/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AR//xAAgEAABAwIHAAAAAAAAAAAAAAABAAIRA0EQEjEyM2Gh/9oACAEBAAY/AhpHaa2mQ4XhcLlJAOYeqVsRBtj/AP/EABwQAQADAAIDAAAAAAAAAAAAAAEAESExQWFxkf/aAAgBAQABPyEQ5HJ1ZQWiCzl9DKILTp0ilSi6yHk/Ygg1koaOkIpXc//aAAwDAQACAAMAAAAQA9gA/8QAGREAAQUAAAAAAAAAAAAAAAAAABARITFB/9oACAEDAQE/EJseYT//xAAYEQACAwAAAAAAAAAAAAAAAAABEQAQMf/aAAgBAgEBPxBjIhf/xAAdEAEAAgMAAwEAAAAAAAAAAAABABEhMUFxgZGh/9oACAEBAAE/EAZxJXoZqOyC08MS6+RS/SDXHsLVib1YPyBLQBVTzUeWC3S1xBsMVZ4y7wGhzD4wFV87P//Z",
+                    "aspectRatio": 1.0059171597633136,
+                    "src": "/static/76510f5e7100118a8bdd0e099911273f/c6ea7/AFI_Guangzhou_Featured_Image.jpg",
+                    "srcSet": "/static/76510f5e7100118a8bdd0e099911273f/722c4/AFI_Guangzhou_Featured_Image.jpg 340w,\n/static/76510f5e7100118a8bdd0e099911273f/1d671/AFI_Guangzhou_Featured_Image.jpg 680w,\n/static/76510f5e7100118a8bdd0e099911273f/c6ea7/AFI_Guangzhou_Featured_Image.jpg 980w",
+                    "sizes": "(max-width: 980px) 100vw, 980px"
                   }
                 }
               }
@@ -146,16 +146,16 @@
             "fields": { "slug": "/get-fruity/" },
             "frontmatter": {
               "date": "May 02, 2019",
-              "title": "Get fruity",
-              "description": "A deep investigation into the pastel properties of colourful fruit and their psychological effects on hamsters",
+              "title": "AirAsia Magazine Ad",
+              "description": "Ashley Furniture HomeStore Asia",
               "thumbnail": {
                 "childImageSharp": {
                   "fluid": {
-                    "base64": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAMABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIDBf/EABcBAAMBAAAAAAAAAAAAAAAAAAABAgP/2gAMAwEAAhADEAAAAdONlndgGf/EABgQAQADAQAAAAAAAAAAAAAAAAEAEBMC/9oACAEBAAEFApoaUchX/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGRAAAgMBAAAAAAAAAAAAAAAAARAAAiFR/9oACAEBAAY/AoK9eAL/xAAaEAEAAgMBAAAAAAAAAAAAAAABEBEAQVFh/9oACAEBAAE/Icay28alKxPhH//aAAwDAQACAAMAAAAQa9//xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAwEBPxBn/8QAFhEAAwAAAAAAAAAAAAAAAAAAEBEh/9oACAECAQE/EKx//8QAHBABAAIBBQAAAAAAAAAAAAAAAQAREDFBUWGh/9oACAEBAAE/EFAtaIESR5W2v3CCUlncTsWqA4//2Q==",
-                    "aspectRatio": 1.619047619047619,
-                    "src": "/static/5dc3b87c18e7ae99cc4415ead1d003bd/ac53a/mike-dorner-173502-unsplash.jpg",
-                    "srcSet": "/static/5dc3b87c18e7ae99cc4415ead1d003bd/722c4/mike-dorner-173502-unsplash.jpg 340w,\n/static/5dc3b87c18e7ae99cc4415ead1d003bd/1d671/mike-dorner-173502-unsplash.jpg 680w,\n/static/5dc3b87c18e7ae99cc4415ead1d003bd/ac53a/mike-dorner-173502-unsplash.jpg 1360w,\n/static/5dc3b87c18e7ae99cc4415ead1d003bd/a41d1/mike-dorner-173502-unsplash.jpg 2000w",
-                    "sizes": "(max-width: 1360px) 100vw, 1360px"
+                    "base64": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAOABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIEA//EABYBAQEBAAAAAAAAAAAAAAAAAAMBAv/aAAwDAQACEAMQAAABtM1zaRAX/8QAGhABAAIDAQAAAAAAAAAAAAAAAgERAxMiQv/aAAgBAQABBQJMiNtgTzkJT8XFf//EABURAQEAAAAAAAAAAAAAAAAAAAAS/9oACAEDAQE/AUv/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEv/aAAgBAgEBPwFT/8QAHBAAAgICAwAAAAAAAAAAAAAAAAECESExUWGB/9oACAEBAAY/AuyTXgrM8EktUI//xAAaEAADAQEBAQAAAAAAAAAAAAAAAREhMVFh/9oACAEBAAE/Idw1Ks9IwAZZq4ICufBEuIQSM3w//9oADAMBAAIAAwAAABCbD//EABYRAQEBAAAAAAAAAAAAAAAAAAERAP/aAAgBAwEBPxAmQtm//8QAFhEBAQEAAAAAAAAAAAAAAAAAAREA/9oACAECAQE/EG4QS7//xAAbEAEBAAMAAwAAAAAAAAAAAAABEQAhMUHB0f/aAAgBAQABPxCOhFXhvzDbJLAaHmKcJSuXdA0A+de8lvZF04JQ145//9k=",
+                    "aspectRatio": 1.3934426229508197,
+                    "src": "/static/18d07d2cc310321db86d7bfc1f74f3bd/c6ea7/AFHS_AirAsia_Featured_Image.jpg",
+                    "srcSet": "/static/18d07d2cc310321db86d7bfc1f74f3bd/722c4/AFHS_AirAsia_Featured_Image.jpg 340w,\n/static/18d07d2cc310321db86d7bfc1f74f3bd/1d671/AFHS_AirAsia_Featured_Image.jpg 680w,\n/static/18d07d2cc310321db86d7bfc1f74f3bd/c6ea7/AFHS_AirAsia_Featured_Image.jpg 980w",
+                    "sizes": "(max-width: 980px) 100vw, 980px"
                   }
                 }
               }
@@ -168,15 +168,15 @@
             "fields": { "slug": "/fur/" },
             "frontmatter": {
               "date": "May 01, 2019",
-              "title": "The fur series",
-              "description": "I have one pug and one Czechoslovakian dog called Prazsky krysarik.",
+              "title": "Billboard Design for Ufa, Russia",
+              "description": "Ashley Furniture HomeStore Ufa, Russia",
               "thumbnail": {
                 "childImageSharp": {
                   "fluid": {
-                    "base64": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAcABQDASIAAhEBAxEB/8QAGgAAAgIDAAAAAAAAAAAAAAAAAAUBBAIDBv/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAFvKegdQaQoq2sJdMSv/8QAHBAAAgEFAQAAAAAAAAAAAAAAAQIDAAQQEjIx/9oACAEBAAEFAs3ewKNJSk63A3SEEy03Y7Xz/8QAFREBAQAAAAAAAAAAAAAAAAAAEBH/2gAIAQMBAT8BKf/EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8BH//EAB8QAAAGAQUAAAAAAAAAAAAAAAABAhARISISMTJBUf/aAAgBAQAGPwJ05QkcjnqxlRjSW4SXh28t/8QAHRAAAwABBQEAAAAAAAAAAAAAAAERITFBUWFx0f/aAAgBAQABPyGiZR3HAi5K9JmDqNOVDfcohl6nQtyPPC+iK90Tpnn2f//aAAwDAQACAAMAAAAQICaw/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAEREP/aAAgBAwEBPxDKSKf/xAAXEQADAQAAAAAAAAAAAAAAAAAAEBEh/9oACAECAQE/EFNIf//EACAQAQADAAEDBQAAAAAAAAAAAAEAESExQWFxEFGB0fH/2gAIAQEAAT8QI7HoEN1oyLS7al/nhtyueSZuSi4syzs8zMFHf3OnzcDhIAmk24VA4dIhI3qDxx9CCMUTdX5GjZURb5Z//9k=",
-                    "aspectRatio": 0.718816067653277,
-                    "src": "/static/98b3ef98da1febad9e79c09eda17307a/ac53a/charles-deluvio-550068-unsplash.jpg",
-                    "srcSet": "/static/98b3ef98da1febad9e79c09eda17307a/722c4/charles-deluvio-550068-unsplash.jpg 340w,\n/static/98b3ef98da1febad9e79c09eda17307a/1d671/charles-deluvio-550068-unsplash.jpg 680w,\n/static/98b3ef98da1febad9e79c09eda17307a/ac53a/charles-deluvio-550068-unsplash.jpg 1360w,\n/static/98b3ef98da1febad9e79c09eda17307a/a41d1/charles-deluvio-550068-unsplash.jpg 2000w",
+                    "base64": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwUA/8QAFgEBAQEAAAAAAAAAAAAAAAAAAwEC/9oADAMBAAIQAxAAAAFFiqSWtC2L/8QAGRABAQADAQAAAAAAAAAAAAAAAgEAEBIT/9oACAEBAAEFAoq1089TjvNrWv/EABYRAQEBAAAAAAAAAAAAAAAAAAABEf/aAAgBAwEBPwGNj//EABYRAQEBAAAAAAAAAAAAAAAAAAACE//aAAgBAgEBPwGpYv/EABoQAAICAwAAAAAAAAAAAAAAAAABESEQEjL/2gAIAQEABj8C2Tg6LFArx//EABkQAAMBAQEAAAAAAAAAAAAAAAABESEx4f/aAAgBAQABPyHHesIeUTlbNGWZSBr4Nu9P/9oADAMBAAIAAwAAABB8H//EABcRAAMBAAAAAAAAAAAAAAAAAAABIWH/2gAIAQMBAT8Qt0xP/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAEhEf/aAAgBAgEBPxBOQqtn/8QAHBABAAMAAgMAAAAAAAAAAAAAAQARITFBUZHR/9oACAEBAAE/EFaD0FHOVqoGAsvj5SoM46ay6rmahNgluPSr3P/Z",
+                    "aspectRatio": 1.780104712041885,
+                    "src": "/static/078ce80536f176506dd187416ded56f2/ac53a/Billboard-Design-Ufa-Russia-Feature-Image.jpg",
+                    "srcSet": "/static/078ce80536f176506dd187416ded56f2/722c4/Billboard-Design-Ufa-Russia-Feature-Image.jpg 340w,\n/static/078ce80536f176506dd187416ded56f2/1d671/Billboard-Design-Ufa-Russia-Feature-Image.jpg 680w,\n/static/078ce80536f176506dd187416ded56f2/ac53a/Billboard-Design-Ufa-Russia-Feature-Image.jpg 1360w,\n/static/078ce80536f176506dd187416ded56f2/d8255/Billboard-Design-Ufa-Russia-Feature-Image.jpg 1920w",
                     "sizes": "(max-width: 1360px) 100vw, 1360px"
                   }
                 }
@@ -190,15 +190,15 @@
             "fields": { "slug": "/hi-folks/" },
             "frontmatter": {
               "date": "May 28, 2015",
-              "title": "New Beginnings",
-              "description": "This is a custom description for SEO and Open Graph purposes, rather than the default generated excerpt. Simply add a description field to the frontmatter.",
+              "title": "2fitfitness Web Design",
+              "description": "UI/UX Design for a father & son fitness website",
               "thumbnail": {
                 "childImageSharp": {
                   "fluid": {
-                    "base64": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAECBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAeHcCoP/xAAYEAADAQEAAAAAAAAAAAAAAAAAATEQEf/aAAgBAQABBQKtzOjP/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAFxAAAwEAAAAAAAAAAAAAAAAAAAEgMf/aAAgBAQAGPwJGT//EABkQAQEBAQEBAAAAAAAAAAAAAAERACExEP/aAAgBAQABPyEIPMDoRGd011Pq/H//2gAMAwEAAgADAAAAEKAP/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPxA//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAGxABAQEAAgMAAAAAAAAAAAAAAREAITFBYbH/2gAIAQEAAT8QFRhQyuESFb380eTnKUV1RROCt3YfW//Z",
-                    "aspectRatio": 1.780104712041885,
-                    "src": "/static/54a16e112c74520e2310f2802be25209/ac53a/bbbb.jpg",
-                    "srcSet": "/static/54a16e112c74520e2310f2802be25209/722c4/bbbb.jpg 340w,\n/static/54a16e112c74520e2310f2802be25209/1d671/bbbb.jpg 680w,\n/static/54a16e112c74520e2310f2802be25209/ac53a/bbbb.jpg 1360w,\n/static/54a16e112c74520e2310f2802be25209/a41d1/bbbb.jpg 2000w",
+                    "base64": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAIABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQF/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEAMQAAABpnDSB//EABkQAAIDAQAAAAAAAAAAAAAAAAITAAMEAf/aAAgBAQABBQJds0Fe7MXVf//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABwQAAEEAwEAAAAAAAAAAAAAAAIAARIhESJBYf/aAAgBAQAGPwKmBFAij4t3vPV//8QAGRABAQEAAwAAAAAAAAAAAAAAAREAIVFh/9oACAEBAAE/IVlaOxdxI0AZDu297//aAAwDAQACAAMAAAAQBA//xAAVEQEBAAAAAAAAAAAAAAAAAAAQEf/aAAgBAwEBPxCn/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAGRABAQADAQAAAAAAAAAAAAAAAREAIYEx/9oACAEBAAE/EHxtRCacwUqgOvCp24yRBuiLq8mf/9k=",
+                    "aspectRatio": 2.463768115942029,
+                    "src": "/static/39494981951f066a5f18c63530ca367c/ac53a/2fitfitness-feature-image.jpg",
+                    "srcSet": "/static/39494981951f066a5f18c63530ca367c/722c4/2fitfitness-feature-image.jpg 340w,\n/static/39494981951f066a5f18c63530ca367c/1d671/2fitfitness-feature-image.jpg 680w,\n/static/39494981951f066a5f18c63530ca367c/ac53a/2fitfitness-feature-image.jpg 1360w,\n/static/39494981951f066a5f18c63530ca367c/0e329/2fitfitness-feature-image.jpg 1600w",
                     "sizes": "(max-width: 1360px) 100vw, 1360px"
                   }
                 }

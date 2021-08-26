@@ -1,8 +1,8 @@
 ---
-title: All spikes
+title: CIFF Shanghai, China Indoor & Outdoor Signage
 date: "2019-05-04"
-thumbnail: ./charles-deluvio-695732-unsplash.jpg
-description: A cactus doesn't live in the desert because it likes the desert; it lives there because the desert hasn't killed it yet.
+thumbnail: ./AFI-CIFF-Shanghai-Feature-Image.jpg
+description: Ashley Furniture Industries
 ---
 
 ![Cactus](./charles-deluvio-695757-unsplash.jpg)

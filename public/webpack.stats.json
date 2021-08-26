@@ -12,11 +12,11 @@
       "name": "commons",
       "assets": [
         { "name": "framework.js", "size": 2561395 },
-        { "name": "commons.css", "size": 78666 },
+        { "name": "commons.css", "size": 77358 },
         { "name": "commons.js", "size": 2339033 }
       ],
       "filteredAssets": 0,
-      "assetsSize": 4979094,
+      "assetsSize": 4977786,
       "filteredAuxiliaryAssets": 100,
       "auxiliaryAssetsSize": 2319084
     },
@@ -42,12 +42,12 @@
       "name": "component---src-pages-about-js",
       "assets": [
         { "name": "framework.js", "size": 2561395 },
-        { "name": "commons.css", "size": 78666 },
+        { "name": "commons.css", "size": 77358 },
         { "name": "commons.js", "size": 2339033 },
         { "name": "component---src-pages-about-js.js", "size": 249133 }
       ],
       "filteredAssets": 0,
-      "assetsSize": 5228227,
+      "assetsSize": 5226919,
       "filteredAuxiliaryAssets": 100,
       "auxiliaryAssetsSize": 2319084
     },
@@ -55,12 +55,12 @@
       "name": "component---src-pages-elements-js",
       "assets": [
         { "name": "framework.js", "size": 2561395 },
-        { "name": "commons.css", "size": 78666 },
+        { "name": "commons.css", "size": 77358 },
         { "name": "commons.js", "size": 2339033 },
         { "name": "component---src-pages-elements-js.js", "size": 327167 }
       ],
       "filteredAssets": 0,
-      "assetsSize": 5306261,
+      "assetsSize": 5304953,
       "filteredAuxiliaryAssets": 100,
       "auxiliaryAssetsSize": 2319084
     },
@@ -68,12 +68,12 @@
       "name": "component---src-pages-index-js",
       "assets": [
         { "name": "framework.js", "size": 2561395 },
-        { "name": "commons.css", "size": 78666 },
+        { "name": "commons.css", "size": 77358 },
         { "name": "commons.js", "size": 2339033 },
         { "name": "component---src-pages-index-js.js", "size": 178723 }
       ],
       "filteredAssets": 0,
-      "assetsSize": 5157817,
+      "assetsSize": 5156509,
       "filteredAuxiliaryAssets": 100,
       "auxiliaryAssetsSize": 2319084
     },
