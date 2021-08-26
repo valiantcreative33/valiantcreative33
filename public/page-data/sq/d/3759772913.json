@@ -10,12 +10,12 @@
       "edges": [
         {
           "node": {
-            "excerpt": "A wallpaper series using shapes and light by Jean-Marc Denis I used a poly reduction on the mesh as a proxy to be able to create my studio…",
+            "excerpt": "A Full Stack Web Development group project created during my coding Boot Camp at the University of Central Florida. Are you stumped with the…",
             "fields": { "slug": "/darkness/" },
             "frontmatter": {
               "date": "May 08, 2019",
               "title": "What's for Dinner?",
-              "description": "Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that.",
+              "description": "A Full Stack Web Development Application",
               "thumbnail": {
                 "childImageSharp": {
                   "fluid": {

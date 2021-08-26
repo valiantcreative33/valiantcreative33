@@ -1,0 +1,121 @@
+{
+  "namedChunkGroups": {
+    "polyfill": {
+      "name": "polyfill",
+      "assets": [{ "name": "polyfill.js", "size": 756612 }],
+      "filteredAssets": 0,
+      "assetsSize": 756612,
+      "filteredAuxiliaryAssets": 0,
+      "auxiliaryAssetsSize": 0
+    },
+    "commons": {
+      "name": "commons",
+      "assets": [
+        { "name": "framework.js", "size": 2561395 },
+        { "name": "commons.css", "size": 78666 },
+        { "name": "commons.js", "size": 2339033 }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": 4979094,
+      "filteredAuxiliaryAssets": 100,
+      "auxiliaryAssetsSize": 2319084
+    },
+    "component---cache-dev-404-page-js": {
+      "name": "component---cache-dev-404-page-js",
+      "assets": [
+        { "name": "component---cache-dev-404-page-js.js", "size": 77987 }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": 77987,
+      "filteredAuxiliaryAssets": 0,
+      "auxiliaryAssetsSize": 0
+    },
+    "component---src-pages-404-js": {
+      "name": "component---src-pages-404-js",
+      "assets": [{ "name": "component---src-pages-404-js.js", "size": 163665 }],
+      "filteredAssets": 0,
+      "assetsSize": 163665,
+      "filteredAuxiliaryAssets": 0,
+      "auxiliaryAssetsSize": 0
+    },
+    "component---src-pages-about-js": {
+      "name": "component---src-pages-about-js",
+      "assets": [
+        { "name": "framework.js", "size": 2561395 },
+        { "name": "commons.css", "size": 78666 },
+        { "name": "commons.js", "size": 2339033 },
+        { "name": "component---src-pages-about-js.js", "size": 249133 }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": 5228227,
+      "filteredAuxiliaryAssets": 100,
+      "auxiliaryAssetsSize": 2319084
+    },
+    "component---src-pages-elements-js": {
+      "name": "component---src-pages-elements-js",
+      "assets": [
+        { "name": "framework.js", "size": 2561395 },
+        { "name": "commons.css", "size": 78666 },
+        { "name": "commons.js", "size": 2339033 },
+        { "name": "component---src-pages-elements-js.js", "size": 327167 }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": 5306261,
+      "filteredAuxiliaryAssets": 100,
+      "auxiliaryAssetsSize": 2319084
+    },
+    "component---src-pages-index-js": {
+      "name": "component---src-pages-index-js",
+      "assets": [
+        { "name": "framework.js", "size": 2561395 },
+        { "name": "commons.css", "size": 78666 },
+        { "name": "commons.js", "size": 2339033 },
+        { "name": "component---src-pages-index-js.js", "size": 178723 }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": 5157817,
+      "filteredAuxiliaryAssets": 100,
+      "auxiliaryAssetsSize": 2319084
+    },
+    "component---src-templates-blog-post-js": {
+      "name": "component---src-templates-blog-post-js",
+      "assets": [
+        { "name": "component---src-templates-blog-post-js.js", "size": 243059 }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": 243059,
+      "filteredAuxiliaryAssets": 0,
+      "auxiliaryAssetsSize": 0
+    }
+  },
+  "assetsByChunkName": {
+    "polyfill": ["polyfill.js"],
+    "commons": ["framework.js", "commons.css", "commons.js"],
+    "component---cache-dev-404-page-js": [
+      "component---cache-dev-404-page-js.js"
+    ],
+    "component---src-pages-404-js": ["component---src-pages-404-js.js"],
+    "component---src-pages-about-js": [
+      "framework.js",
+      "commons.css",
+      "commons.js",
+      "component---src-pages-about-js.js"
+    ],
+    "component---src-pages-elements-js": [
+      "framework.js",
+      "commons.css",
+      "commons.js",
+      "component---src-pages-elements-js.js"
+    ],
+    "component---src-pages-index-js": [
+      "framework.js",
+      "commons.css",
+      "commons.js",
+      "component---src-pages-index-js.js"
+    ],
+    "component---src-templates-blog-post-js": [
+      "component---src-templates-blog-post-js.js"
+    ]
+  },
+  "childAssetsByChunkName": {}
+}
