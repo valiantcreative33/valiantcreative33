@@ -1,11 +1,18 @@
 {
-  "polyfill": ["/polyfill.js"],
-  "commons": ["/commons.css", "/commons.js"],
+  "polyfill": ["/polyfill.js", "/polyfill.20aa11cdaf185111578c.hot-update.js"],
+  "commons": [
+    "/commons.css",
+    "/commons.js",
+    "/commons.20aa11cdaf185111578c.hot-update.js"
+  ],
   "component---cache-dev-404-page-js": [
     "/component---cache-dev-404-page-js.js"
   ],
   "component---src-pages-404-js": ["/component---src-pages-404-js.js"],
-  "component---src-pages-about-js": ["/component---src-pages-about-js.js"],
+  "component---src-pages-about-js": [
+    "/component---src-pages-about-js.js",
+    "/component---src-pages-about-js.20aa11cdaf185111578c.hot-update.js"
+  ],
   "component---src-pages-elements-js": [
     "/component---src-pages-elements-js.js"
   ],

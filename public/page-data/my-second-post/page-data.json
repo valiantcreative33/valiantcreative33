@@ -11,10 +11,10 @@
       },
       "markdownRemark": {
         "id": "7567104a-b39b-54f0-b5af-293466508ad7",
-        "excerpt": "Wow! I love blogging so much already. Did you know that “despite its name, salted duck eggs can also be made from\nchicken eggs, though the taste and texture…",
-        "html": "<p>Wow! I love blogging so much already.</p>\n<p>Did you know that “despite its name, salted duck eggs can also be made from\nchicken eggs, though the taste and texture will be somewhat different, and the\negg yolk will be less rich.”?\n(<a href=\"http://en.wikipedia.org/wiki/Salted_duck_egg\">Wikipedia Link</a>)</p>\n<p>Yeah, I didn’t either.</p>",
+        "excerpt": "Blogging. Yes, there are so many reasons why you should start a blog. But starting a blog has its pros and pitfalls and no single size fits all.\nWhen…",
+        "html": "<p>Blogging. Yes, there are so many reasons why you should start a blog.</p>\n<p>But starting a blog has its pros and pitfalls and no single size fits all.\nWhen considering whether to start a blog or not, consider both sides of the argument and weigh them against your own personality, lifestyle and ambitions. See what fits you and be honest about what you really want out of the experience.</p>\n<p>You’ll be the one doing the work and on the flip side, you’ll be the one reaping the rewards in the end.</p>\n<p>With that said, yes, I hope to have a blog here soon!</p>",
         "frontmatter": {
-          "title": "My Second Post!",
+          "title": "Blog Post?",
           "date": "May 06, 2015",
           "description": null,
           "thumbnail": null
@@ -25,7 +25,7 @@
       "slug": "/my-second-post/",
       "previous": {
         "fields": { "slug": "/hello-world/" },
-        "frontmatter": { "title": "Hello World" }
+        "frontmatter": { "title": "Pig Floyds Urban Barbakoa" }
       },
       "next": {
         "fields": { "slug": "/hi-folks/" },

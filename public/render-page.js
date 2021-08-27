@@ -18,6 +18,11 @@
           "component---src-pages-404-js": preferDefault(
             __webpack_require__(/*! ./src/pages/404.js */ "./src/pages/404.js")
           ),
+          "component---src-pages-about-js": preferDefault(
+            __webpack_require__(
+              /*! ./src/pages/about.js */ "./src/pages/about.js"
+            )
+          ),
           "component---src-pages-index-js": preferDefault(
             __webpack_require__(
               /*! ./src/pages/index.js */ "./src/pages/index.js"
@@ -4808,6 +4813,1009 @@ useStaticQuery(graphql\`${query}\`);
         /***/
       },
 
+    /***/ "./node_modules/gatsby-image/index.js":
+      /*!********************************************!*\
+  !*** ./node_modules/gatsby-image/index.js ***!
+  \********************************************/
+      /***/ (__unused_webpack_module, exports, __webpack_require__) => {
+        "use strict";
+
+        var _interopRequireDefault = __webpack_require__(
+          /*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js"
+        );
+
+        exports.__esModule = true;
+        exports.default = void 0;
+
+        var _assertThisInitialized2 = _interopRequireDefault(
+          __webpack_require__(
+            /*! @babel/runtime/helpers/assertThisInitialized */ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js"
+          )
+        );
+
+        var _inheritsLoose2 = _interopRequireDefault(
+          __webpack_require__(
+            /*! @babel/runtime/helpers/inheritsLoose */ "./node_modules/@babel/runtime/helpers/inheritsLoose.js"
+          )
+        );
+
+        var _objectWithoutPropertiesLoose2 = _interopRequireDefault(
+          __webpack_require__(
+            /*! @babel/runtime/helpers/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js"
+          )
+        );
+
+        var _extends2 = _interopRequireDefault(
+          __webpack_require__(
+            /*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"
+          )
+        );
+
+        var _react = _interopRequireDefault(
+          __webpack_require__(/*! react */ "react")
+        );
+
+        var _propTypes = _interopRequireDefault(
+          __webpack_require__(
+            /*! prop-types */ "./node_modules/prop-types/index.js"
+          )
+        );
+
+        var logDeprecationNotice = function logDeprecationNotice(
+          prop,
+          replacement
+        ) {
+          if (false) {
+          }
+
+          console.log(
+            '\n    The "' +
+              prop +
+              '" prop is now deprecated and will be removed in the next major version\n    of "gatsby-image".\n    '
+          );
+
+          if (replacement) {
+            console.log(
+              "Please use " + replacement + ' instead of "' + prop + '".'
+            );
+          }
+        }; // Handle legacy props during their deprecation phase
+
+        var convertProps = function convertProps(props) {
+          var convertedProps = (0, _extends2.default)({}, props);
+          var resolutions = convertedProps.resolutions,
+            sizes = convertedProps.sizes,
+            critical = convertedProps.critical;
+
+          if (resolutions) {
+            convertedProps.fixed = resolutions;
+            logDeprecationNotice(
+              "resolutions",
+              'the gatsby-image v2 prop "fixed"'
+            );
+            delete convertedProps.resolutions;
+          }
+
+          if (sizes) {
+            convertedProps.fluid = sizes;
+            logDeprecationNotice("sizes", 'the gatsby-image v2 prop "fluid"');
+            delete convertedProps.sizes;
+          }
+
+          if (critical) {
+            logDeprecationNotice("critical", 'the native "loading" attribute');
+            convertedProps.loading = "eager";
+          } // convert fluid & fixed to arrays so we only have to work with arrays
+
+          if (convertedProps.fluid) {
+            convertedProps.fluid = groupByMedia(
+              [].concat(convertedProps.fluid)
+            );
+          }
+
+          if (convertedProps.fixed) {
+            convertedProps.fixed = groupByMedia(
+              [].concat(convertedProps.fixed)
+            );
+          }
+
+          return convertedProps;
+        };
+        /**
+         * Checks if fluid or fixed are art-direction arrays.
+         *
+         * @param currentData  {{media?: string}[]}   The props to check for images.
+         * @return {boolean}
+         */
+
+        var hasArtDirectionSupport = function hasArtDirectionSupport(
+          currentData
+        ) {
+          return (
+            !!currentData &&
+            Array.isArray(currentData) &&
+            currentData.some(function(image) {
+              return typeof image.media !== "undefined";
+            })
+          );
+        };
+        /**
+         * Tries to detect if a media query matches the current viewport.
+         * @property media   {{media?: string}}  A media query string.
+         * @return {boolean}
+         */
+
+        var matchesMedia = function matchesMedia(_ref) {
+          var media = _ref.media;
+          return media
+            ? isBrowser && !!window.matchMedia(media).matches
+            : false;
+        };
+        /**
+         * Find the source of an image to use as a key in the image cache.
+         * Use `the first image in either `fixed` or `fluid`
+         * @param {{fluid: {src: string, media?: string}[], fixed: {src: string, media?: string}[]}} args
+         * @return {string?} Returns image src or undefined it not given.
+         */
+
+        var getImageCacheKey = function getImageCacheKey(_ref2) {
+          var fluid = _ref2.fluid,
+            fixed = _ref2.fixed;
+          var srcData = getCurrentSrcData(fluid || fixed || []);
+          return srcData && srcData.src;
+        };
+        /**
+         * Returns the current src - Preferably with art-direction support.
+         * @param currentData  {{media?: string}[], maxWidth?: Number, maxHeight?: Number}   The fluid or fixed image array.
+         * @return {{src: string, media?: string, maxWidth?: Number, maxHeight?: Number}}
+         */
+
+        var getCurrentSrcData = function getCurrentSrcData(currentData) {
+          if (isBrowser && hasArtDirectionSupport(currentData)) {
+            // Do we have an image for the current Viewport?
+            var foundMedia = currentData.findIndex(matchesMedia);
+
+            if (foundMedia !== -1) {
+              return currentData[foundMedia];
+            } // No media matches, select first element without a media condition
+
+            var noMedia = currentData.findIndex(function(image) {
+              return typeof image.media === "undefined";
+            });
+
+            if (noMedia !== -1) {
+              return currentData[noMedia];
+            }
+          } // Else return the first image.
+
+          return currentData[0];
+        }; // Cache if we've seen an image before so we don't bother with
+        // lazy-loading & fading in on subsequent mounts.
+
+        var imageCache = Object.create({});
+
+        var inImageCache = function inImageCache(props) {
+          var convertedProps = convertProps(props);
+          var cacheKey = getImageCacheKey(convertedProps);
+          return imageCache[cacheKey] || false;
+        };
+
+        var activateCacheForImage = function activateCacheForImage(props) {
+          var convertedProps = convertProps(props);
+          var cacheKey = getImageCacheKey(convertedProps);
+
+          if (cacheKey) {
+            imageCache[cacheKey] = true;
+          }
+        }; // Native lazy-loading support: https://addyosmani.com/blog/lazy-loading/
+
+        var hasNativeLazyLoadSupport =
+          typeof HTMLImageElement !== "undefined" &&
+          "loading" in HTMLImageElement.prototype;
+        var isBrowser = typeof window !== "undefined";
+        var hasIOSupport = isBrowser && window.IntersectionObserver;
+        var io;
+        var listeners = new WeakMap();
+
+        function getIO() {
+          if (
+            typeof io === "undefined" &&
+            typeof window !== "undefined" &&
+            window.IntersectionObserver
+          ) {
+            io = new window.IntersectionObserver(
+              function(entries) {
+                entries.forEach(function(entry) {
+                  if (listeners.has(entry.target)) {
+                    var cb = listeners.get(entry.target); // Edge doesn't currently support isIntersecting, so also test for an intersectionRatio > 0
+
+                    if (entry.isIntersecting || entry.intersectionRatio > 0) {
+                      io.unobserve(entry.target);
+                      listeners.delete(entry.target);
+                      cb();
+                    }
+                  }
+                });
+              },
+              {
+                rootMargin: "200px"
+              }
+            );
+          }
+
+          return io;
+        }
+
+        function generateImageSources(imageVariants) {
+          return imageVariants.map(function(_ref3) {
+            var src = _ref3.src,
+              srcSet = _ref3.srcSet,
+              srcSetWebp = _ref3.srcSetWebp,
+              media = _ref3.media,
+              sizes = _ref3.sizes;
+            return /*#__PURE__*/ _react.default.createElement(
+              _react.default.Fragment,
+              {
+                key: src
+              },
+              srcSetWebp &&
+                /*#__PURE__*/ _react.default.createElement("source", {
+                  type: "image/webp",
+                  media: media,
+                  srcSet: srcSetWebp,
+                  sizes: sizes
+                }),
+              srcSet &&
+                /*#__PURE__*/ _react.default.createElement("source", {
+                  media: media,
+                  srcSet: srcSet,
+                  sizes: sizes
+                })
+            );
+          });
+        } // Return an array ordered by elements having a media prop, does not use
+        // native sort, as a stable sort is not guaranteed by all browsers/versions
+
+        function groupByMedia(imageVariants) {
+          var withMedia = [];
+          var without = [];
+          imageVariants.forEach(function(variant) {
+            return (variant.media ? withMedia : without).push(variant);
+          });
+
+          if (without.length > 1 && "development" !== "production") {
+            console.warn(
+              "We've found " +
+                without.length +
+                " sources without a media property. They might be ignored by the browser, see: https://www.gatsbyjs.org/packages/gatsby-image/#art-directing-multiple-images"
+            );
+          }
+
+          return [].concat(withMedia, without);
+        }
+
+        function generateTracedSVGSources(imageVariants) {
+          return imageVariants.map(function(_ref4) {
+            var src = _ref4.src,
+              media = _ref4.media,
+              tracedSVG = _ref4.tracedSVG;
+            return /*#__PURE__*/ _react.default.createElement("source", {
+              key: src,
+              media: media,
+              srcSet: tracedSVG
+            });
+          });
+        }
+
+        function generateBase64Sources(imageVariants) {
+          return imageVariants.map(function(_ref5) {
+            var src = _ref5.src,
+              media = _ref5.media,
+              base64 = _ref5.base64;
+            return /*#__PURE__*/ _react.default.createElement("source", {
+              key: src,
+              media: media,
+              srcSet: base64
+            });
+          });
+        }
+
+        function generateNoscriptSource(_ref6, isWebp) {
+          var srcSet = _ref6.srcSet,
+            srcSetWebp = _ref6.srcSetWebp,
+            media = _ref6.media,
+            sizes = _ref6.sizes;
+          var src = isWebp ? srcSetWebp : srcSet;
+          var mediaAttr = media ? 'media="' + media + '" ' : "";
+          var typeAttr = isWebp ? "type='image/webp' " : "";
+          var sizesAttr = sizes ? 'sizes="' + sizes + '" ' : "";
+          return (
+            "<source " +
+            typeAttr +
+            mediaAttr +
+            'srcset="' +
+            src +
+            '" ' +
+            sizesAttr +
+            "/>"
+          );
+        }
+
+        function generateNoscriptSources(imageVariants) {
+          return imageVariants
+            .map(function(variant) {
+              return (
+                (variant.srcSetWebp
+                  ? generateNoscriptSource(variant, true)
+                  : "") + generateNoscriptSource(variant)
+              );
+            })
+            .join("");
+        }
+
+        var listenToIntersections = function listenToIntersections(el, cb) {
+          var observer = getIO();
+
+          if (observer) {
+            observer.observe(el);
+            listeners.set(el, cb);
+          }
+
+          return function() {
+            observer.unobserve(el);
+            listeners.delete(el);
+          };
+        };
+
+        var noscriptImg = function noscriptImg(props) {
+          // Check if prop exists before adding each attribute to the string output below to prevent
+          // HTML validation issues caused by empty values like width="" and height=""
+          var src = props.src ? 'src="' + props.src + '" ' : 'src="" '; // required attribute
+
+          var sizes = props.sizes ? 'sizes="' + props.sizes + '" ' : "";
+          var srcSet = props.srcSet ? 'srcset="' + props.srcSet + '" ' : "";
+          var title = props.title ? 'title="' + props.title + '" ' : "";
+          var alt = props.alt ? 'alt="' + props.alt + '" ' : 'alt="" '; // required attribute
+
+          var width = props.width ? 'width="' + props.width + '" ' : "";
+          var height = props.height ? 'height="' + props.height + '" ' : "";
+          var crossOrigin = props.crossOrigin
+            ? 'crossorigin="' + props.crossOrigin + '" '
+            : "";
+          var loading = props.loading ? 'loading="' + props.loading + '" ' : "";
+          var draggable = props.draggable
+            ? 'draggable="' + props.draggable + '" '
+            : "";
+          var sources = generateNoscriptSources(props.imageVariants);
+          return (
+            "<picture>" +
+            sources +
+            "<img " +
+            loading +
+            width +
+            height +
+            sizes +
+            srcSet +
+            src +
+            alt +
+            title +
+            crossOrigin +
+            draggable +
+            'style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture>'
+          );
+        }; // Earlier versions of gatsby-image during the 2.x cycle did not wrap
+        // the `Img` component in a `picture` element. This maintains compatibility
+        // until a breaking change can be introduced in the next major release
+
+        var Placeholder = /*#__PURE__*/ _react.default.forwardRef(function(
+          props,
+          ref
+        ) {
+          var src = props.src,
+            imageVariants = props.imageVariants,
+            generateSources = props.generateSources,
+            spreadProps = props.spreadProps,
+            ariaHidden = props.ariaHidden;
+
+          var baseImage = /*#__PURE__*/ _react.default.createElement(
+            Img,
+            (0, _extends2.default)(
+              {
+                ref: ref,
+                src: src
+              },
+              spreadProps,
+              {
+                ariaHidden: ariaHidden
+              }
+            )
+          );
+
+          return imageVariants.length > 1
+            ? /*#__PURE__*/ _react.default.createElement(
+                "picture",
+                null,
+                generateSources(imageVariants),
+                baseImage
+              )
+            : baseImage;
+        });
+
+        var Img = /*#__PURE__*/ _react.default.forwardRef(function(props, ref) {
+          var sizes = props.sizes,
+            srcSet = props.srcSet,
+            src = props.src,
+            style = props.style,
+            onLoad = props.onLoad,
+            onError = props.onError,
+            loading = props.loading,
+            draggable = props.draggable,
+            ariaHidden = props.ariaHidden,
+            otherProps = (0, _objectWithoutPropertiesLoose2.default)(props, [
+              "sizes",
+              "srcSet",
+              "src",
+              "style",
+              "onLoad",
+              "onError",
+              "loading",
+              "draggable",
+              "ariaHidden"
+            ]);
+          return /*#__PURE__*/ _react.default.createElement(
+            "img",
+            (0, _extends2.default)(
+              {
+                "aria-hidden": ariaHidden,
+                sizes: sizes,
+                srcSet: srcSet,
+                src: src
+              },
+              otherProps,
+              {
+                onLoad: onLoad,
+                onError: onError,
+                ref: ref,
+                loading: loading,
+                draggable: draggable,
+                style: (0, _extends2.default)(
+                  {
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    objectPosition: "center"
+                  },
+                  style
+                )
+              }
+            )
+          );
+        });
+
+        Img.propTypes = {
+          style: _propTypes.default.object,
+          onError: _propTypes.default.func,
+          onLoad: _propTypes.default.func
+        };
+
+        var Image = /*#__PURE__*/ (function(_React$Component) {
+          (0, _inheritsLoose2.default)(Image, _React$Component);
+
+          function Image(props) {
+            var _this;
+
+            _this = _React$Component.call(this, props) || this; // If this image has already been loaded before then we can assume it's
+            // already in the browser cache so it's cheap to just show directly.
+
+            _this.seenBefore = isBrowser && inImageCache(props);
+            _this.isCritical = props.loading === "eager" || props.critical;
+            _this.addNoScript = !(_this.isCritical && !props.fadeIn);
+            _this.useIOSupport =
+              !hasNativeLazyLoadSupport &&
+              hasIOSupport &&
+              !_this.isCritical &&
+              !_this.seenBefore;
+            var isVisible =
+              _this.isCritical ||
+              (isBrowser && (hasNativeLazyLoadSupport || !_this.useIOSupport));
+            _this.state = {
+              isVisible: isVisible,
+              imgLoaded: false,
+              imgCached: false,
+              fadeIn: !_this.seenBefore && props.fadeIn,
+              isHydrated: false
+            };
+            _this.imageRef = /*#__PURE__*/ _react.default.createRef();
+            _this.placeholderRef =
+              props.placeholderRef || /*#__PURE__*/ _react.default.createRef();
+            _this.handleImageLoaded = _this.handleImageLoaded.bind(
+              (0, _assertThisInitialized2.default)(_this)
+            );
+            _this.handleRef = _this.handleRef.bind(
+              (0, _assertThisInitialized2.default)(_this)
+            );
+            return _this;
+          }
+
+          var _proto = Image.prototype;
+
+          _proto.componentDidMount = function componentDidMount() {
+            this.setState({
+              isHydrated: isBrowser
+            });
+
+            if (
+              this.state.isVisible &&
+              typeof this.props.onStartLoad === "function"
+            ) {
+              this.props.onStartLoad({
+                wasCached: inImageCache(this.props)
+              });
+            }
+
+            if (this.isCritical) {
+              var img = this.imageRef.current;
+
+              if (img && img.complete) {
+                this.handleImageLoaded();
+              }
+            }
+          };
+
+          _proto.componentWillUnmount = function componentWillUnmount() {
+            if (this.cleanUpListeners) {
+              this.cleanUpListeners();
+            }
+          }; // Specific to IntersectionObserver based lazy-load support
+
+          _proto.handleRef = function handleRef(ref) {
+            var _this2 = this;
+
+            if (this.useIOSupport && ref) {
+              this.cleanUpListeners = listenToIntersections(ref, function() {
+                var imageInCache = inImageCache(_this2.props);
+
+                if (
+                  !_this2.state.isVisible &&
+                  typeof _this2.props.onStartLoad === "function"
+                ) {
+                  _this2.props.onStartLoad({
+                    wasCached: imageInCache
+                  });
+                } // imgCached and imgLoaded must update after isVisible,
+                // Once isVisible is true, imageRef becomes accessible, which imgCached needs access to.
+                // imgLoaded and imgCached are in a 2nd setState call to be changed together,
+                // avoiding initiating unnecessary animation frames from style changes.
+
+                _this2.setState(
+                  {
+                    isVisible: true
+                  },
+                  function() {
+                    _this2.setState({
+                      imgLoaded: imageInCache,
+                      // `currentSrc` should be a string, but can be `undefined` in IE,
+                      // !! operator validates the value is not undefined/null/""
+                      // for lazyloaded components this might be null
+                      // TODO fix imgCached behaviour as it's now false when it's lazyloaded
+                      imgCached: !!(
+                        _this2.imageRef.current &&
+                        _this2.imageRef.current.currentSrc
+                      )
+                    });
+                  }
+                );
+              });
+            }
+          };
+
+          _proto.handleImageLoaded = function handleImageLoaded() {
+            activateCacheForImage(this.props);
+            this.setState({
+              imgLoaded: true
+            });
+
+            if (this.props.onLoad) {
+              this.props.onLoad();
+            }
+          };
+
+          _proto.render = function render() {
+            var _convertProps = convertProps(this.props),
+              title = _convertProps.title,
+              alt = _convertProps.alt,
+              className = _convertProps.className,
+              _convertProps$style = _convertProps.style,
+              style = _convertProps$style === void 0 ? {} : _convertProps$style,
+              _convertProps$imgStyl = _convertProps.imgStyle,
+              imgStyle =
+                _convertProps$imgStyl === void 0 ? {} : _convertProps$imgStyl,
+              _convertProps$placeho = _convertProps.placeholderStyle,
+              placeholderStyle =
+                _convertProps$placeho === void 0 ? {} : _convertProps$placeho,
+              placeholderClassName = _convertProps.placeholderClassName,
+              fluid = _convertProps.fluid,
+              fixed = _convertProps.fixed,
+              backgroundColor = _convertProps.backgroundColor,
+              durationFadeIn = _convertProps.durationFadeIn,
+              Tag = _convertProps.Tag,
+              itemProp = _convertProps.itemProp,
+              loading = _convertProps.loading,
+              draggable = _convertProps.draggable;
+
+            var imageVariants = fluid || fixed; // Abort early if missing image data (#25371)
+
+            if (!imageVariants) {
+              return null;
+            }
+
+            var shouldReveal =
+              this.state.fadeIn === false || this.state.imgLoaded;
+            var shouldFadeIn =
+              this.state.fadeIn === true && !this.state.imgCached;
+            var imageStyle = (0, _extends2.default)(
+              {
+                opacity: shouldReveal ? 1 : 0,
+                transition: shouldFadeIn
+                  ? "opacity " + durationFadeIn + "ms"
+                  : "none"
+              },
+              imgStyle
+            );
+            var bgColor =
+              typeof backgroundColor === "boolean"
+                ? "lightgray"
+                : backgroundColor;
+            var delayHideStyle = {
+              transitionDelay: durationFadeIn + "ms"
+            };
+            var imagePlaceholderStyle = (0, _extends2.default)(
+              {
+                opacity: this.state.imgLoaded ? 0 : 1
+              },
+              shouldFadeIn && delayHideStyle,
+              imgStyle,
+              placeholderStyle
+            );
+            var placeholderImageProps = {
+              title: title,
+              alt: !this.state.isVisible ? alt : "",
+              style: imagePlaceholderStyle,
+              className: placeholderClassName,
+              itemProp: itemProp
+            }; // Initial client render state needs to match SSR until hydration finishes.
+            // Once hydration completes, render again to update to the correct image.
+            // `imageVariants` is always an Array type at this point due to `convertProps()`
+
+            var image = !this.state.isHydrated
+              ? imageVariants[0]
+              : getCurrentSrcData(imageVariants);
+
+            if (fluid) {
+              return /*#__PURE__*/ _react.default.createElement(
+                Tag,
+                {
+                  className:
+                    (className ? className : "") + " gatsby-image-wrapper",
+                  style: (0, _extends2.default)(
+                    {
+                      position: "relative",
+                      overflow: "hidden",
+                      maxWidth: image.maxWidth ? image.maxWidth + "px" : null,
+                      maxHeight: image.maxHeight ? image.maxHeight + "px" : null
+                    },
+                    style
+                  ),
+                  ref: this.handleRef,
+                  key: "fluid-" + JSON.stringify(image.srcSet)
+                },
+                /*#__PURE__*/ _react.default.createElement(Tag, {
+                  "aria-hidden": true,
+                  style: {
+                    width: "100%",
+                    paddingBottom: 100 / image.aspectRatio + "%"
+                  }
+                }),
+                bgColor &&
+                  /*#__PURE__*/ _react.default.createElement(Tag, {
+                    "aria-hidden": true,
+                    title: title,
+                    style: (0, _extends2.default)(
+                      {
+                        backgroundColor: bgColor,
+                        position: "absolute",
+                        top: 0,
+                        bottom: 0,
+                        opacity: !this.state.imgLoaded ? 1 : 0,
+                        right: 0,
+                        left: 0
+                      },
+                      shouldFadeIn && delayHideStyle
+                    )
+                  }),
+                image.base64 &&
+                  /*#__PURE__*/ _react.default.createElement(Placeholder, {
+                    ariaHidden: true,
+                    ref: this.placeholderRef,
+                    src: image.base64,
+                    spreadProps: placeholderImageProps,
+                    imageVariants: imageVariants,
+                    generateSources: generateBase64Sources
+                  }),
+                image.tracedSVG &&
+                  /*#__PURE__*/ _react.default.createElement(Placeholder, {
+                    ariaHidden: true,
+                    ref: this.placeholderRef,
+                    src: image.tracedSVG,
+                    spreadProps: placeholderImageProps,
+                    imageVariants: imageVariants,
+                    generateSources: generateTracedSVGSources
+                  }),
+                this.state.isVisible &&
+                  /*#__PURE__*/ _react.default.createElement(
+                    "picture",
+                    null,
+                    generateImageSources(imageVariants),
+                    /*#__PURE__*/ _react.default.createElement(Img, {
+                      alt: alt,
+                      title: title,
+                      sizes: image.sizes,
+                      src: image.src,
+                      crossOrigin: this.props.crossOrigin,
+                      srcSet: image.srcSet,
+                      style: imageStyle,
+                      ref: this.imageRef,
+                      onLoad: this.handleImageLoaded,
+                      onError: this.props.onError,
+                      itemProp: itemProp,
+                      loading: loading,
+                      draggable: draggable
+                    })
+                  ),
+                this.addNoScript &&
+                  /*#__PURE__*/ _react.default.createElement("noscript", {
+                    dangerouslySetInnerHTML: {
+                      __html: noscriptImg(
+                        (0, _extends2.default)(
+                          {
+                            alt: alt,
+                            title: title,
+                            loading: loading
+                          },
+                          image,
+                          {
+                            imageVariants: imageVariants
+                          }
+                        )
+                      )
+                    }
+                  })
+              );
+            }
+
+            if (fixed) {
+              var divStyle = (0, _extends2.default)(
+                {
+                  position: "relative",
+                  overflow: "hidden",
+                  display: "inline-block",
+                  width: image.width,
+                  height: image.height
+                },
+                style
+              );
+
+              if (style.display === "inherit") {
+                delete divStyle.display;
+              }
+
+              return /*#__PURE__*/ _react.default.createElement(
+                Tag,
+                {
+                  className:
+                    (className ? className : "") + " gatsby-image-wrapper",
+                  style: divStyle,
+                  ref: this.handleRef,
+                  key: "fixed-" + JSON.stringify(image.srcSet)
+                },
+                bgColor &&
+                  /*#__PURE__*/ _react.default.createElement(Tag, {
+                    "aria-hidden": true,
+                    title: title,
+                    style: (0, _extends2.default)(
+                      {
+                        backgroundColor: bgColor,
+                        width: image.width,
+                        opacity: !this.state.imgLoaded ? 1 : 0,
+                        height: image.height
+                      },
+                      shouldFadeIn && delayHideStyle
+                    )
+                  }),
+                image.base64 &&
+                  /*#__PURE__*/ _react.default.createElement(Placeholder, {
+                    ariaHidden: true,
+                    ref: this.placeholderRef,
+                    src: image.base64,
+                    spreadProps: placeholderImageProps,
+                    imageVariants: imageVariants,
+                    generateSources: generateBase64Sources
+                  }),
+                image.tracedSVG &&
+                  /*#__PURE__*/ _react.default.createElement(Placeholder, {
+                    ariaHidden: true,
+                    ref: this.placeholderRef,
+                    src: image.tracedSVG,
+                    spreadProps: placeholderImageProps,
+                    imageVariants: imageVariants,
+                    generateSources: generateTracedSVGSources
+                  }),
+                this.state.isVisible &&
+                  /*#__PURE__*/ _react.default.createElement(
+                    "picture",
+                    null,
+                    generateImageSources(imageVariants),
+                    /*#__PURE__*/ _react.default.createElement(Img, {
+                      alt: alt,
+                      title: title,
+                      width: image.width,
+                      height: image.height,
+                      sizes: image.sizes,
+                      src: image.src,
+                      crossOrigin: this.props.crossOrigin,
+                      srcSet: image.srcSet,
+                      style: imageStyle,
+                      ref: this.imageRef,
+                      onLoad: this.handleImageLoaded,
+                      onError: this.props.onError,
+                      itemProp: itemProp,
+                      loading: loading,
+                      draggable: draggable
+                    })
+                  ),
+                this.addNoScript &&
+                  /*#__PURE__*/ _react.default.createElement("noscript", {
+                    dangerouslySetInnerHTML: {
+                      __html: noscriptImg(
+                        (0, _extends2.default)(
+                          {
+                            alt: alt,
+                            title: title,
+                            loading: loading
+                          },
+                          image,
+                          {
+                            imageVariants: imageVariants
+                          }
+                        )
+                      )
+                    }
+                  })
+              );
+            }
+
+            return null;
+          };
+
+          return Image;
+        })(_react.default.Component);
+
+        Image.defaultProps = {
+          fadeIn: true,
+          durationFadeIn: 500,
+          alt: "",
+          Tag: "div",
+          // We set it to `lazy` by default because it's best to default to a performant
+          // setting and let the user "opt out" to `eager`
+          loading: "lazy"
+        };
+
+        var fixedObject = _propTypes.default.shape({
+          width: _propTypes.default.number.isRequired,
+          height: _propTypes.default.number.isRequired,
+          src: _propTypes.default.string.isRequired,
+          srcSet: _propTypes.default.string.isRequired,
+          base64: _propTypes.default.string,
+          tracedSVG: _propTypes.default.string,
+          srcWebp: _propTypes.default.string,
+          srcSetWebp: _propTypes.default.string,
+          media: _propTypes.default.string
+        });
+
+        var fluidObject = _propTypes.default.shape({
+          aspectRatio: _propTypes.default.number.isRequired,
+          src: _propTypes.default.string.isRequired,
+          srcSet: _propTypes.default.string.isRequired,
+          sizes: _propTypes.default.string.isRequired,
+          base64: _propTypes.default.string,
+          tracedSVG: _propTypes.default.string,
+          srcWebp: _propTypes.default.string,
+          srcSetWebp: _propTypes.default.string,
+          media: _propTypes.default.string,
+          maxWidth: _propTypes.default.number,
+          maxHeight: _propTypes.default.number
+        });
+
+        function requireFixedOrFluid(originalPropTypes) {
+          return function(props, propName, componentName) {
+            var _PropTypes$checkPropT;
+
+            if (!props.fixed && !props.fluid) {
+              throw new Error(
+                "The prop `fluid` or `fixed` is marked as required in `" +
+                  componentName +
+                  "`, but their values are both `undefined`."
+              );
+            }
+
+            _propTypes.default.checkPropTypes(
+              ((_PropTypes$checkPropT = {}),
+              (_PropTypes$checkPropT[propName] = originalPropTypes),
+              _PropTypes$checkPropT),
+              props,
+              "prop",
+              componentName
+            );
+          };
+        } // If you modify these propTypes, please don't forget to update following files as well:
+        // https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-image/index.d.ts
+        // https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-image/README.md#gatsby-image-props
+        // https://github.com/gatsbyjs/gatsby/blob/master/docs/docs/gatsby-image.md#gatsby-image-props
+
+        Image.propTypes = {
+          resolutions: fixedObject,
+          sizes: fluidObject,
+          fixed: requireFixedOrFluid(
+            _propTypes.default.oneOfType([
+              fixedObject,
+              _propTypes.default.arrayOf(fixedObject)
+            ])
+          ),
+          fluid: requireFixedOrFluid(
+            _propTypes.default.oneOfType([
+              fluidObject,
+              _propTypes.default.arrayOf(fluidObject)
+            ])
+          ),
+          fadeIn: _propTypes.default.bool,
+          durationFadeIn: _propTypes.default.number,
+          title: _propTypes.default.string,
+          alt: _propTypes.default.string,
+          className: _propTypes.default.oneOfType([
+            _propTypes.default.string,
+            _propTypes.default.object
+          ]),
+          // Support Glamor's css prop.
+          critical: _propTypes.default.bool,
+          crossOrigin: _propTypes.default.oneOfType([
+            _propTypes.default.string,
+            _propTypes.default.bool
+          ]),
+          style: _propTypes.default.object,
+          imgStyle: _propTypes.default.object,
+          placeholderStyle: _propTypes.default.object,
+          placeholderClassName: _propTypes.default.string,
+          backgroundColor: _propTypes.default.oneOfType([
+            _propTypes.default.string,
+            _propTypes.default.bool
+          ]),
+          onLoad: _propTypes.default.func,
+          onError: _propTypes.default.func,
+          onStartLoad: _propTypes.default.func,
+          Tag: _propTypes.default.string,
+          itemProp: _propTypes.default.string,
+          loading: _propTypes.default.oneOf(["auto", "lazy", "eager"]),
+          draggable: _propTypes.default.bool
+        };
+        var _default = Image;
+        exports.default = _default;
+
+        /***/
+      },
+
     /***/ "./node_modules/gatsby-plugin-feed/gatsby-ssr.js":
       /*!*******************************************************!*\
   !*** ./node_modules/gatsby-plugin-feed/gatsby-ssr.js ***!
@@ -5997,6 +7005,187 @@ useStaticQuery(graphql\`${query}\`);
 
         /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = NotFoundPage;
         const pageQuery = "3159585216";
+
+        /***/
+      },
+
+    /***/ "./src/pages/about.js":
+      /*!****************************!*\
+  !*** ./src/pages/about.js ***!
+  \****************************/
+      /***/ (
+        __unused_webpack_module,
+        __webpack_exports__,
+        __webpack_require__
+      ) => {
+        "use strict";
+        __webpack_require__.r(__webpack_exports__);
+        /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+          /* harmony export */ default: () => __WEBPACK_DEFAULT_EXPORT__
+          /* harmony export */
+        });
+        /* harmony import */ var _public_page_data_sq_d_4063793609_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+          /*! ../../public/page-data/sq/d/4063793609.json */ "./public/page-data/sq/d/4063793609.json"
+        );
+        /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+          /*! react */ "react"
+        );
+        /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/ __webpack_require__.n(
+          react__WEBPACK_IMPORTED_MODULE_1__
+        );
+        /* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+          /*! gatsby */ "./.cache/gatsby-browser-entry.js"
+        );
+        /* harmony import */ var gatsby_image__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+          /*! gatsby-image */ "./node_modules/gatsby-image/index.js"
+        );
+        /* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+          /*! ../components/layout */ "./src/components/layout.js"
+        );
+        /* harmony import */ var _components_seo__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+          /*! ../components/seo */ "./src/components/seo.js"
+        );
+        /* harmony import */ var _utils_normalize_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+          /*! ../utils/normalize.css */ "./src/utils/normalize.css"
+        );
+        /* harmony import */ var _utils_normalize_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/ __webpack_require__.n(
+          _utils_normalize_css__WEBPACK_IMPORTED_MODULE_6__
+        );
+        /* harmony import */ var _utils_css_screen_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+          /*! ../utils/css/screen.css */ "./src/utils/css/screen.css"
+        );
+        /* harmony import */ var _utils_css_screen_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/ __webpack_require__.n(
+          _utils_css_screen_css__WEBPACK_IMPORTED_MODULE_7__
+        );
+
+        const AboutPage = ({ data }, location) => {
+          const siteTitle = data.site.siteMetadata.title;
+          return /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default().createElement(
+            _components_layout__WEBPACK_IMPORTED_MODULE_4__.default,
+            {
+              title: siteTitle
+            },
+            /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default().createElement(
+              _components_seo__WEBPACK_IMPORTED_MODULE_5__.default,
+              {
+                title: "About",
+                keywords: [`blog`, `gatsby`, `javascript`, `react`]
+              }
+            ),
+            /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default().createElement(
+              "article",
+              {
+                className: "post-content page-template no-image"
+              },
+              /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default().createElement(
+                "div",
+                {
+                  className: "post-content-body"
+                },
+                /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default().createElement(
+                  "h2",
+                  {
+                    id:
+                      "clean-minimal-and-deeply-customisable-london-is-a-theme-made-for-people-who-appreciate-simple-lines-"
+                  },
+                  /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default().createElement(
+                    "strong",
+                    null,
+                    "Hello!"
+                  ),
+                  " Welcome to the design & development portfolio of ",
+                  /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default().createElement(
+                    "strong",
+                    null,
+                    "Ruben Matamoros"
+                  ),
+                  ". I am a highly motivated Graphic & Web Design professional with 10 plus years experience, now a Full-Stack Software Engineer with a focus on Front End Web Development."
+                ),
+                /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default().createElement(
+                  "figure",
+                  {
+                    className: "kg-card kg-image-card kg-width-full"
+                  },
+                  /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default().createElement(
+                    gatsby_image__WEBPACK_IMPORTED_MODULE_3__.default,
+                    {
+                      fluid: data.benchAccounting.childImageSharp.fluid,
+                      className: "kg-image"
+                    }
+                  ),
+                  /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default().createElement(
+                    "figcaption",
+                    null,
+                    "Ruben Matamoros of Valiant Creative"
+                  )
+                ),
+                /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default().createElement(
+                  "h3",
+                  {
+                    id: "dynamic-styles"
+                  },
+                  "A Little About Me"
+                ),
+                /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default().createElement(
+                  "p",
+                  null,
+                  "London comes with photo-centric main layout best suited to photography, graphics portfolios and other image-heavy uses."
+                ),
+                /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default().createElement(
+                  "p",
+                  null,
+                  "Both post and page templates are light and minimal, with all the focus on the content while the design of the theme gets out of the way. Beneath the hood, London enjoys the full power of the",
+                  " ",
+                  /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default().createElement(
+                    "a",
+                    {
+                      href: "https://docs.ghost.org/api/handlebars-themes/"
+                    },
+                    "Ghost Handlebars Theme API"
+                  ),
+                  " ",
+                  "to provide limitless customisation options and dynamic styles."
+                ),
+                /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default().createElement(
+                  "p",
+                  null,
+                  "Don't forget to check out the",
+                  " ",
+                  /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default().createElement(
+                    "a",
+                    {
+                      href: "https://docs.ghost.org/integrations/"
+                    },
+                    "Ghost Integrations Directory"
+                  ),
+                  " ",
+                  "for more ways to integrate Ghost with your favourite services."
+                )
+              )
+            )
+          );
+        };
+
+        const indexQuery = "4063793609";
+        /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = props =>
+          /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default().createElement(
+            gatsby__WEBPACK_IMPORTED_MODULE_2__.StaticQuery,
+            {
+              query: indexQuery,
+              render: data =>
+                /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default().createElement(
+                  AboutPage,
+                  Object.assign(
+                    {
+                      location: props.location,
+                      data: data
+                    },
+                    props
+                  )
+                ),
+              data: _public_page_data_sq_d_4063793609_json__WEBPACK_IMPORTED_MODULE_0__
+            }
+          );
 
         /***/
       },
@@ -18896,7 +20085,20 @@ object-assign
       /***/ module => {
         "use strict";
         module.exports = JSON.parse(
-          '{"data":{"site":{"siteMetadata":{"title":"Valiant Creative","description":"A highly motivated Graphic & Web Design professional with 10 plus years experience, now focusing on Front End Web Development."}},"allMarkdownRemark":{"edges":[{"node":{"excerpt":"A Full Stack Web Development group project created during my coding Boot Camp at the University of Central Florida. Are you stumped with the…","fields":{"slug":"/darkness/"},"frontmatter":{"date":"May 08, 2019","title":"What\'s for Dinner?","description":"A Full Stack Web Development Application","thumbnail":{"childImageSharp":{"fluid":{"base64":"data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMFBP/EABUBAQEAAAAAAAAAAAAAAAAAAAME/9oADAMBAAIQAxAAAAGzlkuQWDB5v//EABkQAQADAQEAAAAAAAAAAAAAAAIAAxEBIf/aAAgBAQABBQIo4/K4qDBWeTJ//8QAFxEAAwEAAAAAAAAAAAAAAAAAAAERA//aAAgBAwEBPwF6qFP/xAAXEQADAQAAAAAAAAAAAAAAAAAAAREC/9oACAECAQE/AVh0h//EABkQAAIDAQAAAAAAAAAAAAAAAAABECExgf/aAAgBAQAGPwJWh5xxRkf/xAAbEAACAgMBAAAAAAAAAAAAAAAAEQEhQVFhgf/aAAgBAQABPyHkLY8NrSsyQU5pvpbQnoh//9oADAMBAAIAAwAAABA3H//EABYRAQEBAAAAAAAAAAAAAAAAABEAQf/aAAgBAwEBPxBM2N//xAAWEQEBAQAAAAAAAAAAAAAAAAAAETH/2gAIAQIBAT8Q1FP/xAAcEAEAAwACAwAAAAAAAAAAAAABABEhMUFx0eH/2gAIAQEAAT8Qs1CDrueYGqXowQmo5Sk4O/EoL4417hD/2Q==","aspectRatio":1.5044247787610618,"src":"/static/37a41b918f0b657d81811de4de7a6647/ac53a/bbbb.jpg","srcSet":"/static/37a41b918f0b657d81811de4de7a6647/722c4/bbbb.jpg 340w,\\n/static/37a41b918f0b657d81811de4de7a6647/1d671/bbbb.jpg 680w,\\n/static/37a41b918f0b657d81811de4de7a6647/ac53a/bbbb.jpg 1360w,\\n/static/37a41b918f0b657d81811de4de7a6647/5bc4f/bbbb.jpg 1851w","sizes":"(max-width: 1360px) 100vw, 1360px"}}}}}},{"node":{"excerpt":"Picasso had his pink period and his blue period. I am in my blonde period right now. When I first started wearing pink, it wasn’t nothing I…","fields":{"slug":"/dont-stop/"},"frontmatter":{"date":"May 07, 2019","title":"FITTER","description":"Pink is my favourite colour. I used to say my favourite colour was black to be cool, but it is pink - all shades of pink. If I have an accessory, it is probably pink.","thumbnail":{"childImageSharp":{"fluid":{"base64":"data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABQABA//EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAFDRukjUTH/xAAZEAEBAAMBAAAAAAAAAAAAAAACAAESEzH/2gAIAQEAAQUCKmrHhat1dFf/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAZEAACAwEAAAAAAAAAAAAAAAAAMRBBYYH/2gAIAQEABj8CwvkMYz//xAAaEAEAAwADAAAAAAAAAAAAAAABABExEEFx/9oACAEBAAE/IbXKhygRbKoedwGOBPB//9oADAMBAAIAAwAAABC/P//EABURAQEAAAAAAAAAAAAAAAAAABAh/9oACAEDAQE/EKf/xAAVEQEBAAAAAAAAAAAAAAAAAAAAIf/aAAgBAgEBPxCq/8QAGxABAQACAwEAAAAAAAAAAAAAAREAITFRYXH/2gAIAQEAAT8Q3EDqu1cL00UCybXo+buTa8DnV++4Rq1vNw42veESOemf/9k=","aspectRatio":1.5044247787610618,"src":"/static/54575802beacf608dd75d6b1adcc073d/ac53a/fitter-featured-image.jpg","srcSet":"/static/54575802beacf608dd75d6b1adcc073d/722c4/fitter-featured-image.jpg 340w,\\n/static/54575802beacf608dd75d6b1adcc073d/1d671/fitter-featured-image.jpg 680w,\\n/static/54575802beacf608dd75d6b1adcc073d/ac53a/fitter-featured-image.jpg 1360w,\\n/static/54575802beacf608dd75d6b1adcc073d/5bc4f/fitter-featured-image.jpg 1851w","sizes":"(max-width: 1360px) 100vw, 1360px"}}}}}},{"node":{"excerpt":"","fields":{"slug":"/its-all-blue/"},"frontmatter":{"date":"May 06, 2019","title":"VendXOR White Paper Lite","description":"VendXOR of Priatek","thumbnail":{"childImageSharp":{"fluid":{"base64":"data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAIDBP/EABUBAQEAAAAAAAAAAAAAAAAAAAIB/9oADAMBAAIQAxAAAAFpPQpSTH//xAAcEAEAAQQDAAAAAAAAAAAAAAABAwACBBExMjP/2gAIAQEAAQUCNSNsqLzk9Tzr/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGxABAAICAwAAAAAAAAAAAAAAAQARAxASIUH/2gAIAQEABj8C7Kqcco14miGv/8QAGhABAAIDAQAAAAAAAAAAAAAAAQAREDFRIf/aAAgBAQABPyEDaOtwKgvIgCBs7CDHajQzWsf/2gAMAwEAAgADAAAAEFD/AP/EABURAQEAAAAAAAAAAAAAAAAAAAEQ/9oACAEDAQE/EGf/xAAWEQEBAQAAAAAAAAAAAAAAAAABEDH/2gAIAQIBAT8QDJ//xAAfEAACAQQCAwAAAAAAAAAAAAABEQAhMUFREGGx0eH/2gAIAQEAAT8QCiOrC5uX98wiVkBJfXq8QjjRE4ABHBkahlkw7Jb4/9k=","aspectRatio":1.8279569892473118,"src":"/static/00cf75fcaafb089aa712793e27c88c41/ac53a/vendXOR-feature-image.jpg","srcSet":"/static/00cf75fcaafb089aa712793e27c88c41/722c4/vendXOR-feature-image.jpg 340w,\\n/static/00cf75fcaafb089aa712793e27c88c41/1d671/vendXOR-feature-image.jpg 680w,\\n/static/00cf75fcaafb089aa712793e27c88c41/ac53a/vendXOR-feature-image.jpg 1360w,\\n/static/00cf75fcaafb089aa712793e27c88c41/4f4f6/vendXOR-feature-image.jpg 1700w","sizes":"(max-width: 1360px) 100vw, 1360px"}}}}}},{"node":{"excerpt":"","fields":{"slug":"/clean-lines/"},"frontmatter":{"date":"May 05, 2019","title":"Pull-Up Banner","description":"Carillon Tower Advisors of Raymond James Financial","thumbnail":{"childImageSharp":{"fluid":{"base64":"data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAOABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEAQL/xAAVAQEBAAAAAAAAAAAAAAAAAAADAv/aAAwDAQACEAMQAAABs5ahAvMIX//EABsQAAMAAgMAAAAAAAAAAAAAAAECAxITAAQz/9oACAEBAAEFArM3Ho2iBJjQjF8dHX8f/8QAFhEBAQEAAAAAAAAAAAAAAAAAAQAx/9oACAEDAQE/AUYy/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQACMf/aAAgBAgEBPwE0T2//xAAdEAACAgEFAAAAAAAAAAAAAAAAAQIDERIhMTJC/9oACAEBAAY/Ao4k+pW9T3E2RyvJXyRP/8QAGhABAQEBAAMAAAAAAAAAAAAAAREAITFBUf/aAAgBAQABPyEdAIWODINVuZRV9u+kBr8o7Mjn4m//2gAMAwEAAgADAAAAEJff/8QAGREAAgMBAAAAAAAAAAAAAAAAAAERITFB/9oACAEDAQE/EL7T4ZSf/8QAFhEBAQEAAAAAAAAAAAAAAAAAAQAR/9oACAECAQE/EMJshSX/xAAbEAEBAQEBAAMAAAAAAAAAAAABEQAhMUFRcf/aAAgBAQABPxAPzkBV+cSWUHTLqr2VKvXPsdHHw+s6BNiSncCR6S/rv//Z","aspectRatio":1.4345991561181435,"src":"/static/c63220ce4d39ea6a914aa54032b0968b/c6ea7/Pullup-Banner-CTA-Featured-Image.jpg","srcSet":"/static/c63220ce4d39ea6a914aa54032b0968b/722c4/Pullup-Banner-CTA-Featured-Image.jpg 340w,\\n/static/c63220ce4d39ea6a914aa54032b0968b/1d671/Pullup-Banner-CTA-Featured-Image.jpg 680w,\\n/static/c63220ce4d39ea6a914aa54032b0968b/c6ea7/Pullup-Banner-CTA-Featured-Image.jpg 980w","sizes":"(max-width: 980px) 100vw, 980px"}}}}}},{"node":{"excerpt":"","fields":{"slug":"/all-spikes/"},"frontmatter":{"date":"May 04, 2019","title":"CIFF Shanghai, China Indoor & Outdoor Signage","description":"Ashley Furniture Industries","thumbnail":{"childImageSharp":{"fluid":{"base64":"data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEAv/EABUBAQEAAAAAAAAAAAAAAAAAAAIA/9oADAMBAAIQAxAAAAGR6XlYKxX/xAAZEAACAwEAAAAAAAAAAAAAAAAAAQIDERP/2gAIAQEAAQUCxxFXq4nPCuKxtQP/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAwEBPwGI/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAEh/9oACAECAQE/AU1//8QAGhAAAwEAAwAAAAAAAAAAAAAAAAERMQJBgf/aAAgBAQAGPwJ4zpemotZCLij/xAAcEAEAAwACAwAAAAAAAAAAAAABABEhMUFRgeH/2gAIAQEAAT8hNADMg2nJ3F/pKFOVZ6gBQb8xXMJ//9oADAMBAAIAAwAAABA/3//EABcRAQEBAQAAAAAAAAAAAAAAAAEAESH/2gAIAQMBAT8QGznl/8QAFxEBAQEBAAAAAAAAAAAAAAAAAREAIf/aAAgBAgEBPxC8uCKb/8QAHBABAAMAAgMAAAAAAAAAAAAAAQARIUFRMWGB/9oACAEBAAE/EEzkCqRy8SJOPLZ8MyC2i7zCQXCidHr3EWV+RbfcNGEO3P/Z","aspectRatio":1.497797356828194,"src":"/static/80ae37a8e42789e44df74433a46a1d7a/ac53a/AFI-CIFF-Shanghai-Feature-Image.jpg","srcSet":"/static/80ae37a8e42789e44df74433a46a1d7a/722c4/AFI-CIFF-Shanghai-Feature-Image.jpg 340w,\\n/static/80ae37a8e42789e44df74433a46a1d7a/1d671/AFI-CIFF-Shanghai-Feature-Image.jpg 680w,\\n/static/80ae37a8e42789e44df74433a46a1d7a/ac53a/AFI-CIFF-Shanghai-Feature-Image.jpg 1360w,\\n/static/80ae37a8e42789e44df74433a46a1d7a/6eda9/AFI-CIFF-Shanghai-Feature-Image.jpg 2040w,\\n/static/80ae37a8e42789e44df74433a46a1d7a/69755/AFI-CIFF-Shanghai-Feature-Image.jpg 2048w","sizes":"(max-width: 1360px) 100vw, 1360px"}}}}}},{"node":{"excerpt":"","fields":{"slug":"/green/"},"frontmatter":{"date":"May 03, 2019","title":"Email Teasers for Ashley Furniture Industries","description":"Guangzhou, China\'s International Furniture Fair of 2017","thumbnail":{"childImageSharp":{"fluid":{"base64":"data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAMEAv/EABYBAQEBAAAAAAAAAAAAAAAAAAEAAv/aAAwDAQACEAMQAAABpKmgcDWrnWTcOf/EABwQAAICAgMAAAAAAAAAAAAAAAECAAMEEhQiQv/aAAgBAQABBQJ2paXXAQM81AybTqnIMRtrPNQ6f//EABcRAQADAAAAAAAAAAAAAAAAAAABEBH/2gAIAQMBAT8Bamv/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AR//xAAgEAABAwIHAAAAAAAAAAAAAAABAAIRA0EQEjEyM2Gh/9oACAEBAAY/AhpHaa2mQ4XhcLlJAOYeqVsRBtj/AP/EABwQAQADAAIDAAAAAAAAAAAAAAEAESExQWFxkf/aAAgBAQABPyEQ5HJ1ZQWiCzl9DKILTp0ilSi6yHk/Ygg1koaOkIpXc//aAAwDAQACAAMAAAAQA9gA/8QAGREAAQUAAAAAAAAAAAAAAAAAABARITFB/9oACAEDAQE/EJseYT//xAAYEQACAwAAAAAAAAAAAAAAAAABEQAQMf/aAAgBAgEBPxBjIhf/xAAdEAEAAgMAAwEAAAAAAAAAAAABABEhMUFxgZGh/9oACAEBAAE/EAZxJXoZqOyC08MS6+RS/SDXHsLVib1YPyBLQBVTzUeWC3S1xBsMVZ4y7wGhzD4wFV87P//Z","aspectRatio":1.0059171597633136,"src":"/static/76510f5e7100118a8bdd0e099911273f/c6ea7/AFI_Guangzhou_Featured_Image.jpg","srcSet":"/static/76510f5e7100118a8bdd0e099911273f/722c4/AFI_Guangzhou_Featured_Image.jpg 340w,\\n/static/76510f5e7100118a8bdd0e099911273f/1d671/AFI_Guangzhou_Featured_Image.jpg 680w,\\n/static/76510f5e7100118a8bdd0e099911273f/c6ea7/AFI_Guangzhou_Featured_Image.jpg 980w","sizes":"(max-width: 980px) 100vw, 980px"}}}}}},{"node":{"excerpt":"","fields":{"slug":"/get-fruity/"},"frontmatter":{"date":"May 02, 2019","title":"AirAsia Magazine Ad","description":"Ashley Furniture HomeStore Asia","thumbnail":{"childImageSharp":{"fluid":{"base64":"data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAOABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIEA//EABYBAQEBAAAAAAAAAAAAAAAAAAMBAv/aAAwDAQACEAMQAAABtM1zaRAX/8QAGhABAAIDAQAAAAAAAAAAAAAAAgERAxMiQv/aAAgBAQABBQJMiNtgTzkJT8XFf//EABURAQEAAAAAAAAAAAAAAAAAAAAS/9oACAEDAQE/AUv/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEv/aAAgBAgEBPwFT/8QAHBAAAgICAwAAAAAAAAAAAAAAAAECESExUWGB/9oACAEBAAY/AuyTXgrM8EktUI//xAAaEAADAQEBAQAAAAAAAAAAAAAAAREhMVFh/9oACAEBAAE/Idw1Ks9IwAZZq4ICufBEuIQSM3w//9oADAMBAAIAAwAAABCbD//EABYRAQEBAAAAAAAAAAAAAAAAAAERAP/aAAgBAwEBPxAmQtm//8QAFhEBAQEAAAAAAAAAAAAAAAAAAREA/9oACAECAQE/EG4QS7//xAAbEAEBAAMAAwAAAAAAAAAAAAABEQAhMUHB0f/aAAgBAQABPxCOhFXhvzDbJLAaHmKcJSuXdA0A+de8lvZF04JQ145//9k=","aspectRatio":1.3934426229508197,"src":"/static/18d07d2cc310321db86d7bfc1f74f3bd/c6ea7/AFHS_AirAsia_Featured_Image.jpg","srcSet":"/static/18d07d2cc310321db86d7bfc1f74f3bd/722c4/AFHS_AirAsia_Featured_Image.jpg 340w,\\n/static/18d07d2cc310321db86d7bfc1f74f3bd/1d671/AFHS_AirAsia_Featured_Image.jpg 680w,\\n/static/18d07d2cc310321db86d7bfc1f74f3bd/c6ea7/AFHS_AirAsia_Featured_Image.jpg 980w","sizes":"(max-width: 980px) 100vw, 980px"}}}}}},{"node":{"excerpt":"","fields":{"slug":"/fur/"},"frontmatter":{"date":"May 01, 2019","title":"Billboard Design for Ufa, Russia","description":"Ashley Furniture HomeStore Ufa, Russia","thumbnail":{"childImageSharp":{"fluid":{"base64":"data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwUA/8QAFgEBAQEAAAAAAAAAAAAAAAAAAwEC/9oADAMBAAIQAxAAAAFFiqSWtC2L/8QAGRABAQADAQAAAAAAAAAAAAAAAgEAEBIT/9oACAEBAAEFAoq1089TjvNrWv/EABYRAQEBAAAAAAAAAAAAAAAAAAABEf/aAAgBAwEBPwGNj//EABYRAQEBAAAAAAAAAAAAAAAAAAACE//aAAgBAgEBPwGpYv/EABoQAAICAwAAAAAAAAAAAAAAAAABESEQEjL/2gAIAQEABj8C2Tg6LFArx//EABkQAAMBAQEAAAAAAAAAAAAAAAABESEx4f/aAAgBAQABPyHHesIeUTlbNGWZSBr4Nu9P/9oADAMBAAIAAwAAABB8H//EABcRAAMBAAAAAAAAAAAAAAAAAAABIWH/2gAIAQMBAT8Qt0xP/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAEhEf/aAAgBAgEBPxBOQqtn/8QAHBABAAMAAgMAAAAAAAAAAAAAAQARITFBUZHR/9oACAEBAAE/EFaD0FHOVqoGAsvj5SoM46ay6rmahNgluPSr3P/Z","aspectRatio":1.780104712041885,"src":"/static/078ce80536f176506dd187416ded56f2/ac53a/Billboard-Design-Ufa-Russia-Feature-Image.jpg","srcSet":"/static/078ce80536f176506dd187416ded56f2/722c4/Billboard-Design-Ufa-Russia-Feature-Image.jpg 340w,\\n/static/078ce80536f176506dd187416ded56f2/1d671/Billboard-Design-Ufa-Russia-Feature-Image.jpg 680w,\\n/static/078ce80536f176506dd187416ded56f2/ac53a/Billboard-Design-Ufa-Russia-Feature-Image.jpg 1360w,\\n/static/078ce80536f176506dd187416ded56f2/d8255/Billboard-Design-Ufa-Russia-Feature-Image.jpg 1920w","sizes":"(max-width: 1360px) 100vw, 1360px"}}}}}},{"node":{"excerpt":"Far far away, behind the word mountains, far from the countries Vokalia and\\nConsonantia, there live the blind texts. Separated they live in…","fields":{"slug":"/hi-folks/"},"frontmatter":{"date":"May 28, 2015","title":"2fitfitness Web Design","description":"UI/UX Design for a father & son fitness website","thumbnail":{"childImageSharp":{"fluid":{"base64":"data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAIABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAIF/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEAMQAAABqA2gf//EABkQAAMAAwAAAAAAAAAAAAAAAAECAxESE//aAAgBAQABBQLtEqaJrI5l/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGBAAAwEBAAAAAAAAAAAAAAAAAAIhAWH/2gAIAQEABj8CrEE3h//EABkQAQACAwAAAAAAAAAAAAAAAAEAESFBYf/aAAgBAQABPyFKQa1ApVWYnfDP/9oADAMBAAIAAwAAABD3z//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8QP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8QP//EABwQAQACAQUAAAAAAAAAAAAAAAEAESExUWFxof/aAAgBAQABPxACZRq5vqNBCIEVvSw5hb6PJ//Z","aspectRatio":2.463768115942029,"src":"/static/9aff55be76b75ce1670cb1202b68eff0/ac53a/2fitfitness-feature-image.jpg","srcSet":"/static/9aff55be76b75ce1670cb1202b68eff0/722c4/2fitfitness-feature-image.jpg 340w,\\n/static/9aff55be76b75ce1670cb1202b68eff0/1d671/2fitfitness-feature-image.jpg 680w,\\n/static/9aff55be76b75ce1670cb1202b68eff0/ac53a/2fitfitness-feature-image.jpg 1360w,\\n/static/9aff55be76b75ce1670cb1202b68eff0/aee6f/2fitfitness-feature-image.jpg 1452w","sizes":"(max-width: 1360px) 100vw, 1360px"}}}}}},{"node":{"excerpt":"Wow! I love blogging so much already. Did you know that “despite its name, salted duck eggs can also be made from\\nchicken eggs, though the…","fields":{"slug":"/my-second-post/"},"frontmatter":{"date":"May 06, 2015","title":"My Second Post!","description":null,"thumbnail":null}}},{"node":{"excerpt":"This is my first post on my new fake blog! How exciting! I’m sure I’ll write a lot more interesting things in the future. Oh, and here’s a…","fields":{"slug":"/hello-world/"},"frontmatter":{"date":"May 01, 2015","title":"Hello World","description":null,"thumbnail":{"childImageSharp":{"fluid":{"base64":"data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAMB/8QAFwEAAwEAAAAAAAAAAAAAAAAAAAEEBf/aAAwDAQACEAMQAAABgik0dWC//8QAGRABAAMBAQAAAAAAAAAAAAAAAQACERJC/9oACAEBAAEFAkqW7B5Zovtvk//EABcRAQADAAAAAAAAAAAAAAAAAAAREkH/2gAIAQMBAT8B1WX/xAAWEQEBAQAAAAAAAAAAAAAAAAAAESL/2gAIAQIBAT8BjT//xAAbEAABBAMAAAAAAAAAAAAAAAAAAQIRISIxMv/aAAgBAQAGPwK9GNocyS8hCj//xAAaEAADAQEBAQAAAAAAAAAAAAAAAREhQYGx/9oACAEBAAE/IXOrA43oOyg9wgU86OZMfwZKypT/2gAMAwEAAgADAAAAEMjv/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQARIf/aAAgBAwEBPxARwyusv//EABcRAQEBAQAAAAAAAAAAAAAAAAEAIVH/2gAIAQIBAT8QOoVoX//EAB0QAQEAAgIDAQAAAAAAAAAAAAERADFhgSFB0eH/2gAIAQEAAT8QSpwaGjrBSrtHyF9iY8RpUnGRBGqtOcsiDE6fM3AgiXf5M//Z","aspectRatio":1.3333333333333333,"src":"/static/8058f3f26913fea3b6a89a73344fe94a/ac53a/salty_egg.jpg","srcSet":"/static/8058f3f26913fea3b6a89a73344fe94a/722c4/salty_egg.jpg 340w,\\n/static/8058f3f26913fea3b6a89a73344fe94a/1d671/salty_egg.jpg 680w,\\n/static/8058f3f26913fea3b6a89a73344fe94a/ac53a/salty_egg.jpg 1360w,\\n/static/8058f3f26913fea3b6a89a73344fe94a/6eda9/salty_egg.jpg 2040w,\\n/static/8058f3f26913fea3b6a89a73344fe94a/69755/salty_egg.jpg 2048w","sizes":"(max-width: 1360px) 100vw, 1360px"}}}}}}]}}}'
+          '{"data":{"site":{"siteMetadata":{"title":"Valiant Creative","description":"A highly motivated Graphic & Web Design professional with 10 plus years experience, now focusing on Front End Web Development."}},"allMarkdownRemark":{"edges":[{"node":{"excerpt":"A Full Stack Web Development group project created during my coding Boot Camp at the University of Central Florida. Are you stumped with the…","fields":{"slug":"/darkness/"},"frontmatter":{"date":"May 08, 2019","title":"What\'s for Dinner?","description":"A Full Stack Web Development Application","thumbnail":{"childImageSharp":{"fluid":{"base64":"data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMFBP/EABUBAQEAAAAAAAAAAAAAAAAAAAME/9oADAMBAAIQAxAAAAGzlkuQWDB5v//EABkQAQADAQEAAAAAAAAAAAAAAAIAAxEBIf/aAAgBAQABBQIo4/K4qDBWeTJ//8QAFxEAAwEAAAAAAAAAAAAAAAAAAAERA//aAAgBAwEBPwF6qFP/xAAXEQADAQAAAAAAAAAAAAAAAAAAAREC/9oACAECAQE/AVh0h//EABkQAAIDAQAAAAAAAAAAAAAAAAABECExgf/aAAgBAQAGPwJWh5xxRkf/xAAbEAACAgMBAAAAAAAAAAAAAAAAEQEhQVFhgf/aAAgBAQABPyHkLY8NrSsyQU5pvpbQnoh//9oADAMBAAIAAwAAABA3H//EABYRAQEBAAAAAAAAAAAAAAAAABEAQf/aAAgBAwEBPxBM2N//xAAWEQEBAQAAAAAAAAAAAAAAAAAAETH/2gAIAQIBAT8Q1FP/xAAcEAEAAwACAwAAAAAAAAAAAAABABEhMUFx0eH/2gAIAQEAAT8Qs1CDrueYGqXowQmo5Sk4O/EoL4417hD/2Q==","aspectRatio":1.5044247787610618,"src":"/static/37a41b918f0b657d81811de4de7a6647/ac53a/bbbb.jpg","srcSet":"/static/37a41b918f0b657d81811de4de7a6647/722c4/bbbb.jpg 340w,\\n/static/37a41b918f0b657d81811de4de7a6647/1d671/bbbb.jpg 680w,\\n/static/37a41b918f0b657d81811de4de7a6647/ac53a/bbbb.jpg 1360w,\\n/static/37a41b918f0b657d81811de4de7a6647/5bc4f/bbbb.jpg 1851w","sizes":"(max-width: 1360px) 100vw, 1360px"}}}}}},{"node":{"excerpt":"Picasso had his pink period and his blue period. I am in my blonde period right now. When I first started wearing pink, it wasn’t nothing I…","fields":{"slug":"/dont-stop/"},"frontmatter":{"date":"May 07, 2019","title":"FITTER","description":"Pink is my favourite colour. I used to say my favourite colour was black to be cool, but it is pink - all shades of pink. If I have an accessory, it is probably pink.","thumbnail":{"childImageSharp":{"fluid":{"base64":"data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABQABA//EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAFDRukjUTH/xAAZEAEBAAMBAAAAAAAAAAAAAAACAAESEzH/2gAIAQEAAQUCKmrHhat1dFf/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAZEAACAwEAAAAAAAAAAAAAAAAAMRBBYYH/2gAIAQEABj8CwvkMYz//xAAaEAEAAwADAAAAAAAAAAAAAAABABExEEFx/9oACAEBAAE/IbXKhygRbKoedwGOBPB//9oADAMBAAIAAwAAABC/P//EABURAQEAAAAAAAAAAAAAAAAAABAh/9oACAEDAQE/EKf/xAAVEQEBAAAAAAAAAAAAAAAAAAAAIf/aAAgBAgEBPxCq/8QAGxABAQACAwEAAAAAAAAAAAAAAREAITFRYXH/2gAIAQEAAT8Q3EDqu1cL00UCybXo+buTa8DnV++4Rq1vNw42veESOemf/9k=","aspectRatio":1.5044247787610618,"src":"/static/54575802beacf608dd75d6b1adcc073d/ac53a/fitter-featured-image.jpg","srcSet":"/static/54575802beacf608dd75d6b1adcc073d/722c4/fitter-featured-image.jpg 340w,\\n/static/54575802beacf608dd75d6b1adcc073d/1d671/fitter-featured-image.jpg 680w,\\n/static/54575802beacf608dd75d6b1adcc073d/ac53a/fitter-featured-image.jpg 1360w,\\n/static/54575802beacf608dd75d6b1adcc073d/5bc4f/fitter-featured-image.jpg 1851w","sizes":"(max-width: 1360px) 100vw, 1360px"}}}}}},{"node":{"excerpt":"","fields":{"slug":"/its-all-blue/"},"frontmatter":{"date":"May 06, 2019","title":"VendXOR White Paper Lite","description":"VendXOR of Priatek","thumbnail":{"childImageSharp":{"fluid":{"base64":"data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAIDBP/EABUBAQEAAAAAAAAAAAAAAAAAAAIB/9oADAMBAAIQAxAAAAFpPQpSTH//xAAcEAEAAQQDAAAAAAAAAAAAAAABAwACBBExMjP/2gAIAQEAAQUCNSNsqLzk9Tzr/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGxABAAICAwAAAAAAAAAAAAAAAQARAxASIUH/2gAIAQEABj8C7Kqcco14miGv/8QAGhABAAIDAQAAAAAAAAAAAAAAAQAREDFRIf/aAAgBAQABPyEDaOtwKgvIgCBs7CDHajQzWsf/2gAMAwEAAgADAAAAEFD/AP/EABURAQEAAAAAAAAAAAAAAAAAAAEQ/9oACAEDAQE/EGf/xAAWEQEBAQAAAAAAAAAAAAAAAAABEDH/2gAIAQIBAT8QDJ//xAAfEAACAQQCAwAAAAAAAAAAAAABEQAhMUFREGGx0eH/2gAIAQEAAT8QCiOrC5uX98wiVkBJfXq8QjjRE4ABHBkahlkw7Jb4/9k=","aspectRatio":1.8279569892473118,"src":"/static/00cf75fcaafb089aa712793e27c88c41/ac53a/vendXOR-feature-image.jpg","srcSet":"/static/00cf75fcaafb089aa712793e27c88c41/722c4/vendXOR-feature-image.jpg 340w,\\n/static/00cf75fcaafb089aa712793e27c88c41/1d671/vendXOR-feature-image.jpg 680w,\\n/static/00cf75fcaafb089aa712793e27c88c41/ac53a/vendXOR-feature-image.jpg 1360w,\\n/static/00cf75fcaafb089aa712793e27c88c41/4f4f6/vendXOR-feature-image.jpg 1700w","sizes":"(max-width: 1360px) 100vw, 1360px"}}}}}},{"node":{"excerpt":"","fields":{"slug":"/clean-lines/"},"frontmatter":{"date":"May 05, 2019","title":"Pull-Up Banner","description":"Carillon Tower Advisors of Raymond James Financial","thumbnail":{"childImageSharp":{"fluid":{"base64":"data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAOABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEAQL/xAAVAQEBAAAAAAAAAAAAAAAAAAADAv/aAAwDAQACEAMQAAABs5ahAvMIX//EABsQAAMAAgMAAAAAAAAAAAAAAAECAxITAAQz/9oACAEBAAEFArM3Ho2iBJjQjF8dHX8f/8QAFhEBAQEAAAAAAAAAAAAAAAAAAQAx/9oACAEDAQE/AUYy/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQACMf/aAAgBAgEBPwE0T2//xAAdEAACAgEFAAAAAAAAAAAAAAAAAQIDERIhMTJC/9oACAEBAAY/Ao4k+pW9T3E2RyvJXyRP/8QAGhABAQEBAAMAAAAAAAAAAAAAAREAITFBUf/aAAgBAQABPyEdAIWODINVuZRV9u+kBr8o7Mjn4m//2gAMAwEAAgADAAAAEJff/8QAGREAAgMBAAAAAAAAAAAAAAAAAAERITFB/9oACAEDAQE/EL7T4ZSf/8QAFhEBAQEAAAAAAAAAAAAAAAAAAQAR/9oACAECAQE/EMJshSX/xAAbEAEBAQEBAAMAAAAAAAAAAAABEQAhMUFRcf/aAAgBAQABPxAPzkBV+cSWUHTLqr2VKvXPsdHHw+s6BNiSncCR6S/rv//Z","aspectRatio":1.4345991561181435,"src":"/static/c63220ce4d39ea6a914aa54032b0968b/c6ea7/Pullup-Banner-CTA-Featured-Image.jpg","srcSet":"/static/c63220ce4d39ea6a914aa54032b0968b/722c4/Pullup-Banner-CTA-Featured-Image.jpg 340w,\\n/static/c63220ce4d39ea6a914aa54032b0968b/1d671/Pullup-Banner-CTA-Featured-Image.jpg 680w,\\n/static/c63220ce4d39ea6a914aa54032b0968b/c6ea7/Pullup-Banner-CTA-Featured-Image.jpg 980w","sizes":"(max-width: 980px) 100vw, 980px"}}}}}},{"node":{"excerpt":"","fields":{"slug":"/all-spikes/"},"frontmatter":{"date":"May 04, 2019","title":"CIFF Shanghai, China Indoor & Outdoor Signage","description":"Ashley Furniture Industries","thumbnail":{"childImageSharp":{"fluid":{"base64":"data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEAv/EABUBAQEAAAAAAAAAAAAAAAAAAAIA/9oADAMBAAIQAxAAAAGR6XlYKxX/xAAZEAACAwEAAAAAAAAAAAAAAAAAAQIDERP/2gAIAQEAAQUCxxFXq4nPCuKxtQP/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAwEBPwGI/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAEh/9oACAECAQE/AU1//8QAGhAAAwEAAwAAAAAAAAAAAAAAAAERMQJBgf/aAAgBAQAGPwJ4zpemotZCLij/xAAcEAEAAwACAwAAAAAAAAAAAAABABEhMUFRgeH/2gAIAQEAAT8hNADMg2nJ3F/pKFOVZ6gBQb8xXMJ//9oADAMBAAIAAwAAABA/3//EABcRAQEBAQAAAAAAAAAAAAAAAAEAESH/2gAIAQMBAT8QGznl/8QAFxEBAQEBAAAAAAAAAAAAAAAAAREAIf/aAAgBAgEBPxC8uCKb/8QAHBABAAMAAgMAAAAAAAAAAAAAAQARIUFRMWGB/9oACAEBAAE/EEzkCqRy8SJOPLZ8MyC2i7zCQXCidHr3EWV+RbfcNGEO3P/Z","aspectRatio":1.497797356828194,"src":"/static/80ae37a8e42789e44df74433a46a1d7a/ac53a/AFI-CIFF-Shanghai-Feature-Image.jpg","srcSet":"/static/80ae37a8e42789e44df74433a46a1d7a/722c4/AFI-CIFF-Shanghai-Feature-Image.jpg 340w,\\n/static/80ae37a8e42789e44df74433a46a1d7a/1d671/AFI-CIFF-Shanghai-Feature-Image.jpg 680w,\\n/static/80ae37a8e42789e44df74433a46a1d7a/ac53a/AFI-CIFF-Shanghai-Feature-Image.jpg 1360w,\\n/static/80ae37a8e42789e44df74433a46a1d7a/6eda9/AFI-CIFF-Shanghai-Feature-Image.jpg 2040w,\\n/static/80ae37a8e42789e44df74433a46a1d7a/69755/AFI-CIFF-Shanghai-Feature-Image.jpg 2048w","sizes":"(max-width: 1360px) 100vw, 1360px"}}}}}},{"node":{"excerpt":"","fields":{"slug":"/green/"},"frontmatter":{"date":"May 03, 2019","title":"Email Teasers for Ashley Furniture Industries","description":"Guangzhou, China\'s International Furniture Fair of 2017","thumbnail":{"childImageSharp":{"fluid":{"base64":"data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAMEAv/EABYBAQEBAAAAAAAAAAAAAAAAAAEAAv/aAAwDAQACEAMQAAABpKmgcDWrnWTcOf/EABwQAAICAgMAAAAAAAAAAAAAAAECAAMEEhQiQv/aAAgBAQABBQJ2paXXAQM81AybTqnIMRtrPNQ6f//EABcRAQADAAAAAAAAAAAAAAAAAAABEBH/2gAIAQMBAT8Bamv/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AR//xAAgEAABAwIHAAAAAAAAAAAAAAABAAIRA0EQEjEyM2Gh/9oACAEBAAY/AhpHaa2mQ4XhcLlJAOYeqVsRBtj/AP/EABwQAQADAAIDAAAAAAAAAAAAAAEAESExQWFxkf/aAAgBAQABPyEQ5HJ1ZQWiCzl9DKILTp0ilSi6yHk/Ygg1koaOkIpXc//aAAwDAQACAAMAAAAQA9gA/8QAGREAAQUAAAAAAAAAAAAAAAAAABARITFB/9oACAEDAQE/EJseYT//xAAYEQACAwAAAAAAAAAAAAAAAAABEQAQMf/aAAgBAgEBPxBjIhf/xAAdEAEAAgMAAwEAAAAAAAAAAAABABEhMUFxgZGh/9oACAEBAAE/EAZxJXoZqOyC08MS6+RS/SDXHsLVib1YPyBLQBVTzUeWC3S1xBsMVZ4y7wGhzD4wFV87P//Z","aspectRatio":1.0059171597633136,"src":"/static/76510f5e7100118a8bdd0e099911273f/c6ea7/AFI_Guangzhou_Featured_Image.jpg","srcSet":"/static/76510f5e7100118a8bdd0e099911273f/722c4/AFI_Guangzhou_Featured_Image.jpg 340w,\\n/static/76510f5e7100118a8bdd0e099911273f/1d671/AFI_Guangzhou_Featured_Image.jpg 680w,\\n/static/76510f5e7100118a8bdd0e099911273f/c6ea7/AFI_Guangzhou_Featured_Image.jpg 980w","sizes":"(max-width: 980px) 100vw, 980px"}}}}}},{"node":{"excerpt":"","fields":{"slug":"/get-fruity/"},"frontmatter":{"date":"May 02, 2019","title":"AirAsia Magazine Ad","description":"Ashley Furniture HomeStore Asia","thumbnail":{"childImageSharp":{"fluid":{"base64":"data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAOABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIEA//EABYBAQEBAAAAAAAAAAAAAAAAAAMBAv/aAAwDAQACEAMQAAABtM1zaRAX/8QAGhABAAIDAQAAAAAAAAAAAAAAAgERAxMiQv/aAAgBAQABBQJMiNtgTzkJT8XFf//EABURAQEAAAAAAAAAAAAAAAAAAAAS/9oACAEDAQE/AUv/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEv/aAAgBAgEBPwFT/8QAHBAAAgICAwAAAAAAAAAAAAAAAAECESExUWGB/9oACAEBAAY/AuyTXgrM8EktUI//xAAaEAADAQEBAQAAAAAAAAAAAAAAAREhMVFh/9oACAEBAAE/Idw1Ks9IwAZZq4ICufBEuIQSM3w//9oADAMBAAIAAwAAABCbD//EABYRAQEBAAAAAAAAAAAAAAAAAAERAP/aAAgBAwEBPxAmQtm//8QAFhEBAQEAAAAAAAAAAAAAAAAAAREA/9oACAECAQE/EG4QS7//xAAbEAEBAAMAAwAAAAAAAAAAAAABEQAhMUHB0f/aAAgBAQABPxCOhFXhvzDbJLAaHmKcJSuXdA0A+de8lvZF04JQ145//9k=","aspectRatio":1.3934426229508197,"src":"/static/18d07d2cc310321db86d7bfc1f74f3bd/c6ea7/AFHS_AirAsia_Featured_Image.jpg","srcSet":"/static/18d07d2cc310321db86d7bfc1f74f3bd/722c4/AFHS_AirAsia_Featured_Image.jpg 340w,\\n/static/18d07d2cc310321db86d7bfc1f74f3bd/1d671/AFHS_AirAsia_Featured_Image.jpg 680w,\\n/static/18d07d2cc310321db86d7bfc1f74f3bd/c6ea7/AFHS_AirAsia_Featured_Image.jpg 980w","sizes":"(max-width: 980px) 100vw, 980px"}}}}}},{"node":{"excerpt":"","fields":{"slug":"/fur/"},"frontmatter":{"date":"May 01, 2019","title":"Billboard Design for Ufa, Russia","description":"Ashley Furniture HomeStore Ufa, Russia","thumbnail":{"childImageSharp":{"fluid":{"base64":"data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwUA/8QAFgEBAQEAAAAAAAAAAAAAAAAAAwEC/9oADAMBAAIQAxAAAAFFiqSWtC2L/8QAGRABAQADAQAAAAAAAAAAAAAAAgEAEBIT/9oACAEBAAEFAoq1089TjvNrWv/EABYRAQEBAAAAAAAAAAAAAAAAAAABEf/aAAgBAwEBPwGNj//EABYRAQEBAAAAAAAAAAAAAAAAAAACE//aAAgBAgEBPwGpYv/EABoQAAICAwAAAAAAAAAAAAAAAAABESEQEjL/2gAIAQEABj8C2Tg6LFArx//EABkQAAMBAQEAAAAAAAAAAAAAAAABESEx4f/aAAgBAQABPyHHesIeUTlbNGWZSBr4Nu9P/9oADAMBAAIAAwAAABB8H//EABcRAAMBAAAAAAAAAAAAAAAAAAABIWH/2gAIAQMBAT8Qt0xP/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAEhEf/aAAgBAgEBPxBOQqtn/8QAHBABAAMAAgMAAAAAAAAAAAAAAQARITFBUZHR/9oACAEBAAE/EFaD0FHOVqoGAsvj5SoM46ay6rmahNgluPSr3P/Z","aspectRatio":1.780104712041885,"src":"/static/078ce80536f176506dd187416ded56f2/ac53a/Billboard-Design-Ufa-Russia-Feature-Image.jpg","srcSet":"/static/078ce80536f176506dd187416ded56f2/722c4/Billboard-Design-Ufa-Russia-Feature-Image.jpg 340w,\\n/static/078ce80536f176506dd187416ded56f2/1d671/Billboard-Design-Ufa-Russia-Feature-Image.jpg 680w,\\n/static/078ce80536f176506dd187416ded56f2/ac53a/Billboard-Design-Ufa-Russia-Feature-Image.jpg 1360w,\\n/static/078ce80536f176506dd187416ded56f2/d8255/Billboard-Design-Ufa-Russia-Feature-Image.jpg 1920w","sizes":"(max-width: 1360px) 100vw, 1360px"}}}}}},{"node":{"excerpt":"Far far away, behind the word mountains, far from the countries Vokalia and\\nConsonantia, there live the blind texts. Separated they live in…","fields":{"slug":"/hi-folks/"},"frontmatter":{"date":"May 28, 2015","title":"2fitfitness Web Design","description":"UI/UX Design for a father & son fitness website","thumbnail":{"childImageSharp":{"fluid":{"base64":"data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAIABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAME/8QAFgEBAQEAAAAAAAAAAAAAAAAAAwEE/9oADAMBAAIQAxAAAAGGQPXURP/EABgQAAMBAQAAAAAAAAAAAAAAAAABAhED/9oACAEBAAEFAn1pj3ZP/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAECITH/2gAIAQMBAT8BcqVhPD//xAAVEQEBAAAAAAAAAAAAAAAAAAAQEf/aAAgBAgEBPwGn/8QAGBAAAgMAAAAAAAAAAAAAAAAAAAEQIjH/2gAIAQEABj8CdUa4/8QAGRABAQADAQAAAAAAAAAAAAAAAREAITFB/9oACAEBAAE/ISetJRx34Xhi01u/c//aAAwDAQACAAMAAAAQCB//xAAXEQEBAQEAAAAAAAAAAAAAAAABABFB/9oACAEDAQE/EOYbJDf/xAAWEQEBAQAAAAAAAAAAAAAAAAABACH/2gAIAQIBAT8QEuybf//EABoQAQADAAMAAAAAAAAAAAAAAAEAESExQVH/2gAIAQEAAT8QMg7RMuYRAeHbMJaIHkl5P//Z","aspectRatio":2.463768115942029,"src":"/static/e34d69371c5174241a1e4ea91de3a529/ac53a/2fitfitness-feature-image.jpg","srcSet":"/static/e34d69371c5174241a1e4ea91de3a529/722c4/2fitfitness-feature-image.jpg 340w,\\n/static/e34d69371c5174241a1e4ea91de3a529/1d671/2fitfitness-feature-image.jpg 680w,\\n/static/e34d69371c5174241a1e4ea91de3a529/ac53a/2fitfitness-feature-image.jpg 1360w,\\n/static/e34d69371c5174241a1e4ea91de3a529/0e329/2fitfitness-feature-image.jpg 1600w","sizes":"(max-width: 1360px) 100vw, 1360px"}}}}}},{"node":{"excerpt":"Blogging. Yes, there are so many reasons why you should start a blog. But starting a blog has its pros and pitfalls and no single size fits…","fields":{"slug":"/my-second-post/"},"frontmatter":{"date":"May 06, 2015","title":"Blog Post?","description":null,"thumbnail":null}}},{"node":{"excerpt":"Thomas Ward’s Mills 50 District phenomenon is a hipster barbecue joint where global flavorings distinguish the grilled meat specialties. The…","fields":{"slug":"/hello-world/"},"frontmatter":{"date":"May 01, 2015","title":"Pig Floyds Urban Barbakoa","description":"Web Design","thumbnail":{"childImageSharp":{"fluid":{"base64":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAIAAACgpqunAAAACXBIWXMAAAsTAAALEwEAmpwYAAADYUlEQVQozwFWA6n8AIxdP7OTZcOqjMiwkriai7eWisirlNK8n8utgsehcbmXcbmZc9C9n+HWs+TUquXWs+vmzO7aku3MderVpQB0UUrk49/////8/v/y9fb2+Pj8/fv8/Pnm2sHFnW3ConzQv5/l06DpzIjovn7bsXTbuIDiuG3ptV/ryZMAblFZ4+Tn6ejq7+3t7+zq8/Lw9PHt7ujl39XCvplqz7qe6OC16tSY7MiG67586sCA26xqx5NS0ppM7tGjAHBTXNXX293g4drb3NvZ2eDe3eDg397f3tDEr7qfdNzSu+ffse3iru7Ul/HKd/LQdObFa9WkP8aNPeTIoQCBZmaDa4Z8WnGIaHxwSmF7VWeHZHKAO1Gsin+9rYTXxKLavojs2YXz34DuznXdv3LhzGjLmCy1ezjjxZcAh3BqxYaEzm1r0n+By2xqsExUs1RT0mdRu4p/tqCK2ryg3q966sln6K9G1qxY6NiN38douI9HqX1LzK+JAItwZ9i5nciQcqyPf7yDcZZWT5VoVaVvUayJer6mk+DEldywfO3MfuGjR8adUurQe7+UR72NQMGKPcWmewCFa2XTrqHDd1yyeW2PTlKVVlihZV2PQ0WkenjFqpbgxovTonLqyIfct2y5jVu6jUqshEO/lUanfUTGpHMAgWdlwJ2RvINiuop+YUhTdlhdk11ZrmZSs4V6waCN1LiFzptt2qd1yI1jqV9ItnVCn2pDnXJKglM9eVBMAIhsaZhvcJZlYJ9qaZdubaeCfaV/eLR0X8CRgLWKeNK5ltGgbcR8ZNaocMePZsF7VLBwS4tgQIhaQXhOSwCDZmXMtKWlZleOVE6ecWiQY1uufGa9fFrAlH+odmDMsprXt4zOlGzEh2exfmapZVCTWUOKXT2HVkCSb08AfF9nsJyMkGRJmWtRjWFQm2tNt4lXtoNUtpN/pHZYsH902Met1reFzJlkq3VYdjM7h1E2n3JBl2c6qHdAAHZZaHFvdlpcWmhiX2BRTWtRT3lfWHdcW6OKha2DYJ5kU7SMidHGsc25mr2hiKKAd62PYq2YcLCXd6p9TABsT2WMjIhoTk+HZ2yEcGeJcW5/WFxuXFSgkImugFuueVaOTE2oe4HMxbvKw7XNxrfHvqjBtaLJwLbBs6Gpr/WLpLjmUAAAAABJRU5ErkJggg==","aspectRatio":1.4718614718614718,"src":"/static/59568764dbe383e2d65e105abb192f53/40a76/Pig_Floyds_Feature_Image.png","srcSet":"/static/59568764dbe383e2d65e105abb192f53/c972b/Pig_Floyds_Feature_Image.png 340w,\\n/static/59568764dbe383e2d65e105abb192f53/27625/Pig_Floyds_Feature_Image.png 680w,\\n/static/59568764dbe383e2d65e105abb192f53/40a76/Pig_Floyds_Feature_Image.png 1360w,\\n/static/59568764dbe383e2d65e105abb192f53/f8864/Pig_Floyds_Feature_Image.png 1493w","sizes":"(max-width: 1360px) 100vw, 1360px"}}}}}}]}}}'
+        );
+
+        /***/
+      },
+
+    /***/ "./public/page-data/sq/d/4063793609.json":
+      /*!***********************************************!*\
+  !*** ./public/page-data/sq/d/4063793609.json ***!
+  \***********************************************/
+      /***/ module => {
+        "use strict";
+        module.exports = JSON.parse(
+          '{"data":{"site":{"siteMetadata":{"title":"Valiant Creative"}},"benchAccounting":{"childImageSharp":{"fluid":{"base64":"data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAEDBAX/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAHbFCWBB//EABgQAAIDAAAAAAAAAAAAAAAAAAABAhAx/9oACAEBAAEFArZDT//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABYQAAMAAAAAAAAAAAAAAAAAABAgMf/aAAgBAQAGPwJKP//EABgQAAMBAQAAAAAAAAAAAAAAAAEQEQAx/9oACAEBAAE/IS+NVUiv/9oADAMBAAIAAwAAABDgz//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8QP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8QP//EABkQAAMBAQEAAAAAAAAAAAAAAAABIREQMf/aAAgBAQABPxDjRbuDLWXtYvD/2Q==","aspectRatio":1.497797356828194,"src":"/static/5e80cb2f67c2a4804561f9d0ccaa9685/ac53a/bench-accounting-49909-unsplash.jpg","srcSet":"/static/5e80cb2f67c2a4804561f9d0ccaa9685/722c4/bench-accounting-49909-unsplash.jpg 340w,\\n/static/5e80cb2f67c2a4804561f9d0ccaa9685/1d671/bench-accounting-49909-unsplash.jpg 680w,\\n/static/5e80cb2f67c2a4804561f9d0ccaa9685/ac53a/bench-accounting-49909-unsplash.jpg 1360w,\\n/static/5e80cb2f67c2a4804561f9d0ccaa9685/a41d1/bench-accounting-49909-unsplash.jpg 2000w","sizes":"(max-width: 1360px) 100vw, 1360px"}}}}}'
         );
 
         /***/

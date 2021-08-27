@@ -2,9 +2,12 @@
   "namedChunkGroups": {
     "polyfill": {
       "name": "polyfill",
-      "assets": [{ "name": "polyfill.js", "size": 756612 }],
+      "assets": [
+        { "name": "polyfill.js", "size": 756612 },
+        { "name": "polyfill.20aa11cdaf185111578c.hot-update.js", "size": 891 }
+      ],
       "filteredAssets": 0,
-      "assetsSize": 756612,
+      "assetsSize": 757503,
       "filteredAuxiliaryAssets": 0,
       "auxiliaryAssetsSize": 0
     },
@@ -12,11 +15,12 @@
       "name": "commons",
       "assets": [
         { "name": "framework.js", "size": 2561395 },
-        { "name": "commons.css", "size": 77358 },
-        { "name": "commons.js", "size": 2339033 }
+        { "name": "commons.css", "size": 77359 },
+        { "name": "commons.js", "size": 2339033 },
+        { "name": "commons.20aa11cdaf185111578c.hot-update.js", "size": 890 }
       ],
       "filteredAssets": 0,
-      "assetsSize": 4977786,
+      "assetsSize": 4978677,
       "filteredAuxiliaryAssets": 100,
       "auxiliaryAssetsSize": 2319084
     },
@@ -42,12 +46,17 @@
       "name": "component---src-pages-about-js",
       "assets": [
         { "name": "framework.js", "size": 2561395 },
-        { "name": "commons.css", "size": 77358 },
+        { "name": "commons.css", "size": 77359 },
         { "name": "commons.js", "size": 2339033 },
-        { "name": "component---src-pages-about-js.js", "size": 249133 }
+        { "name": "commons.20aa11cdaf185111578c.hot-update.js", "size": 890 },
+        { "name": "component---src-pages-about-js.js", "size": 250016 },
+        {
+          "name": "component---src-pages-about-js.20aa11cdaf185111578c.hot-update.js",
+          "size": 16854
+        }
       ],
       "filteredAssets": 0,
-      "assetsSize": 5226919,
+      "assetsSize": 5245547,
       "filteredAuxiliaryAssets": 100,
       "auxiliaryAssetsSize": 2319084
     },
@@ -55,12 +64,13 @@
       "name": "component---src-pages-elements-js",
       "assets": [
         { "name": "framework.js", "size": 2561395 },
-        { "name": "commons.css", "size": 77358 },
+        { "name": "commons.css", "size": 77359 },
         { "name": "commons.js", "size": 2339033 },
+        { "name": "commons.20aa11cdaf185111578c.hot-update.js", "size": 890 },
         { "name": "component---src-pages-elements-js.js", "size": 327167 }
       ],
       "filteredAssets": 0,
-      "assetsSize": 5304953,
+      "assetsSize": 5305844,
       "filteredAuxiliaryAssets": 100,
       "auxiliaryAssetsSize": 2319084
     },
@@ -68,12 +78,13 @@
       "name": "component---src-pages-index-js",
       "assets": [
         { "name": "framework.js", "size": 2561395 },
-        { "name": "commons.css", "size": 77358 },
+        { "name": "commons.css", "size": 77359 },
         { "name": "commons.js", "size": 2339033 },
+        { "name": "commons.20aa11cdaf185111578c.hot-update.js", "size": 890 },
         { "name": "component---src-pages-index-js.js", "size": 178723 }
       ],
       "filteredAssets": 0,
-      "assetsSize": 5156509,
+      "assetsSize": 5157400,
       "filteredAuxiliaryAssets": 100,
       "auxiliaryAssetsSize": 2319084
     },
@@ -89,8 +100,13 @@
     }
   },
   "assetsByChunkName": {
-    "polyfill": ["polyfill.js"],
-    "commons": ["framework.js", "commons.css", "commons.js"],
+    "polyfill": ["polyfill.js", "polyfill.20aa11cdaf185111578c.hot-update.js"],
+    "commons": [
+      "framework.js",
+      "commons.css",
+      "commons.js",
+      "commons.20aa11cdaf185111578c.hot-update.js"
+    ],
     "component---cache-dev-404-page-js": [
       "component---cache-dev-404-page-js.js"
     ],
@@ -99,18 +115,22 @@
       "framework.js",
       "commons.css",
       "commons.js",
-      "component---src-pages-about-js.js"
+      "commons.20aa11cdaf185111578c.hot-update.js",
+      "component---src-pages-about-js.js",
+      "component---src-pages-about-js.20aa11cdaf185111578c.hot-update.js"
     ],
     "component---src-pages-elements-js": [
       "framework.js",
       "commons.css",
       "commons.js",
+      "commons.20aa11cdaf185111578c.hot-update.js",
       "component---src-pages-elements-js.js"
     ],
     "component---src-pages-index-js": [
       "framework.js",
       "commons.css",
       "commons.js",
+      "commons.20aa11cdaf185111578c.hot-update.js",
       "component---src-pages-index-js.js"
     ],
     "component---src-templates-blog-post-js": [

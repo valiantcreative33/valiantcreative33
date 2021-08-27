@@ -195,10 +195,10 @@
               "thumbnail": {
                 "childImageSharp": {
                   "fluid": {
-                    "base64": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAIABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQF/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEAMQAAABpnDSB//EABkQAAIDAQAAAAAAAAAAAAAAAAITAAMEAf/aAAgBAQABBQJds0Fe7MXVf//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABwQAAEEAwEAAAAAAAAAAAAAAAIAARIhESJBYf/aAAgBAQAGPwKmBFAij4t3vPV//8QAGRABAQEAAwAAAAAAAAAAAAAAAREAIVFh/9oACAEBAAE/IVlaOxdxI0AZDu297//aAAwDAQACAAMAAAAQBA//xAAVEQEBAAAAAAAAAAAAAAAAAAAQEf/aAAgBAwEBPxCn/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAGRABAQADAQAAAAAAAAAAAAAAAREAIYEx/9oACAEBAAE/EHxtRCacwUqgOvCp24yRBuiLq8mf/9k=",
+                    "base64": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAIABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAME/8QAFgEBAQEAAAAAAAAAAAAAAAAAAwEE/9oADAMBAAIQAxAAAAGGQPXURP/EABgQAAMBAQAAAAAAAAAAAAAAAAABAhED/9oACAEBAAEFAn1pj3ZP/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAECITH/2gAIAQMBAT8BcqVhPD//xAAVEQEBAAAAAAAAAAAAAAAAAAAQEf/aAAgBAgEBPwGn/8QAGBAAAgMAAAAAAAAAAAAAAAAAAAEQIjH/2gAIAQEABj8CdUa4/8QAGRABAQADAQAAAAAAAAAAAAAAAREAITFB/9oACAEBAAE/ISetJRx34Xhi01u/c//aAAwDAQACAAMAAAAQCB//xAAXEQEBAQEAAAAAAAAAAAAAAAABABFB/9oACAEDAQE/EOYbJDf/xAAWEQEBAQAAAAAAAAAAAAAAAAABACH/2gAIAQIBAT8QEuybf//EABoQAQADAAMAAAAAAAAAAAAAAAEAESExQVH/2gAIAQEAAT8QMg7RMuYRAeHbMJaIHkl5P//Z",
                     "aspectRatio": 2.463768115942029,
-                    "src": "/static/39494981951f066a5f18c63530ca367c/ac53a/2fitfitness-feature-image.jpg",
-                    "srcSet": "/static/39494981951f066a5f18c63530ca367c/722c4/2fitfitness-feature-image.jpg 340w,\n/static/39494981951f066a5f18c63530ca367c/1d671/2fitfitness-feature-image.jpg 680w,\n/static/39494981951f066a5f18c63530ca367c/ac53a/2fitfitness-feature-image.jpg 1360w,\n/static/39494981951f066a5f18c63530ca367c/0e329/2fitfitness-feature-image.jpg 1600w",
+                    "src": "/static/e34d69371c5174241a1e4ea91de3a529/ac53a/2fitfitness-feature-image.jpg",
+                    "srcSet": "/static/e34d69371c5174241a1e4ea91de3a529/722c4/2fitfitness-feature-image.jpg 340w,\n/static/e34d69371c5174241a1e4ea91de3a529/1d671/2fitfitness-feature-image.jpg 680w,\n/static/e34d69371c5174241a1e4ea91de3a529/ac53a/2fitfitness-feature-image.jpg 1360w,\n/static/e34d69371c5174241a1e4ea91de3a529/0e329/2fitfitness-feature-image.jpg 1600w",
                     "sizes": "(max-width: 1360px) 100vw, 1360px"
                   }
                 }
@@ -208,11 +208,11 @@
         },
         {
           "node": {
-            "excerpt": "Wow! I love blogging so much already. Did you know that “despite its name, salted duck eggs can also be made from\nchicken eggs, though the…",
+            "excerpt": "Blogging. Yes, there are so many reasons why you should start a blog. But starting a blog has its pros and pitfalls and no single size fits…",
             "fields": { "slug": "/my-second-post/" },
             "frontmatter": {
               "date": "May 06, 2015",
-              "title": "My Second Post!",
+              "title": "Blog Post?",
               "description": null,
               "thumbnail": null
             }
@@ -220,19 +220,19 @@
         },
         {
           "node": {
-            "excerpt": "This is my first post on my new fake blog! How exciting! I’m sure I’ll write a lot more interesting things in the future. Oh, and here’s a…",
+            "excerpt": "Thomas Ward’s Mills 50 District phenomenon is a hipster barbecue joint where global flavorings distinguish the grilled meat specialties. The…",
             "fields": { "slug": "/hello-world/" },
             "frontmatter": {
               "date": "May 01, 2015",
-              "title": "Hello World",
-              "description": null,
+              "title": "Pig Floyds Urban Barbakoa",
+              "description": "Web Design",
               "thumbnail": {
                 "childImageSharp": {
                   "fluid": {
-                    "base64": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAMB/8QAFwEAAwEAAAAAAAAAAAAAAAAAAAEEBf/aAAwDAQACEAMQAAABgik0dWC//8QAGRABAAMBAQAAAAAAAAAAAAAAAQACERJC/9oACAEBAAEFAkqW7B5Zovtvk//EABcRAQADAAAAAAAAAAAAAAAAAAAREkH/2gAIAQMBAT8B1WX/xAAWEQEBAQAAAAAAAAAAAAAAAAAAESL/2gAIAQIBAT8BjT//xAAbEAABBAMAAAAAAAAAAAAAAAAAAQIRISIxMv/aAAgBAQAGPwK9GNocyS8hCj//xAAaEAADAQEBAQAAAAAAAAAAAAAAAREhQYGx/9oACAEBAAE/IXOrA43oOyg9wgU86OZMfwZKypT/2gAMAwEAAgADAAAAEMjv/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQARIf/aAAgBAwEBPxARwyusv//EABcRAQEBAQAAAAAAAAAAAAAAAAEAIVH/2gAIAQIBAT8QOoVoX//EAB0QAQEAAgIDAQAAAAAAAAAAAAERADFhgSFB0eH/2gAIAQEAAT8QSpwaGjrBSrtHyF9iY8RpUnGRBGqtOcsiDE6fM3AgiXf5M//Z",
-                    "aspectRatio": 1.3333333333333333,
-                    "src": "/static/8058f3f26913fea3b6a89a73344fe94a/ac53a/salty_egg.jpg",
-                    "srcSet": "/static/8058f3f26913fea3b6a89a73344fe94a/722c4/salty_egg.jpg 340w,\n/static/8058f3f26913fea3b6a89a73344fe94a/1d671/salty_egg.jpg 680w,\n/static/8058f3f26913fea3b6a89a73344fe94a/ac53a/salty_egg.jpg 1360w,\n/static/8058f3f26913fea3b6a89a73344fe94a/6eda9/salty_egg.jpg 2040w,\n/static/8058f3f26913fea3b6a89a73344fe94a/69755/salty_egg.jpg 2048w",
+                    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAIAAACgpqunAAAACXBIWXMAAAsTAAALEwEAmpwYAAADYUlEQVQozwFWA6n8AIxdP7OTZcOqjMiwkriai7eWisirlNK8n8utgsehcbmXcbmZc9C9n+HWs+TUquXWs+vmzO7aku3MderVpQB0UUrk49/////8/v/y9fb2+Pj8/fv8/Pnm2sHFnW3ConzQv5/l06DpzIjovn7bsXTbuIDiuG3ptV/ryZMAblFZ4+Tn6ejq7+3t7+zq8/Lw9PHt7ujl39XCvplqz7qe6OC16tSY7MiG67586sCA26xqx5NS0ppM7tGjAHBTXNXX293g4drb3NvZ2eDe3eDg397f3tDEr7qfdNzSu+ffse3iru7Ul/HKd/LQdObFa9WkP8aNPeTIoQCBZmaDa4Z8WnGIaHxwSmF7VWeHZHKAO1Gsin+9rYTXxKLavojs2YXz34DuznXdv3LhzGjLmCy1ezjjxZcAh3BqxYaEzm1r0n+By2xqsExUs1RT0mdRu4p/tqCK2ryg3q966sln6K9G1qxY6NiN38douI9HqX1LzK+JAItwZ9i5nciQcqyPf7yDcZZWT5VoVaVvUayJer6mk+DEldywfO3MfuGjR8adUurQe7+UR72NQMGKPcWmewCFa2XTrqHDd1yyeW2PTlKVVlihZV2PQ0WkenjFqpbgxovTonLqyIfct2y5jVu6jUqshEO/lUanfUTGpHMAgWdlwJ2RvINiuop+YUhTdlhdk11ZrmZSs4V6waCN1LiFzptt2qd1yI1jqV9ItnVCn2pDnXJKglM9eVBMAIhsaZhvcJZlYJ9qaZdubaeCfaV/eLR0X8CRgLWKeNK5ltGgbcR8ZNaocMePZsF7VLBwS4tgQIhaQXhOSwCDZmXMtKWlZleOVE6ecWiQY1uufGa9fFrAlH+odmDMsprXt4zOlGzEh2exfmapZVCTWUOKXT2HVkCSb08AfF9nsJyMkGRJmWtRjWFQm2tNt4lXtoNUtpN/pHZYsH902Met1reFzJlkq3VYdjM7h1E2n3JBl2c6qHdAAHZZaHFvdlpcWmhiX2BRTWtRT3lfWHdcW6OKha2DYJ5kU7SMidHGsc25mr2hiKKAd62PYq2YcLCXd6p9TABsT2WMjIhoTk+HZ2yEcGeJcW5/WFxuXFSgkImugFuueVaOTE2oe4HMxbvKw7XNxrfHvqjBtaLJwLbBs6Gpr/WLpLjmUAAAAABJRU5ErkJggg==",
+                    "aspectRatio": 1.4718614718614718,
+                    "src": "/static/59568764dbe383e2d65e105abb192f53/40a76/Pig_Floyds_Feature_Image.png",
+                    "srcSet": "/static/59568764dbe383e2d65e105abb192f53/c972b/Pig_Floyds_Feature_Image.png 340w,\n/static/59568764dbe383e2d65e105abb192f53/27625/Pig_Floyds_Feature_Image.png 680w,\n/static/59568764dbe383e2d65e105abb192f53/40a76/Pig_Floyds_Feature_Image.png 1360w,\n/static/59568764dbe383e2d65e105abb192f53/f8864/Pig_Floyds_Feature_Image.png 1493w",
                     "sizes": "(max-width: 1360px) 100vw, 1360px"
                   }
                 }

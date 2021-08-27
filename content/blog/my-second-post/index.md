@@ -1,13 +1,13 @@
 ---
-title: My Second Post!
+title: Blog Post?
 date: "2015-05-06T23:46:37.121Z"
 ---
 
-Wow! I love blogging so much already.
+Blogging. Yes, there are so many reasons why you should start a blog.
 
-Did you know that "despite its name, salted duck eggs can also be made from
-chicken eggs, though the taste and texture will be somewhat different, and the
-egg yolk will be less rich."?
-([Wikipedia Link](http://en.wikipedia.org/wiki/Salted_duck_egg))
+But starting a blog has its pros and pitfalls and no single size fits all.
+When considering whether to start a blog or not, consider both sides of the argument and weigh them against your own personality, lifestyle and ambitions. See what fits you and be honest about what you really want out of the experience.
 
-Yeah, I didn't either.
+You’ll be the one doing the work and on the flip side, you’ll be the one reaping the rewards in the end.
+
+With that said, yes, I hope to have a blog here soon!

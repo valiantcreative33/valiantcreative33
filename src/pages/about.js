@@ -1,34 +1,37 @@
-import React from "react"
-import { graphql, StaticQuery } from "gatsby"
-import Img from "gatsby-image"
+import React from "react";
+import { graphql, StaticQuery } from "gatsby";
+import Img from "gatsby-image";
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 
-import "../utils/normalize.css"
-import "../utils/css/screen.css"
+import "../utils/normalize.css";
+import "../utils/css/screen.css";
 
 const AboutPage = ({ data }, location) => {
-  const siteTitle = data.site.siteMetadata.title
+  const siteTitle = data.site.siteMetadata.title;
 
   return (
     <Layout title={siteTitle}>
-      <SEO title="ABout" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
+      <SEO title="About" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
 
       <article className="post-content page-template no-image">
         <div className="post-content-body">
           <h2 id="clean-minimal-and-deeply-customisable-london-is-a-theme-made-for-people-who-appreciate-simple-lines-">
-            Clean, minimal, and deeply customisable. London is a theme made for
-            people who appreciate simple lines.
+            <strong>Hello!</strong> Welcome to the design & development
+            portfolio of <strong>Ruben Matamoros</strong>. I am a highly
+            motivated Graphic & Web Design professional with 10 plus years
+            experience, now a Full-Stack Software Engineer with a focus on Front
+            End Web Development.
           </h2>
           <figure className="kg-card kg-image-card kg-width-full">
             <Img
               fluid={data.benchAccounting.childImageSharp.fluid}
               className="kg-image"
             />
-            <figcaption>Large imagery is at the heart of this theme</figcaption>
+            <figcaption>Ruben Matamoros of Valiant Creative</figcaption>
           </figure>
-          <h3 id="dynamic-styles">Dynamic styles</h3>
+          <h3 id="dynamic-styles">A Little About Me</h3>
           <p>
             London comes with photo-centric main layout best suited to
             photography, graphics portfolios and other image-heavy uses.
@@ -52,8 +55,8 @@ const AboutPage = ({ data }, location) => {
         </div>
       </article>
     </Layout>
-  )
-}
+  );
+};
 
 const indexQuery = graphql`
   query {
@@ -72,7 +75,7 @@ const indexQuery = graphql`
       }
     }
   }
-`
+`;
 
 export default props => (
   <StaticQuery
@@ -81,4 +84,4 @@ export default props => (
       <AboutPage location={props.location} data={data} {...props} />
     )}
   />
-)
+);
