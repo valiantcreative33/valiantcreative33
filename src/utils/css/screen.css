@@ -576,14 +576,17 @@ body {
 }
 
 .post-content-body blockquote {
-  margin: 0 0 1.5em;
+  margin: 0 0 3em;
   padding: 0 1.5em;
-  border-left: #3eb0ef 3px solid;
+  font-size: 30px;
+  line-height: 1.3em;
+  color: var(--color-primary);
+  border-left: #0032a1 3px solid;
 }
 
 .post-content-body blockquote p {
   margin: 0 0 1em 0;
-  color: inherit;
+  color: var(--color-primary);
   font-size: inherit;
   line-height: inherit;
   font-style: italic;

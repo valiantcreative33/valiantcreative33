@@ -31,26 +31,44 @@ const AboutPage = ({ data }, location) => {
             />
             <figcaption>Ruben Matamoros of Valiant Creative</figcaption>
           </figure>
+          <blockquote>
+            "Absorb what is useful, discard what is useless and add what is
+            specifically your own." – Bruce Lee
+          </blockquote>
           <h3 id="dynamic-styles">A Little About Me</h3>
           <p>
-            London comes with photo-centric main layout best suited to
-            photography, graphics portfolios and other image-heavy uses.
+            Originally, I hail from the tropical land of Costa Rica, although, I
+            grew up mostly here in the USA and now reside in the Tampa Bay Area,
+            Florida.
           </p>
           <p>
-            Both post and page templates are light and minimal, with all the
-            focus on the content while the design of the theme gets out of the
-            way. Beneath the hood, London enjoys the full power of the{" "}
-            <a href="https://docs.ghost.org/api/handlebars-themes/">
-              Ghost Handlebars Theme API
-            </a>{" "}
-            to provide limitless customisation options and dynamic styles.
+            I graduated at the top of my class in 2013 from Full Sail
+            University. I gave a speech as the representative of my class and
+            was awarded with the Advanced Achiever Award. Since then I have
+            designed on a global scale with companies such as Ashley Furniture
+            and Carillon Tower Advisors of Raymond James. With 10 plus years
+            experience in design, now turned a Full-Stack Software Engineer with
+            a focus on Front End Web Development. An innovative problem-solver
+            who is passionate about developing websites and apps, with a focus
+            on mobile-first design and development. Strengths are in creativity,
+            teamwork, and building projects from concept to execution. When I’m
+            not developing, sketching and just crushing pixels I enjoy being
+            active as well after sitting all day. My favorite sports are soccer,
+            martial arts, and bike riding. What I enjoy most of all is traveling
+            and spending time with my beautiful wife and three daughters.
           </p>
           <p>
-            Don't forget to check out the{" "}
-            <a href="https://docs.ghost.org/integrations/">
-              Ghost Integrations Directory
-            </a>{" "}
-            for more ways to integrate Ghost with your favourite services.
+            My clients come to me with a business problem they are struggling
+            with, and I partner with them to develop exciting and flexible
+            marketing collaterals that build brand awareness, promote product
+            benefits, enhance the product's professional appearance; and in turn
+            contribute to sustained values for their business.
+          </p>
+          <p>
+            Cognizant of the importance of balancing the client's needs and
+            vision with practical and cost-efficient design formats, I strive to
+            develop and design solutions that are inviting and interesting but
+            also mirror the client's core values and mission.
           </p>
         </div>
       </article>
@@ -65,9 +83,7 @@ const indexQuery = graphql`
         title
       }
     }
-    benchAccounting: file(
-      relativePath: { eq: "bench-accounting-49909-unsplash.jpg" }
-    ) {
+    benchAccounting: file(relativePath: { eq: "about-page-image.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1360) {
           ...GatsbyImageSharpFluid

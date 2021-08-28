@@ -1,35 +1,33 @@
 /* Variables
 /* ---------------------------------------------------------- */
 
-@import url('https://fonts.googleapis.com/css?family=Muli:400,400i,600,700,700i,800&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Muli:400,400i,600,700,700i,800&display=swap");
 
 :root {
+  /* Colours */
+  --color-primary: #498ac8;
+  --color-base: #0032a1;
+  --color-border: #626262;
+  --color-bg: white;
 
-    /* Colours */
-    --color-primary: #498AC8;
-    --color-base: #0032A1; 
-    --color-border: #222224;
-    --color-bg: white;
+  /* Fonts */
+  --font-sans-serif: "Muli", sans-serif;
+  --font-serif: Georgia, Times, serif;
+  --font-mono: Menlo, Courier, monospace;
+  --font-light: 100;
+  --font-normal: 400;
+  --font-bold: 700;
+  --font-heavy: 800;
 
-    /* Fonts */
-    --font-sans-serif: 'Muli', sans-serif;
-    --font-serif: Georgia, Times, serif;
-    --font-mono: Menlo, Courier, monospace;
-    --font-light: 100;
-    --font-normal: 400;
-    --font-bold: 700;
-    --font-heavy: 800;
+  /* Breakpoints */
+  --xlarge: 1680px;
+  --large: 1280px;
+  --medium: 980px;
+  --small: 740px;
+  --xsmall: 480px;
 
-    /* Breakpoints */
-    --xlarge: 1680px;
-    --large: 1280px;
-    --medium: 980px;
-    --small: 740px;
-    --xsmall: 480px;
-
-    /* Sizes */
-    --height: 4rem;
-    --margin: 2rem;
-    --radius: 0.5rem;
-
+  /* Sizes */
+  --height: 4rem;
+  --margin: 2rem;
+  --radius: 0.5rem;
 }
