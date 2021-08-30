@@ -32,12 +32,12 @@
         },
         {
           "node": {
-            "excerpt": "Picasso had his pink period and his blue period. I am in my blonde period right now. When I first started wearing pink, it wasn’t nothing I…",
+            "excerpt": "A Full Stack Web Development group project created during my coding Boot Camp at the University of Central Florida. FITTER is a health and…",
             "fields": { "slug": "/fitter/" },
             "frontmatter": {
               "date": "May 07, 2019",
               "title": "FITTER",
-              "description": "Pink is my favourite colour. I used to say my favourite colour was black to be cool, but it is pink - all shades of pink. If I have an accessory, it is probably pink.",
+              "description": "A Full Stack Web Development Application",
               "thumbnail": {
                 "childImageSharp": {
                   "fluid": {
@@ -54,12 +54,12 @@
         },
         {
           "node": {
-            "excerpt": "",
+            "excerpt": "VendXOR, formerly of Priatek, is a blockchain-based platform for vendor rewards. VendXOR was built with the purpose to change the way…",
             "fields": { "slug": "/vendXOR/" },
             "frontmatter": {
               "date": "May 06, 2019",
               "title": "VendXOR White Paper Lite",
-              "description": "VendXOR of Priatek",
+              "description": "VendXOR of Priatek, White Paper Lite",
               "thumbnail": {
                 "childImageSharp": {
                   "fluid": {

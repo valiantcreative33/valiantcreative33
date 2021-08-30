@@ -6,11 +6,6 @@
       "allSiteFunction": { "nodes": [{ "functionRoute": "FAKE" }] },
       "allSitePage": {
         "nodes": [
-          { "path": "/404.html" },
-          { "path": "/404/" },
-          { "path": "/about/" },
-          { "path": "/elements/" },
-          { "path": "/" },
           { "path": "/whats-for-dinner/" },
           { "path": "/fitter/" },
           { "path": "/vendXOR/" },
@@ -21,7 +16,12 @@
           { "path": "/ufa-russia-billboard/" },
           { "path": "/2fitfitness-web-design/" },
           { "path": "/blog-post/" },
-          { "path": "/pig-floyds-urban-bbq-web-design/" }
+          { "path": "/pig-floyds-urban-bbq-web-design/" },
+          { "path": "/404.html" },
+          { "path": "/404/" },
+          { "path": "/about/" },
+          { "path": "/elements/" },
+          { "path": "/" }
         ]
       }
     },

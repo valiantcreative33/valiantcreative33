@@ -15,18 +15,18 @@ View the live project [here](https://deckiedevs.github.io/whats-for-dinner/).
 
 <div class="kg-card kg-image-card kg-width-full">
 
-![Darkness](./whats-for-dinner-iMac-mockup.jpg)
+![whats-for-dinner](./whats-for-dinner-iMac-mockup.jpg)
 
 </div>
 
 <div class="kg-card kg-image-card kg-width-full">
 
-![Darkness](./whats-for-dinner-iPad-mockup.jpg)
+![whats-for-dinner](./whats-for-dinner-iPad-mockup.jpg)
 
 </div>
 
 <div class="kg-card kg-image-card kg-width-full">
 
-![Darkness](./whats-for-dinner-iPhones-mockup.jpg)
+![whats-for-dinner](./whats-for-dinner-iPhones-mockup.jpg)
 
 </div>
