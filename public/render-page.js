@@ -18,14 +18,14 @@
           "component---src-pages-404-js": preferDefault(
             __webpack_require__(/*! ./src/pages/404.js */ "./src/pages/404.js")
           ),
-          "component---src-pages-about-js": preferDefault(
-            __webpack_require__(
-              /*! ./src/pages/about.js */ "./src/pages/about.js"
-            )
-          ),
           "component---src-pages-index-js": preferDefault(
             __webpack_require__(
               /*! ./src/pages/index.js */ "./src/pages/index.js"
+            )
+          ),
+          "component---src-templates-blog-post-js": preferDefault(
+            __webpack_require__(
+              /*! ./src/templates/blog-post.js */ "./src/templates/blog-post.js"
             )
           )
         };
@@ -7009,177 +7009,6 @@ useStaticQuery(graphql\`${query}\`);
         /***/
       },
 
-    /***/ "./src/pages/about.js":
-      /*!****************************!*\
-  !*** ./src/pages/about.js ***!
-  \****************************/
-      /***/ (
-        __unused_webpack_module,
-        __webpack_exports__,
-        __webpack_require__
-      ) => {
-        "use strict";
-        __webpack_require__.r(__webpack_exports__);
-        /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-          /* harmony export */ default: () => __WEBPACK_DEFAULT_EXPORT__
-          /* harmony export */
-        });
-        /* harmony import */ var _public_page_data_sq_d_3216788317_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-          /*! ../../public/page-data/sq/d/3216788317.json */ "./public/page-data/sq/d/3216788317.json"
-        );
-        /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-          /*! react */ "react"
-        );
-        /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/ __webpack_require__.n(
-          react__WEBPACK_IMPORTED_MODULE_1__
-        );
-        /* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-          /*! gatsby */ "./.cache/gatsby-browser-entry.js"
-        );
-        /* harmony import */ var gatsby_image__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-          /*! gatsby-image */ "./node_modules/gatsby-image/index.js"
-        );
-        /* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-          /*! ../components/layout */ "./src/components/layout.js"
-        );
-        /* harmony import */ var _components_seo__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-          /*! ../components/seo */ "./src/components/seo.js"
-        );
-        /* harmony import */ var _utils_normalize_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
-          /*! ../utils/normalize.css */ "./src/utils/normalize.css"
-        );
-        /* harmony import */ var _utils_normalize_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/ __webpack_require__.n(
-          _utils_normalize_css__WEBPACK_IMPORTED_MODULE_6__
-        );
-        /* harmony import */ var _utils_css_screen_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
-          /*! ../utils/css/screen.css */ "./src/utils/css/screen.css"
-        );
-        /* harmony import */ var _utils_css_screen_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/ __webpack_require__.n(
-          _utils_css_screen_css__WEBPACK_IMPORTED_MODULE_7__
-        );
-
-        const AboutPage = ({ data }, location) => {
-          const siteTitle = data.site.siteMetadata.title;
-          return /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default().createElement(
-            _components_layout__WEBPACK_IMPORTED_MODULE_4__.default,
-            {
-              title: siteTitle
-            },
-            /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default().createElement(
-              _components_seo__WEBPACK_IMPORTED_MODULE_5__.default,
-              {
-                title: "About",
-                keywords: [`blog`, `gatsby`, `javascript`, `react`]
-              }
-            ),
-            /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default().createElement(
-              "article",
-              {
-                className: "post-content page-template no-image"
-              },
-              /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default().createElement(
-                "div",
-                {
-                  className: "post-content-body"
-                },
-                /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default().createElement(
-                  "h2",
-                  {
-                    id:
-                      "clean-minimal-and-deeply-customisable-london-is-a-theme-made-for-people-who-appreciate-simple-lines-"
-                  },
-                  /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default().createElement(
-                    "strong",
-                    null,
-                    "Hello!"
-                  ),
-                  " Welcome to the design & development portfolio of ",
-                  /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default().createElement(
-                    "strong",
-                    null,
-                    "Ruben Matamoros"
-                  ),
-                  ". I am a highly motivated Graphic & Web Design professional with 10 plus years experience, now a Full-Stack Software Engineer with a focus on Front End Web Development."
-                ),
-                /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default().createElement(
-                  "figure",
-                  {
-                    className: "kg-card kg-image-card kg-width-full"
-                  },
-                  /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default().createElement(
-                    gatsby_image__WEBPACK_IMPORTED_MODULE_3__.default,
-                    {
-                      fluid: data.benchAccounting.childImageSharp.fluid,
-                      className: "kg-image"
-                    }
-                  ),
-                  /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default().createElement(
-                    "figcaption",
-                    null,
-                    "Ruben Matamoros of Valiant Creative"
-                  )
-                ),
-                /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default().createElement(
-                  "blockquote",
-                  null,
-                  '"Absorb what is useful, discard what is useless and add what is specifically your own." \u2013 Bruce Lee'
-                ),
-                /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default().createElement(
-                  "h3",
-                  {
-                    id: "dynamic-styles"
-                  },
-                  "A Little About Me"
-                ),
-                /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default().createElement(
-                  "p",
-                  null,
-                  "Originally, I hail from the tropical land of Costa Rica, although, I grew up mostly here in the USA and now reside in the Tampa Bay Area, Florida."
-                ),
-                /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default().createElement(
-                  "p",
-                  null,
-                  "I graduated at the top of my class in 2013 from Full Sail University. I gave a speech as the representative of my class and was awarded with the Advanced Achiever Award. Since then I have designed on a global scale with companies such as Ashley Furniture and Carillon Tower Advisors of Raymond James. With 10 plus years experience in design, now turned a Full-Stack Software Engineer with a focus on Front End Web Development. An innovative problem-solver who is passionate about developing websites and apps, with a focus on mobile-first design and development. Strengths are in creativity, teamwork, and building projects from concept to execution. When I\u2019m not developing, sketching and just crushing pixels I enjoy being active as well after sitting all day. My favorite sports are soccer, martial arts, and bike riding. What I enjoy most of all is traveling and spending time with my beautiful wife and three daughters."
-                ),
-                /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default().createElement(
-                  "p",
-                  null,
-                  "My clients come to me with a business problem they are struggling with, and I partner with them to develop exciting and flexible marketing collaterals that build brand awareness, promote product benefits, enhance the product's professional appearance; and in turn contribute to sustained values for their business."
-                ),
-                /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default().createElement(
-                  "p",
-                  null,
-                  "Cognizant of the importance of balancing the client's needs and vision with practical and cost-efficient design formats, I strive to develop and design solutions that are inviting and interesting but also mirror the client's core values and mission."
-                )
-              )
-            )
-          );
-        };
-
-        const indexQuery = "3216788317";
-        /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = props =>
-          /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default().createElement(
-            gatsby__WEBPACK_IMPORTED_MODULE_2__.StaticQuery,
-            {
-              query: indexQuery,
-              render: data =>
-                /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default().createElement(
-                  AboutPage,
-                  Object.assign(
-                    {
-                      location: props.location,
-                      data: data
-                    },
-                    props
-                  )
-                ),
-              data: _public_page_data_sq_d_3216788317_json__WEBPACK_IMPORTED_MODULE_0__
-            }
-          );
-
-        /***/
-      },
-
     /***/ "./src/pages/index.js":
       /*!****************************!*\
   !*** ./src/pages/index.js ***!
@@ -7305,6 +7134,123 @@ useStaticQuery(graphql\`${query}\`);
               data: _public_page_data_sq_d_3759772913_json__WEBPACK_IMPORTED_MODULE_0__
             }
           );
+
+        /***/
+      },
+
+    /***/ "./src/templates/blog-post.js":
+      /*!************************************!*\
+  !*** ./src/templates/blog-post.js ***!
+  \************************************/
+      /***/ (
+        __unused_webpack_module,
+        __webpack_exports__,
+        __webpack_require__
+      ) => {
+        "use strict";
+        __webpack_require__.r(__webpack_exports__);
+        /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+          /* harmony export */ default: () => __WEBPACK_DEFAULT_EXPORT__
+          /* harmony export */
+        });
+        /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+          /*! react */ "react"
+        );
+        /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/ __webpack_require__.n(
+          react__WEBPACK_IMPORTED_MODULE_0__
+        );
+        /* harmony import */ var gatsby_image__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+          /*! gatsby-image */ "./node_modules/gatsby-image/index.js"
+        );
+        /* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+          /*! ../components/layout */ "./src/components/layout.js"
+        );
+        /* harmony import */ var _components_seo__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+          /*! ../components/seo */ "./src/components/seo.js"
+        );
+
+        class BlogPostTemplate extends react__WEBPACK_IMPORTED_MODULE_0___default()
+          .Component {
+          render() {
+            const post = this.props.data.markdownRemark;
+            const siteTitle = this.props.data.site.siteMetadata.title;
+            return /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+              _components_layout__WEBPACK_IMPORTED_MODULE_2__.default,
+              {
+                location: this.props.location,
+                title: siteTitle
+              },
+              /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+                _components_seo__WEBPACK_IMPORTED_MODULE_3__.default,
+                {
+                  title: post.frontmatter.title,
+                  description: post.frontmatter.description || post.excerpt
+                }
+              ),
+              /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+                "article",
+                {
+                  className: `post-content ${post.frontmatter.thumbnail ||
+                    `no-image`}`
+                },
+                /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+                  "header",
+                  {
+                    className: "post-content-header"
+                  },
+                  /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+                    "h1",
+                    {
+                      className: "post-content-title"
+                    },
+                    post.frontmatter.title
+                  )
+                ),
+                post.frontmatter.description &&
+                  /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+                    "p",
+                    {
+                      class: "post-content-excerpt"
+                    },
+                    post.frontmatter.description
+                  ),
+                post.frontmatter.thumbnail &&
+                  /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+                    "div",
+                    {
+                      className: "post-content-image"
+                    },
+                    /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+                      gatsby_image__WEBPACK_IMPORTED_MODULE_1__.default,
+                      {
+                        className: "kg-image",
+                        fluid: post.frontmatter.thumbnail.childImageSharp.fluid,
+                        alt: post.frontmatter.title
+                      }
+                    )
+                  ),
+                /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+                  "div",
+                  {
+                    className: "post-content-body",
+                    dangerouslySetInnerHTML: {
+                      __html: post.html
+                    }
+                  }
+                ),
+                /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+                  "footer",
+                  {
+                    className: "post-content-footer"
+                  }
+                )
+              )
+            );
+          }
+        }
+
+        /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = BlogPostTemplate;
+        const pageQuery = "3796471250";
 
         /***/
       },
@@ -20068,19 +20014,6 @@ object-assign
         /***/
       },
 
-    /***/ "./public/page-data/sq/d/3216788317.json":
-      /*!***********************************************!*\
-  !*** ./public/page-data/sq/d/3216788317.json ***!
-  \***********************************************/
-      /***/ module => {
-        "use strict";
-        module.exports = JSON.parse(
-          '{"data":{"site":{"siteMetadata":{"title":"Valiant Creative"}},"benchAccounting":{"childImageSharp":{"fluid":{"base64":"data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAMABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwAF/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAL/2gAMAwEAAhADEAAAAcdBrloo/8QAGBAAAgMAAAAAAAAAAAAAAAAAAAERICH/2gAIAQEAAQUCE9cU/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAFBABAAAAAAAAAAAAAAAAAAAAIP/aAAgBAQAGPwJf/8QAGRAAAwADAAAAAAAAAAAAAAAAAAERICGR/9oACAEBAAE/IaKij1tcw//aAAwDAQACAAMAAAAQMA//xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAwEBPxCI/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAER/9oACAECAQE/EJWv/8QAGhABAQEAAwEAAAAAAAAAAAAAAREAECFBUf/aAAgBAQABPxA1MhAvZoKNT1Dmv3f/2Q==","aspectRatio":1.6748768472906403,"src":"/static/58c3804efae001bddc9553e59383904f/ac53a/about-page-image.jpg","srcSet":"/static/58c3804efae001bddc9553e59383904f/722c4/about-page-image.jpg 340w,\\n/static/58c3804efae001bddc9553e59383904f/1d671/about-page-image.jpg 680w,\\n/static/58c3804efae001bddc9553e59383904f/ac53a/about-page-image.jpg 1360w,\\n/static/58c3804efae001bddc9553e59383904f/fe118/about-page-image.jpg 1980w","sizes":"(max-width: 1360px) 100vw, 1360px"}}}}}'
-        );
-
-        /***/
-      },
-
     /***/ "./public/page-data/sq/d/3759772913.json":
       /*!***********************************************!*\
   !*** ./public/page-data/sq/d/3759772913.json ***!
@@ -20088,7 +20021,7 @@ object-assign
       /***/ module => {
         "use strict";
         module.exports = JSON.parse(
-          '{"data":{"site":{"siteMetadata":{"title":"Valiant Creative","description":"A highly motivated Graphic & Web Design professional with 10 plus years experience, now focusing on Front End Web Development."}},"allMarkdownRemark":{"edges":[{"node":{"excerpt":"A Full Stack Web Development group project created during my coding Boot Camp at the University of Central Florida. Are you stumped with the…","fields":{"slug":"/darkness/"},"frontmatter":{"date":"May 08, 2019","title":"What\'s for Dinner?","description":"A Full Stack Web Development Application","thumbnail":{"childImageSharp":{"fluid":{"base64":"data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMFBP/EABUBAQEAAAAAAAAAAAAAAAAAAAME/9oADAMBAAIQAxAAAAGzlkuQWDB5v//EABkQAQADAQEAAAAAAAAAAAAAAAIAAxEBIf/aAAgBAQABBQIo4/K4qDBWeTJ//8QAFxEAAwEAAAAAAAAAAAAAAAAAAAERA//aAAgBAwEBPwF6qFP/xAAXEQADAQAAAAAAAAAAAAAAAAAAAREC/9oACAECAQE/AVh0h//EABkQAAIDAQAAAAAAAAAAAAAAAAABECExgf/aAAgBAQAGPwJWh5xxRkf/xAAbEAACAgMBAAAAAAAAAAAAAAAAEQEhQVFhgf/aAAgBAQABPyHkLY8NrSsyQU5pvpbQnoh//9oADAMBAAIAAwAAABA3H//EABYRAQEBAAAAAAAAAAAAAAAAABEAQf/aAAgBAwEBPxBM2N//xAAWEQEBAQAAAAAAAAAAAAAAAAAAETH/2gAIAQIBAT8Q1FP/xAAcEAEAAwACAwAAAAAAAAAAAAABABEhMUFx0eH/2gAIAQEAAT8Qs1CDrueYGqXowQmo5Sk4O/EoL4417hD/2Q==","aspectRatio":1.5044247787610618,"src":"/static/37a41b918f0b657d81811de4de7a6647/ac53a/bbbb.jpg","srcSet":"/static/37a41b918f0b657d81811de4de7a6647/722c4/bbbb.jpg 340w,\\n/static/37a41b918f0b657d81811de4de7a6647/1d671/bbbb.jpg 680w,\\n/static/37a41b918f0b657d81811de4de7a6647/ac53a/bbbb.jpg 1360w,\\n/static/37a41b918f0b657d81811de4de7a6647/5bc4f/bbbb.jpg 1851w","sizes":"(max-width: 1360px) 100vw, 1360px"}}}}}},{"node":{"excerpt":"Picasso had his pink period and his blue period. I am in my blonde period right now. When I first started wearing pink, it wasn’t nothing I…","fields":{"slug":"/dont-stop/"},"frontmatter":{"date":"May 07, 2019","title":"FITTER","description":"Pink is my favourite colour. I used to say my favourite colour was black to be cool, but it is pink - all shades of pink. If I have an accessory, it is probably pink.","thumbnail":{"childImageSharp":{"fluid":{"base64":"data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABQABA//EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAFDRukjUTH/xAAZEAEBAAMBAAAAAAAAAAAAAAACAAESEzH/2gAIAQEAAQUCKmrHhat1dFf/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAZEAACAwEAAAAAAAAAAAAAAAAAMRBBYYH/2gAIAQEABj8CwvkMYz//xAAaEAEAAwADAAAAAAAAAAAAAAABABExEEFx/9oACAEBAAE/IbXKhygRbKoedwGOBPB//9oADAMBAAIAAwAAABC/P//EABURAQEAAAAAAAAAAAAAAAAAABAh/9oACAEDAQE/EKf/xAAVEQEBAAAAAAAAAAAAAAAAAAAAIf/aAAgBAgEBPxCq/8QAGxABAQACAwEAAAAAAAAAAAAAAREAITFRYXH/2gAIAQEAAT8Q3EDqu1cL00UCybXo+buTa8DnV++4Rq1vNw42veESOemf/9k=","aspectRatio":1.5044247787610618,"src":"/static/54575802beacf608dd75d6b1adcc073d/ac53a/fitter-featured-image.jpg","srcSet":"/static/54575802beacf608dd75d6b1adcc073d/722c4/fitter-featured-image.jpg 340w,\\n/static/54575802beacf608dd75d6b1adcc073d/1d671/fitter-featured-image.jpg 680w,\\n/static/54575802beacf608dd75d6b1adcc073d/ac53a/fitter-featured-image.jpg 1360w,\\n/static/54575802beacf608dd75d6b1adcc073d/5bc4f/fitter-featured-image.jpg 1851w","sizes":"(max-width: 1360px) 100vw, 1360px"}}}}}},{"node":{"excerpt":"","fields":{"slug":"/its-all-blue/"},"frontmatter":{"date":"May 06, 2019","title":"VendXOR White Paper Lite","description":"VendXOR of Priatek","thumbnail":{"childImageSharp":{"fluid":{"base64":"data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAIDBP/EABUBAQEAAAAAAAAAAAAAAAAAAAIB/9oADAMBAAIQAxAAAAFpPQpSTH//xAAcEAEAAQQDAAAAAAAAAAAAAAABAwACBBExMjP/2gAIAQEAAQUCNSNsqLzk9Tzr/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGxABAAICAwAAAAAAAAAAAAAAAQARAxASIUH/2gAIAQEABj8C7Kqcco14miGv/8QAGhABAAIDAQAAAAAAAAAAAAAAAQAREDFRIf/aAAgBAQABPyEDaOtwKgvIgCBs7CDHajQzWsf/2gAMAwEAAgADAAAAEFD/AP/EABURAQEAAAAAAAAAAAAAAAAAAAEQ/9oACAEDAQE/EGf/xAAWEQEBAQAAAAAAAAAAAAAAAAABEDH/2gAIAQIBAT8QDJ//xAAfEAACAQQCAwAAAAAAAAAAAAABEQAhMUFREGGx0eH/2gAIAQEAAT8QCiOrC5uX98wiVkBJfXq8QjjRE4ABHBkahlkw7Jb4/9k=","aspectRatio":1.8279569892473118,"src":"/static/00cf75fcaafb089aa712793e27c88c41/ac53a/vendXOR-feature-image.jpg","srcSet":"/static/00cf75fcaafb089aa712793e27c88c41/722c4/vendXOR-feature-image.jpg 340w,\\n/static/00cf75fcaafb089aa712793e27c88c41/1d671/vendXOR-feature-image.jpg 680w,\\n/static/00cf75fcaafb089aa712793e27c88c41/ac53a/vendXOR-feature-image.jpg 1360w,\\n/static/00cf75fcaafb089aa712793e27c88c41/4f4f6/vendXOR-feature-image.jpg 1700w","sizes":"(max-width: 1360px) 100vw, 1360px"}}}}}},{"node":{"excerpt":"","fields":{"slug":"/clean-lines/"},"frontmatter":{"date":"May 05, 2019","title":"Pull-Up Banner","description":"Carillon Tower Advisors of Raymond James Financial","thumbnail":{"childImageSharp":{"fluid":{"base64":"data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAOABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEAQL/xAAVAQEBAAAAAAAAAAAAAAAAAAADAv/aAAwDAQACEAMQAAABs5ahAvMIX//EABsQAAMAAgMAAAAAAAAAAAAAAAECAxITAAQz/9oACAEBAAEFArM3Ho2iBJjQjF8dHX8f/8QAFhEBAQEAAAAAAAAAAAAAAAAAAQAx/9oACAEDAQE/AUYy/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQACMf/aAAgBAgEBPwE0T2//xAAdEAACAgEFAAAAAAAAAAAAAAAAAQIDERIhMTJC/9oACAEBAAY/Ao4k+pW9T3E2RyvJXyRP/8QAGhABAQEBAAMAAAAAAAAAAAAAAREAITFBUf/aAAgBAQABPyEdAIWODINVuZRV9u+kBr8o7Mjn4m//2gAMAwEAAgADAAAAEJff/8QAGREAAgMBAAAAAAAAAAAAAAAAAAERITFB/9oACAEDAQE/EL7T4ZSf/8QAFhEBAQEAAAAAAAAAAAAAAAAAAQAR/9oACAECAQE/EMJshSX/xAAbEAEBAQEBAAMAAAAAAAAAAAABEQAhMUFRcf/aAAgBAQABPxAPzkBV+cSWUHTLqr2VKvXPsdHHw+s6BNiSncCR6S/rv//Z","aspectRatio":1.4345991561181435,"src":"/static/c63220ce4d39ea6a914aa54032b0968b/c6ea7/Pullup-Banner-CTA-Featured-Image.jpg","srcSet":"/static/c63220ce4d39ea6a914aa54032b0968b/722c4/Pullup-Banner-CTA-Featured-Image.jpg 340w,\\n/static/c63220ce4d39ea6a914aa54032b0968b/1d671/Pullup-Banner-CTA-Featured-Image.jpg 680w,\\n/static/c63220ce4d39ea6a914aa54032b0968b/c6ea7/Pullup-Banner-CTA-Featured-Image.jpg 980w","sizes":"(max-width: 980px) 100vw, 980px"}}}}}},{"node":{"excerpt":"","fields":{"slug":"/all-spikes/"},"frontmatter":{"date":"May 04, 2019","title":"CIFF Shanghai, China Indoor & Outdoor Signage","description":"Ashley Furniture Industries","thumbnail":{"childImageSharp":{"fluid":{"base64":"data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEAv/EABUBAQEAAAAAAAAAAAAAAAAAAAIA/9oADAMBAAIQAxAAAAGR6XlYKxX/xAAZEAACAwEAAAAAAAAAAAAAAAAAAQIDERP/2gAIAQEAAQUCxxFXq4nPCuKxtQP/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAwEBPwGI/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAEh/9oACAECAQE/AU1//8QAGhAAAwEAAwAAAAAAAAAAAAAAAAERMQJBgf/aAAgBAQAGPwJ4zpemotZCLij/xAAcEAEAAwACAwAAAAAAAAAAAAABABEhMUFRgeH/2gAIAQEAAT8hNADMg2nJ3F/pKFOVZ6gBQb8xXMJ//9oADAMBAAIAAwAAABA/3//EABcRAQEBAQAAAAAAAAAAAAAAAAEAESH/2gAIAQMBAT8QGznl/8QAFxEBAQEBAAAAAAAAAAAAAAAAAREAIf/aAAgBAgEBPxC8uCKb/8QAHBABAAMAAgMAAAAAAAAAAAAAAQARIUFRMWGB/9oACAEBAAE/EEzkCqRy8SJOPLZ8MyC2i7zCQXCidHr3EWV+RbfcNGEO3P/Z","aspectRatio":1.497797356828194,"src":"/static/80ae37a8e42789e44df74433a46a1d7a/ac53a/AFI-CIFF-Shanghai-Feature-Image.jpg","srcSet":"/static/80ae37a8e42789e44df74433a46a1d7a/722c4/AFI-CIFF-Shanghai-Feature-Image.jpg 340w,\\n/static/80ae37a8e42789e44df74433a46a1d7a/1d671/AFI-CIFF-Shanghai-Feature-Image.jpg 680w,\\n/static/80ae37a8e42789e44df74433a46a1d7a/ac53a/AFI-CIFF-Shanghai-Feature-Image.jpg 1360w,\\n/static/80ae37a8e42789e44df74433a46a1d7a/6eda9/AFI-CIFF-Shanghai-Feature-Image.jpg 2040w,\\n/static/80ae37a8e42789e44df74433a46a1d7a/69755/AFI-CIFF-Shanghai-Feature-Image.jpg 2048w","sizes":"(max-width: 1360px) 100vw, 1360px"}}}}}},{"node":{"excerpt":"","fields":{"slug":"/green/"},"frontmatter":{"date":"May 03, 2019","title":"Email Teasers for Ashley Furniture Industries","description":"Guangzhou, China\'s International Furniture Fair of 2017","thumbnail":{"childImageSharp":{"fluid":{"base64":"data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAMEAv/EABYBAQEBAAAAAAAAAAAAAAAAAAEAAv/aAAwDAQACEAMQAAABpKmgcDWrnWTcOf/EABwQAAICAgMAAAAAAAAAAAAAAAECAAMEEhQiQv/aAAgBAQABBQJ2paXXAQM81AybTqnIMRtrPNQ6f//EABcRAQADAAAAAAAAAAAAAAAAAAABEBH/2gAIAQMBAT8Bamv/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AR//xAAgEAABAwIHAAAAAAAAAAAAAAABAAIRA0EQEjEyM2Gh/9oACAEBAAY/AhpHaa2mQ4XhcLlJAOYeqVsRBtj/AP/EABwQAQADAAIDAAAAAAAAAAAAAAEAESExQWFxkf/aAAgBAQABPyEQ5HJ1ZQWiCzl9DKILTp0ilSi6yHk/Ygg1koaOkIpXc//aAAwDAQACAAMAAAAQA9gA/8QAGREAAQUAAAAAAAAAAAAAAAAAABARITFB/9oACAEDAQE/EJseYT//xAAYEQACAwAAAAAAAAAAAAAAAAABEQAQMf/aAAgBAgEBPxBjIhf/xAAdEAEAAgMAAwEAAAAAAAAAAAABABEhMUFxgZGh/9oACAEBAAE/EAZxJXoZqOyC08MS6+RS/SDXHsLVib1YPyBLQBVTzUeWC3S1xBsMVZ4y7wGhzD4wFV87P//Z","aspectRatio":1.0059171597633136,"src":"/static/76510f5e7100118a8bdd0e099911273f/c6ea7/AFI_Guangzhou_Featured_Image.jpg","srcSet":"/static/76510f5e7100118a8bdd0e099911273f/722c4/AFI_Guangzhou_Featured_Image.jpg 340w,\\n/static/76510f5e7100118a8bdd0e099911273f/1d671/AFI_Guangzhou_Featured_Image.jpg 680w,\\n/static/76510f5e7100118a8bdd0e099911273f/c6ea7/AFI_Guangzhou_Featured_Image.jpg 980w","sizes":"(max-width: 980px) 100vw, 980px"}}}}}},{"node":{"excerpt":"","fields":{"slug":"/get-fruity/"},"frontmatter":{"date":"May 02, 2019","title":"AirAsia Magazine Ad","description":"Ashley Furniture HomeStore Asia","thumbnail":{"childImageSharp":{"fluid":{"base64":"data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAOABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIEA//EABYBAQEBAAAAAAAAAAAAAAAAAAMBAv/aAAwDAQACEAMQAAABtM1zaRAX/8QAGhABAAIDAQAAAAAAAAAAAAAAAgERAxMiQv/aAAgBAQABBQJMiNtgTzkJT8XFf//EABURAQEAAAAAAAAAAAAAAAAAAAAS/9oACAEDAQE/AUv/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEv/aAAgBAgEBPwFT/8QAHBAAAgICAwAAAAAAAAAAAAAAAAECESExUWGB/9oACAEBAAY/AuyTXgrM8EktUI//xAAaEAADAQEBAQAAAAAAAAAAAAAAAREhMVFh/9oACAEBAAE/Idw1Ks9IwAZZq4ICufBEuIQSM3w//9oADAMBAAIAAwAAABCbD//EABYRAQEBAAAAAAAAAAAAAAAAAAERAP/aAAgBAwEBPxAmQtm//8QAFhEBAQEAAAAAAAAAAAAAAAAAAREA/9oACAECAQE/EG4QS7//xAAbEAEBAAMAAwAAAAAAAAAAAAABEQAhMUHB0f/aAAgBAQABPxCOhFXhvzDbJLAaHmKcJSuXdA0A+de8lvZF04JQ145//9k=","aspectRatio":1.3934426229508197,"src":"/static/18d07d2cc310321db86d7bfc1f74f3bd/c6ea7/AFHS_AirAsia_Featured_Image.jpg","srcSet":"/static/18d07d2cc310321db86d7bfc1f74f3bd/722c4/AFHS_AirAsia_Featured_Image.jpg 340w,\\n/static/18d07d2cc310321db86d7bfc1f74f3bd/1d671/AFHS_AirAsia_Featured_Image.jpg 680w,\\n/static/18d07d2cc310321db86d7bfc1f74f3bd/c6ea7/AFHS_AirAsia_Featured_Image.jpg 980w","sizes":"(max-width: 980px) 100vw, 980px"}}}}}},{"node":{"excerpt":"","fields":{"slug":"/fur/"},"frontmatter":{"date":"May 01, 2019","title":"Billboard Design for Ufa, Russia","description":"Ashley Furniture HomeStore Ufa, Russia","thumbnail":{"childImageSharp":{"fluid":{"base64":"data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwUA/8QAFgEBAQEAAAAAAAAAAAAAAAAAAwEC/9oADAMBAAIQAxAAAAFFiqSWtC2L/8QAGRABAQADAQAAAAAAAAAAAAAAAgEAEBIT/9oACAEBAAEFAoq1089TjvNrWv/EABYRAQEBAAAAAAAAAAAAAAAAAAABEf/aAAgBAwEBPwGNj//EABYRAQEBAAAAAAAAAAAAAAAAAAACE//aAAgBAgEBPwGpYv/EABoQAAICAwAAAAAAAAAAAAAAAAABESEQEjL/2gAIAQEABj8C2Tg6LFArx//EABkQAAMBAQEAAAAAAAAAAAAAAAABESEx4f/aAAgBAQABPyHHesIeUTlbNGWZSBr4Nu9P/9oADAMBAAIAAwAAABB8H//EABcRAAMBAAAAAAAAAAAAAAAAAAABIWH/2gAIAQMBAT8Qt0xP/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAEhEf/aAAgBAgEBPxBOQqtn/8QAHBABAAMAAgMAAAAAAAAAAAAAAQARITFBUZHR/9oACAEBAAE/EFaD0FHOVqoGAsvj5SoM46ay6rmahNgluPSr3P/Z","aspectRatio":1.780104712041885,"src":"/static/078ce80536f176506dd187416ded56f2/ac53a/Billboard-Design-Ufa-Russia-Feature-Image.jpg","srcSet":"/static/078ce80536f176506dd187416ded56f2/722c4/Billboard-Design-Ufa-Russia-Feature-Image.jpg 340w,\\n/static/078ce80536f176506dd187416ded56f2/1d671/Billboard-Design-Ufa-Russia-Feature-Image.jpg 680w,\\n/static/078ce80536f176506dd187416ded56f2/ac53a/Billboard-Design-Ufa-Russia-Feature-Image.jpg 1360w,\\n/static/078ce80536f176506dd187416ded56f2/d8255/Billboard-Design-Ufa-Russia-Feature-Image.jpg 1920w","sizes":"(max-width: 1360px) 100vw, 1360px"}}}}}},{"node":{"excerpt":"Far far away, behind the word mountains, far from the countries Vokalia and\\nConsonantia, there live the blind texts. Separated they live in…","fields":{"slug":"/hi-folks/"},"frontmatter":{"date":"May 28, 2015","title":"2fitfitness Web Design","description":"UI/UX Design for a father & son fitness website","thumbnail":{"childImageSharp":{"fluid":{"base64":"data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAIABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAME/8QAFgEBAQEAAAAAAAAAAAAAAAAAAwEE/9oADAMBAAIQAxAAAAGGQPXURP/EABgQAAMBAQAAAAAAAAAAAAAAAAABAhED/9oACAEBAAEFAn1pj3ZP/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAECITH/2gAIAQMBAT8BcqVhPD//xAAVEQEBAAAAAAAAAAAAAAAAAAAQEf/aAAgBAgEBPwGn/8QAGBAAAgMAAAAAAAAAAAAAAAAAAAEQIjH/2gAIAQEABj8CdUa4/8QAGRABAQADAQAAAAAAAAAAAAAAAREAITFB/9oACAEBAAE/ISetJRx34Xhi01u/c//aAAwDAQACAAMAAAAQCB//xAAXEQEBAQEAAAAAAAAAAAAAAAABABFB/9oACAEDAQE/EOYbJDf/xAAWEQEBAQAAAAAAAAAAAAAAAAABACH/2gAIAQIBAT8QEuybf//EABoQAQADAAMAAAAAAAAAAAAAAAEAESExQVH/2gAIAQEAAT8QMg7RMuYRAeHbMJaIHkl5P//Z","aspectRatio":2.463768115942029,"src":"/static/e34d69371c5174241a1e4ea91de3a529/ac53a/2fitfitness-feature-image.jpg","srcSet":"/static/e34d69371c5174241a1e4ea91de3a529/722c4/2fitfitness-feature-image.jpg 340w,\\n/static/e34d69371c5174241a1e4ea91de3a529/1d671/2fitfitness-feature-image.jpg 680w,\\n/static/e34d69371c5174241a1e4ea91de3a529/ac53a/2fitfitness-feature-image.jpg 1360w,\\n/static/e34d69371c5174241a1e4ea91de3a529/0e329/2fitfitness-feature-image.jpg 1600w","sizes":"(max-width: 1360px) 100vw, 1360px"}}}}}},{"node":{"excerpt":"Blogging. Yes, there are so many reasons why you should start a blog. But starting a blog has its pros and pitfalls and no single size fits…","fields":{"slug":"/my-second-post/"},"frontmatter":{"date":"May 06, 2015","title":"Blog Post?","description":null,"thumbnail":null}}},{"node":{"excerpt":"Thomas Ward’s Mills 50 District phenomenon is a hipster barbecue joint where global flavorings distinguish the grilled meat specialties. The…","fields":{"slug":"/hello-world/"},"frontmatter":{"date":"May 01, 2015","title":"Pig Floyds Urban Barbakoa","description":"Web Design","thumbnail":{"childImageSharp":{"fluid":{"base64":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAIAAACgpqunAAAACXBIWXMAAAsTAAALEwEAmpwYAAADYUlEQVQozwFWA6n8AIxdP7OTZcOqjMiwkriai7eWisirlNK8n8utgsehcbmXcbmZc9C9n+HWs+TUquXWs+vmzO7aku3MderVpQB0UUrk49/////8/v/y9fb2+Pj8/fv8/Pnm2sHFnW3ConzQv5/l06DpzIjovn7bsXTbuIDiuG3ptV/ryZMAblFZ4+Tn6ejq7+3t7+zq8/Lw9PHt7ujl39XCvplqz7qe6OC16tSY7MiG67586sCA26xqx5NS0ppM7tGjAHBTXNXX293g4drb3NvZ2eDe3eDg397f3tDEr7qfdNzSu+ffse3iru7Ul/HKd/LQdObFa9WkP8aNPeTIoQCBZmaDa4Z8WnGIaHxwSmF7VWeHZHKAO1Gsin+9rYTXxKLavojs2YXz34DuznXdv3LhzGjLmCy1ezjjxZcAh3BqxYaEzm1r0n+By2xqsExUs1RT0mdRu4p/tqCK2ryg3q966sln6K9G1qxY6NiN38douI9HqX1LzK+JAItwZ9i5nciQcqyPf7yDcZZWT5VoVaVvUayJer6mk+DEldywfO3MfuGjR8adUurQe7+UR72NQMGKPcWmewCFa2XTrqHDd1yyeW2PTlKVVlihZV2PQ0WkenjFqpbgxovTonLqyIfct2y5jVu6jUqshEO/lUanfUTGpHMAgWdlwJ2RvINiuop+YUhTdlhdk11ZrmZSs4V6waCN1LiFzptt2qd1yI1jqV9ItnVCn2pDnXJKglM9eVBMAIhsaZhvcJZlYJ9qaZdubaeCfaV/eLR0X8CRgLWKeNK5ltGgbcR8ZNaocMePZsF7VLBwS4tgQIhaQXhOSwCDZmXMtKWlZleOVE6ecWiQY1uufGa9fFrAlH+odmDMsprXt4zOlGzEh2exfmapZVCTWUOKXT2HVkCSb08AfF9nsJyMkGRJmWtRjWFQm2tNt4lXtoNUtpN/pHZYsH902Met1reFzJlkq3VYdjM7h1E2n3JBl2c6qHdAAHZZaHFvdlpcWmhiX2BRTWtRT3lfWHdcW6OKha2DYJ5kU7SMidHGsc25mr2hiKKAd62PYq2YcLCXd6p9TABsT2WMjIhoTk+HZ2yEcGeJcW5/WFxuXFSgkImugFuueVaOTE2oe4HMxbvKw7XNxrfHvqjBtaLJwLbBs6Gpr/WLpLjmUAAAAABJRU5ErkJggg==","aspectRatio":1.4718614718614718,"src":"/static/59568764dbe383e2d65e105abb192f53/40a76/Pig_Floyds_Feature_Image.png","srcSet":"/static/59568764dbe383e2d65e105abb192f53/c972b/Pig_Floyds_Feature_Image.png 340w,\\n/static/59568764dbe383e2d65e105abb192f53/27625/Pig_Floyds_Feature_Image.png 680w,\\n/static/59568764dbe383e2d65e105abb192f53/40a76/Pig_Floyds_Feature_Image.png 1360w,\\n/static/59568764dbe383e2d65e105abb192f53/f8864/Pig_Floyds_Feature_Image.png 1493w","sizes":"(max-width: 1360px) 100vw, 1360px"}}}}}}]}}}'
+          '{"data":{"site":{"siteMetadata":{"title":"Valiant Creative","description":"A highly motivated Graphic & Web Design professional with 10 plus years experience, now focusing on Front End Web Development."}},"allMarkdownRemark":{"edges":[{"node":{"excerpt":"A Full Stack Web Development group project created during my coding Boot Camp at the University of Central Florida. Are you stumped with the…","fields":{"slug":"/whats-for-dinner/"},"frontmatter":{"date":"May 08, 2019","title":"What\'s for Dinner?","description":"A Full Stack Web Development Application","thumbnail":{"childImageSharp":{"fluid":{"base64":"data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMFBP/EABUBAQEAAAAAAAAAAAAAAAAAAAME/9oADAMBAAIQAxAAAAGzlkuQWDB5v//EABkQAQADAQEAAAAAAAAAAAAAAAIAAxEBIf/aAAgBAQABBQIo4/K4qDBWeTJ//8QAFxEAAwEAAAAAAAAAAAAAAAAAAAERA//aAAgBAwEBPwF6qFP/xAAXEQADAQAAAAAAAAAAAAAAAAAAAREC/9oACAECAQE/AVh0h//EABkQAAIDAQAAAAAAAAAAAAAAAAABECExgf/aAAgBAQAGPwJWh5xxRkf/xAAbEAACAgMBAAAAAAAAAAAAAAAAEQEhQVFhgf/aAAgBAQABPyHkLY8NrSsyQU5pvpbQnoh//9oADAMBAAIAAwAAABA3H//EABYRAQEBAAAAAAAAAAAAAAAAABEAQf/aAAgBAwEBPxBM2N//xAAWEQEBAQAAAAAAAAAAAAAAAAAAETH/2gAIAQIBAT8Q1FP/xAAcEAEAAwACAwAAAAAAAAAAAAABABEhMUFx0eH/2gAIAQEAAT8Qs1CDrueYGqXowQmo5Sk4O/EoL4417hD/2Q==","aspectRatio":1.5044247787610618,"src":"/static/37a41b918f0b657d81811de4de7a6647/ac53a/whats-for-dinner-feature-image.jpg","srcSet":"/static/37a41b918f0b657d81811de4de7a6647/722c4/whats-for-dinner-feature-image.jpg 340w,\\n/static/37a41b918f0b657d81811de4de7a6647/1d671/whats-for-dinner-feature-image.jpg 680w,\\n/static/37a41b918f0b657d81811de4de7a6647/ac53a/whats-for-dinner-feature-image.jpg 1360w,\\n/static/37a41b918f0b657d81811de4de7a6647/5bc4f/whats-for-dinner-feature-image.jpg 1851w","sizes":"(max-width: 1360px) 100vw, 1360px"}}}}}},{"node":{"excerpt":"Picasso had his pink period and his blue period. I am in my blonde period right now. When I first started wearing pink, it wasn’t nothing I…","fields":{"slug":"/fitter/"},"frontmatter":{"date":"May 07, 2019","title":"FITTER","description":"Pink is my favourite colour. I used to say my favourite colour was black to be cool, but it is pink - all shades of pink. If I have an accessory, it is probably pink.","thumbnail":{"childImageSharp":{"fluid":{"base64":"data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABQABA//EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAFDRukjUTH/xAAZEAEBAAMBAAAAAAAAAAAAAAACAAESEzH/2gAIAQEAAQUCKmrHhat1dFf/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAZEAACAwEAAAAAAAAAAAAAAAAAMRBBYYH/2gAIAQEABj8CwvkMYz//xAAaEAEAAwADAAAAAAAAAAAAAAABABExEEFx/9oACAEBAAE/IbXKhygRbKoedwGOBPB//9oADAMBAAIAAwAAABC/P//EABURAQEAAAAAAAAAAAAAAAAAABAh/9oACAEDAQE/EKf/xAAVEQEBAAAAAAAAAAAAAAAAAAAAIf/aAAgBAgEBPxCq/8QAGxABAQACAwEAAAAAAAAAAAAAAREAITFRYXH/2gAIAQEAAT8Q3EDqu1cL00UCybXo+buTa8DnV++4Rq1vNw42veESOemf/9k=","aspectRatio":1.5044247787610618,"src":"/static/54575802beacf608dd75d6b1adcc073d/ac53a/fitter-featured-image.jpg","srcSet":"/static/54575802beacf608dd75d6b1adcc073d/722c4/fitter-featured-image.jpg 340w,\\n/static/54575802beacf608dd75d6b1adcc073d/1d671/fitter-featured-image.jpg 680w,\\n/static/54575802beacf608dd75d6b1adcc073d/ac53a/fitter-featured-image.jpg 1360w,\\n/static/54575802beacf608dd75d6b1adcc073d/5bc4f/fitter-featured-image.jpg 1851w","sizes":"(max-width: 1360px) 100vw, 1360px"}}}}}},{"node":{"excerpt":"","fields":{"slug":"/vendXOR/"},"frontmatter":{"date":"May 06, 2019","title":"VendXOR White Paper Lite","description":"VendXOR of Priatek","thumbnail":{"childImageSharp":{"fluid":{"base64":"data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAIDBP/EABUBAQEAAAAAAAAAAAAAAAAAAAIB/9oADAMBAAIQAxAAAAFpPQpSTH//xAAcEAEAAQQDAAAAAAAAAAAAAAABAwACBBExMjP/2gAIAQEAAQUCNSNsqLzk9Tzr/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGxABAAICAwAAAAAAAAAAAAAAAQARAxASIUH/2gAIAQEABj8C7Kqcco14miGv/8QAGhABAAIDAQAAAAAAAAAAAAAAAQAREDFRIf/aAAgBAQABPyEDaOtwKgvIgCBs7CDHajQzWsf/2gAMAwEAAgADAAAAEFD/AP/EABURAQEAAAAAAAAAAAAAAAAAAAEQ/9oACAEDAQE/EGf/xAAWEQEBAQAAAAAAAAAAAAAAAAABEDH/2gAIAQIBAT8QDJ//xAAfEAACAQQCAwAAAAAAAAAAAAABEQAhMUFREGGx0eH/2gAIAQEAAT8QCiOrC5uX98wiVkBJfXq8QjjRE4ABHBkahlkw7Jb4/9k=","aspectRatio":1.8279569892473118,"src":"/static/00cf75fcaafb089aa712793e27c88c41/ac53a/vendXOR-feature-image.jpg","srcSet":"/static/00cf75fcaafb089aa712793e27c88c41/722c4/vendXOR-feature-image.jpg 340w,\\n/static/00cf75fcaafb089aa712793e27c88c41/1d671/vendXOR-feature-image.jpg 680w,\\n/static/00cf75fcaafb089aa712793e27c88c41/ac53a/vendXOR-feature-image.jpg 1360w,\\n/static/00cf75fcaafb089aa712793e27c88c41/4f4f6/vendXOR-feature-image.jpg 1700w","sizes":"(max-width: 1360px) 100vw, 1360px"}}}}}},{"node":{"excerpt":"","fields":{"slug":"/cta-pull-up-banner/"},"frontmatter":{"date":"May 05, 2019","title":"Pull-Up Banner","description":"Carillon Tower Advisors of Raymond James Financial","thumbnail":{"childImageSharp":{"fluid":{"base64":"data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAOABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEAQL/xAAVAQEBAAAAAAAAAAAAAAAAAAADAv/aAAwDAQACEAMQAAABs5ahAvMIX//EABsQAAMAAgMAAAAAAAAAAAAAAAECAxITAAQz/9oACAEBAAEFArM3Ho2iBJjQjF8dHX8f/8QAFhEBAQEAAAAAAAAAAAAAAAAAAQAx/9oACAEDAQE/AUYy/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQACMf/aAAgBAgEBPwE0T2//xAAdEAACAgEFAAAAAAAAAAAAAAAAAQIDERIhMTJC/9oACAEBAAY/Ao4k+pW9T3E2RyvJXyRP/8QAGhABAQEBAAMAAAAAAAAAAAAAAREAITFBUf/aAAgBAQABPyEdAIWODINVuZRV9u+kBr8o7Mjn4m//2gAMAwEAAgADAAAAEJff/8QAGREAAgMBAAAAAAAAAAAAAAAAAAERITFB/9oACAEDAQE/EL7T4ZSf/8QAFhEBAQEAAAAAAAAAAAAAAAAAAQAR/9oACAECAQE/EMJshSX/xAAbEAEBAQEBAAMAAAAAAAAAAAABEQAhMUFRcf/aAAgBAQABPxAPzkBV+cSWUHTLqr2VKvXPsdHHw+s6BNiSncCR6S/rv//Z","aspectRatio":1.4345991561181435,"src":"/static/c63220ce4d39ea6a914aa54032b0968b/c6ea7/Pullup-Banner-CTA-Featured-Image.jpg","srcSet":"/static/c63220ce4d39ea6a914aa54032b0968b/722c4/Pullup-Banner-CTA-Featured-Image.jpg 340w,\\n/static/c63220ce4d39ea6a914aa54032b0968b/1d671/Pullup-Banner-CTA-Featured-Image.jpg 680w,\\n/static/c63220ce4d39ea6a914aa54032b0968b/c6ea7/Pullup-Banner-CTA-Featured-Image.jpg 980w","sizes":"(max-width: 980px) 100vw, 980px"}}}}}},{"node":{"excerpt":"","fields":{"slug":"/afi-ciff-shanghai-signage/"},"frontmatter":{"date":"May 04, 2019","title":"CIFF Shanghai, China Indoor & Outdoor Signage","description":"Ashley Furniture Industries","thumbnail":{"childImageSharp":{"fluid":{"base64":"data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEAv/EABUBAQEAAAAAAAAAAAAAAAAAAAIA/9oADAMBAAIQAxAAAAGR6XlYKxX/xAAZEAACAwEAAAAAAAAAAAAAAAAAAQIDERP/2gAIAQEAAQUCxxFXq4nPCuKxtQP/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAwEBPwGI/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAEh/9oACAECAQE/AU1//8QAGhAAAwEAAwAAAAAAAAAAAAAAAAERMQJBgf/aAAgBAQAGPwJ4zpemotZCLij/xAAcEAEAAwACAwAAAAAAAAAAAAABABEhMUFRgeH/2gAIAQEAAT8hNADMg2nJ3F/pKFOVZ6gBQb8xXMJ//9oADAMBAAIAAwAAABA/3//EABcRAQEBAQAAAAAAAAAAAAAAAAEAESH/2gAIAQMBAT8QGznl/8QAFxEBAQEBAAAAAAAAAAAAAAAAAREAIf/aAAgBAgEBPxC8uCKb/8QAHBABAAMAAgMAAAAAAAAAAAAAAQARIUFRMWGB/9oACAEBAAE/EEzkCqRy8SJOPLZ8MyC2i7zCQXCidHr3EWV+RbfcNGEO3P/Z","aspectRatio":1.497797356828194,"src":"/static/80ae37a8e42789e44df74433a46a1d7a/ac53a/AFI-CIFF-Shanghai-Feature-Image.jpg","srcSet":"/static/80ae37a8e42789e44df74433a46a1d7a/722c4/AFI-CIFF-Shanghai-Feature-Image.jpg 340w,\\n/static/80ae37a8e42789e44df74433a46a1d7a/1d671/AFI-CIFF-Shanghai-Feature-Image.jpg 680w,\\n/static/80ae37a8e42789e44df74433a46a1d7a/ac53a/AFI-CIFF-Shanghai-Feature-Image.jpg 1360w,\\n/static/80ae37a8e42789e44df74433a46a1d7a/6eda9/AFI-CIFF-Shanghai-Feature-Image.jpg 2040w,\\n/static/80ae37a8e42789e44df74433a46a1d7a/69755/AFI-CIFF-Shanghai-Feature-Image.jpg 2048w","sizes":"(max-width: 1360px) 100vw, 1360px"}}}}}},{"node":{"excerpt":"","fields":{"slug":"/afi-email-teasers/"},"frontmatter":{"date":"May 03, 2019","title":"Email Teasers for Ashley Furniture Industries","description":"Guangzhou, China\'s International Furniture Fair of 2017","thumbnail":{"childImageSharp":{"fluid":{"base64":"data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAMEAv/EABYBAQEBAAAAAAAAAAAAAAAAAAEAAv/aAAwDAQACEAMQAAABpKmgcDWrnWTcOf/EABwQAAICAgMAAAAAAAAAAAAAAAECAAMEEhQiQv/aAAgBAQABBQJ2paXXAQM81AybTqnIMRtrPNQ6f//EABcRAQADAAAAAAAAAAAAAAAAAAABEBH/2gAIAQMBAT8Bamv/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AR//xAAgEAABAwIHAAAAAAAAAAAAAAABAAIRA0EQEjEyM2Gh/9oACAEBAAY/AhpHaa2mQ4XhcLlJAOYeqVsRBtj/AP/EABwQAQADAAIDAAAAAAAAAAAAAAEAESExQWFxkf/aAAgBAQABPyEQ5HJ1ZQWiCzl9DKILTp0ilSi6yHk/Ygg1koaOkIpXc//aAAwDAQACAAMAAAAQA9gA/8QAGREAAQUAAAAAAAAAAAAAAAAAABARITFB/9oACAEDAQE/EJseYT//xAAYEQACAwAAAAAAAAAAAAAAAAABEQAQMf/aAAgBAgEBPxBjIhf/xAAdEAEAAgMAAwEAAAAAAAAAAAABABEhMUFxgZGh/9oACAEBAAE/EAZxJXoZqOyC08MS6+RS/SDXHsLVib1YPyBLQBVTzUeWC3S1xBsMVZ4y7wGhzD4wFV87P//Z","aspectRatio":1.0059171597633136,"src":"/static/76510f5e7100118a8bdd0e099911273f/c6ea7/AFI_Guangzhou_Featured_Image.jpg","srcSet":"/static/76510f5e7100118a8bdd0e099911273f/722c4/AFI_Guangzhou_Featured_Image.jpg 340w,\\n/static/76510f5e7100118a8bdd0e099911273f/1d671/AFI_Guangzhou_Featured_Image.jpg 680w,\\n/static/76510f5e7100118a8bdd0e099911273f/c6ea7/AFI_Guangzhou_Featured_Image.jpg 980w","sizes":"(max-width: 980px) 100vw, 980px"}}}}}},{"node":{"excerpt":"","fields":{"slug":"/air-asia-mag-ad/"},"frontmatter":{"date":"May 02, 2019","title":"AirAsia Magazine Ad","description":"Ashley Furniture HomeStore Asia","thumbnail":{"childImageSharp":{"fluid":{"base64":"data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAOABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIEA//EABYBAQEBAAAAAAAAAAAAAAAAAAMBAv/aAAwDAQACEAMQAAABtM1zaRAX/8QAGhABAAIDAQAAAAAAAAAAAAAAAgERAxMiQv/aAAgBAQABBQJMiNtgTzkJT8XFf//EABURAQEAAAAAAAAAAAAAAAAAAAAS/9oACAEDAQE/AUv/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEv/aAAgBAgEBPwFT/8QAHBAAAgICAwAAAAAAAAAAAAAAAAECESExUWGB/9oACAEBAAY/AuyTXgrM8EktUI//xAAaEAADAQEBAQAAAAAAAAAAAAAAAREhMVFh/9oACAEBAAE/Idw1Ks9IwAZZq4ICufBEuIQSM3w//9oADAMBAAIAAwAAABCbD//EABYRAQEBAAAAAAAAAAAAAAAAAAERAP/aAAgBAwEBPxAmQtm//8QAFhEBAQEAAAAAAAAAAAAAAAAAAREA/9oACAECAQE/EG4QS7//xAAbEAEBAAMAAwAAAAAAAAAAAAABEQAhMUHB0f/aAAgBAQABPxCOhFXhvzDbJLAaHmKcJSuXdA0A+de8lvZF04JQ145//9k=","aspectRatio":1.3934426229508197,"src":"/static/18d07d2cc310321db86d7bfc1f74f3bd/c6ea7/AFHS_AirAsia_Featured_Image.jpg","srcSet":"/static/18d07d2cc310321db86d7bfc1f74f3bd/722c4/AFHS_AirAsia_Featured_Image.jpg 340w,\\n/static/18d07d2cc310321db86d7bfc1f74f3bd/1d671/AFHS_AirAsia_Featured_Image.jpg 680w,\\n/static/18d07d2cc310321db86d7bfc1f74f3bd/c6ea7/AFHS_AirAsia_Featured_Image.jpg 980w","sizes":"(max-width: 980px) 100vw, 980px"}}}}}},{"node":{"excerpt":"","fields":{"slug":"/ufa-russia-billboard/"},"frontmatter":{"date":"May 01, 2019","title":"Billboard Design for Ufa, Russia","description":"Ashley Furniture HomeStore Ufa, Russia","thumbnail":{"childImageSharp":{"fluid":{"base64":"data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwUA/8QAFgEBAQEAAAAAAAAAAAAAAAAAAwEC/9oADAMBAAIQAxAAAAFFiqSWtC2L/8QAGRABAQADAQAAAAAAAAAAAAAAAgEAEBIT/9oACAEBAAEFAoq1089TjvNrWv/EABYRAQEBAAAAAAAAAAAAAAAAAAABEf/aAAgBAwEBPwGNj//EABYRAQEBAAAAAAAAAAAAAAAAAAACE//aAAgBAgEBPwGpYv/EABoQAAICAwAAAAAAAAAAAAAAAAABESEQEjL/2gAIAQEABj8C2Tg6LFArx//EABkQAAMBAQEAAAAAAAAAAAAAAAABESEx4f/aAAgBAQABPyHHesIeUTlbNGWZSBr4Nu9P/9oADAMBAAIAAwAAABB8H//EABcRAAMBAAAAAAAAAAAAAAAAAAABIWH/2gAIAQMBAT8Qt0xP/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAEhEf/aAAgBAgEBPxBOQqtn/8QAHBABAAMAAgMAAAAAAAAAAAAAAQARITFBUZHR/9oACAEBAAE/EFaD0FHOVqoGAsvj5SoM46ay6rmahNgluPSr3P/Z","aspectRatio":1.780104712041885,"src":"/static/078ce80536f176506dd187416ded56f2/ac53a/Billboard-Design-Ufa-Russia-Feature-Image.jpg","srcSet":"/static/078ce80536f176506dd187416ded56f2/722c4/Billboard-Design-Ufa-Russia-Feature-Image.jpg 340w,\\n/static/078ce80536f176506dd187416ded56f2/1d671/Billboard-Design-Ufa-Russia-Feature-Image.jpg 680w,\\n/static/078ce80536f176506dd187416ded56f2/ac53a/Billboard-Design-Ufa-Russia-Feature-Image.jpg 1360w,\\n/static/078ce80536f176506dd187416ded56f2/d8255/Billboard-Design-Ufa-Russia-Feature-Image.jpg 1920w","sizes":"(max-width: 1360px) 100vw, 1360px"}}}}}},{"node":{"excerpt":"Far far away, behind the word mountains, far from the countries Vokalia and\\nConsonantia, there live the blind texts. Separated they live in…","fields":{"slug":"/2fitfitness-web-design/"},"frontmatter":{"date":"May 28, 2015","title":"2fitfitness Web Design","description":"UI/UX Design for a father & son fitness website","thumbnail":{"childImageSharp":{"fluid":{"base64":"data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAIABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAME/8QAFgEBAQEAAAAAAAAAAAAAAAAAAwEE/9oADAMBAAIQAxAAAAGGQPXURP/EABgQAAMBAQAAAAAAAAAAAAAAAAABAhED/9oACAEBAAEFAn1pj3ZP/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAECITH/2gAIAQMBAT8BcqVhPD//xAAVEQEBAAAAAAAAAAAAAAAAAAAQEf/aAAgBAgEBPwGn/8QAGBAAAgMAAAAAAAAAAAAAAAAAAAEQIjH/2gAIAQEABj8CdUa4/8QAGRABAQADAQAAAAAAAAAAAAAAAREAITFB/9oACAEBAAE/ISetJRx34Xhi01u/c//aAAwDAQACAAMAAAAQCB//xAAXEQEBAQEAAAAAAAAAAAAAAAABABFB/9oACAEDAQE/EOYbJDf/xAAWEQEBAQAAAAAAAAAAAAAAAAABACH/2gAIAQIBAT8QEuybf//EABoQAQADAAMAAAAAAAAAAAAAAAEAESExQVH/2gAIAQEAAT8QMg7RMuYRAeHbMJaIHkl5P//Z","aspectRatio":2.463768115942029,"src":"/static/e34d69371c5174241a1e4ea91de3a529/ac53a/2fitfitness-feature-image.jpg","srcSet":"/static/e34d69371c5174241a1e4ea91de3a529/722c4/2fitfitness-feature-image.jpg 340w,\\n/static/e34d69371c5174241a1e4ea91de3a529/1d671/2fitfitness-feature-image.jpg 680w,\\n/static/e34d69371c5174241a1e4ea91de3a529/ac53a/2fitfitness-feature-image.jpg 1360w,\\n/static/e34d69371c5174241a1e4ea91de3a529/0e329/2fitfitness-feature-image.jpg 1600w","sizes":"(max-width: 1360px) 100vw, 1360px"}}}}}},{"node":{"excerpt":"Blogging. Yes, there are so many reasons why you should start a blog. But starting a blog has its pros and pitfalls and no single size fits…","fields":{"slug":"/blog-post/"},"frontmatter":{"date":"May 06, 2015","title":"Blog Post?","description":null,"thumbnail":null}}},{"node":{"excerpt":"Thomas Ward’s Mills 50 District phenomenon is a hipster barbecue joint where global flavorings distinguish the grilled meat specialties. The…","fields":{"slug":"/pig-floyds-urban-bbq-web-design/"},"frontmatter":{"date":"May 01, 2015","title":"Pig Floyds Urban Barbakoa","description":"Web Design","thumbnail":{"childImageSharp":{"fluid":{"base64":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAIAAACgpqunAAAACXBIWXMAAAsTAAALEwEAmpwYAAADYUlEQVQozwFWA6n8AIxdP7OTZcOqjMiwkriai7eWisirlNK8n8utgsehcbmXcbmZc9C9n+HWs+TUquXWs+vmzO7aku3MderVpQB0UUrk49/////8/v/y9fb2+Pj8/fv8/Pnm2sHFnW3ConzQv5/l06DpzIjovn7bsXTbuIDiuG3ptV/ryZMAblFZ4+Tn6ejq7+3t7+zq8/Lw9PHt7ujl39XCvplqz7qe6OC16tSY7MiG67586sCA26xqx5NS0ppM7tGjAHBTXNXX293g4drb3NvZ2eDe3eDg397f3tDEr7qfdNzSu+ffse3iru7Ul/HKd/LQdObFa9WkP8aNPeTIoQCBZmaDa4Z8WnGIaHxwSmF7VWeHZHKAO1Gsin+9rYTXxKLavojs2YXz34DuznXdv3LhzGjLmCy1ezjjxZcAh3BqxYaEzm1r0n+By2xqsExUs1RT0mdRu4p/tqCK2ryg3q966sln6K9G1qxY6NiN38douI9HqX1LzK+JAItwZ9i5nciQcqyPf7yDcZZWT5VoVaVvUayJer6mk+DEldywfO3MfuGjR8adUurQe7+UR72NQMGKPcWmewCFa2XTrqHDd1yyeW2PTlKVVlihZV2PQ0WkenjFqpbgxovTonLqyIfct2y5jVu6jUqshEO/lUanfUTGpHMAgWdlwJ2RvINiuop+YUhTdlhdk11ZrmZSs4V6waCN1LiFzptt2qd1yI1jqV9ItnVCn2pDnXJKglM9eVBMAIhsaZhvcJZlYJ9qaZdubaeCfaV/eLR0X8CRgLWKeNK5ltGgbcR8ZNaocMePZsF7VLBwS4tgQIhaQXhOSwCDZmXMtKWlZleOVE6ecWiQY1uufGa9fFrAlH+odmDMsprXt4zOlGzEh2exfmapZVCTWUOKXT2HVkCSb08AfF9nsJyMkGRJmWtRjWFQm2tNt4lXtoNUtpN/pHZYsH902Met1reFzJlkq3VYdjM7h1E2n3JBl2c6qHdAAHZZaHFvdlpcWmhiX2BRTWtRT3lfWHdcW6OKha2DYJ5kU7SMidHGsc25mr2hiKKAd62PYq2YcLCXd6p9TABsT2WMjIhoTk+HZ2yEcGeJcW5/WFxuXFSgkImugFuueVaOTE2oe4HMxbvKw7XNxrfHvqjBtaLJwLbBs6Gpr/WLpLjmUAAAAABJRU5ErkJggg==","aspectRatio":1.4718614718614718,"src":"/static/59568764dbe383e2d65e105abb192f53/40a76/Pig_Floyds_Feature_Image.png","srcSet":"/static/59568764dbe383e2d65e105abb192f53/c972b/Pig_Floyds_Feature_Image.png 340w,\\n/static/59568764dbe383e2d65e105abb192f53/27625/Pig_Floyds_Feature_Image.png 680w,\\n/static/59568764dbe383e2d65e105abb192f53/40a76/Pig_Floyds_Feature_Image.png 1360w,\\n/static/59568764dbe383e2d65e105abb192f53/f8864/Pig_Floyds_Feature_Image.png 1493w","sizes":"(max-width: 1360px) 100vw, 1360px"}}}}}}]}}}'
         );
 
         /***/

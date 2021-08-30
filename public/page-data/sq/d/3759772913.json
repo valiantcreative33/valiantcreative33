@@ -11,7 +11,7 @@
         {
           "node": {
             "excerpt": "A Full Stack Web Development group project created during my coding Boot Camp at the University of Central Florida. Are you stumped with the…",
-            "fields": { "slug": "/darkness/" },
+            "fields": { "slug": "/whats-for-dinner/" },
             "frontmatter": {
               "date": "May 08, 2019",
               "title": "What's for Dinner?",
@@ -21,8 +21,8 @@
                   "fluid": {
                     "base64": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMFBP/EABUBAQEAAAAAAAAAAAAAAAAAAAME/9oADAMBAAIQAxAAAAGzlkuQWDB5v//EABkQAQADAQEAAAAAAAAAAAAAAAIAAxEBIf/aAAgBAQABBQIo4/K4qDBWeTJ//8QAFxEAAwEAAAAAAAAAAAAAAAAAAAERA//aAAgBAwEBPwF6qFP/xAAXEQADAQAAAAAAAAAAAAAAAAAAAREC/9oACAECAQE/AVh0h//EABkQAAIDAQAAAAAAAAAAAAAAAAABECExgf/aAAgBAQAGPwJWh5xxRkf/xAAbEAACAgMBAAAAAAAAAAAAAAAAEQEhQVFhgf/aAAgBAQABPyHkLY8NrSsyQU5pvpbQnoh//9oADAMBAAIAAwAAABA3H//EABYRAQEBAAAAAAAAAAAAAAAAABEAQf/aAAgBAwEBPxBM2N//xAAWEQEBAQAAAAAAAAAAAAAAAAAAETH/2gAIAQIBAT8Q1FP/xAAcEAEAAwACAwAAAAAAAAAAAAABABEhMUFx0eH/2gAIAQEAAT8Qs1CDrueYGqXowQmo5Sk4O/EoL4417hD/2Q==",
                     "aspectRatio": 1.5044247787610618,
-                    "src": "/static/37a41b918f0b657d81811de4de7a6647/ac53a/bbbb.jpg",
-                    "srcSet": "/static/37a41b918f0b657d81811de4de7a6647/722c4/bbbb.jpg 340w,\n/static/37a41b918f0b657d81811de4de7a6647/1d671/bbbb.jpg 680w,\n/static/37a41b918f0b657d81811de4de7a6647/ac53a/bbbb.jpg 1360w,\n/static/37a41b918f0b657d81811de4de7a6647/5bc4f/bbbb.jpg 1851w",
+                    "src": "/static/37a41b918f0b657d81811de4de7a6647/ac53a/whats-for-dinner-feature-image.jpg",
+                    "srcSet": "/static/37a41b918f0b657d81811de4de7a6647/722c4/whats-for-dinner-feature-image.jpg 340w,\n/static/37a41b918f0b657d81811de4de7a6647/1d671/whats-for-dinner-feature-image.jpg 680w,\n/static/37a41b918f0b657d81811de4de7a6647/ac53a/whats-for-dinner-feature-image.jpg 1360w,\n/static/37a41b918f0b657d81811de4de7a6647/5bc4f/whats-for-dinner-feature-image.jpg 1851w",
                     "sizes": "(max-width: 1360px) 100vw, 1360px"
                   }
                 }
@@ -33,7 +33,7 @@
         {
           "node": {
             "excerpt": "Picasso had his pink period and his blue period. I am in my blonde period right now. When I first started wearing pink, it wasn’t nothing I…",
-            "fields": { "slug": "/dont-stop/" },
+            "fields": { "slug": "/fitter/" },
             "frontmatter": {
               "date": "May 07, 2019",
               "title": "FITTER",
@@ -55,7 +55,7 @@
         {
           "node": {
             "excerpt": "",
-            "fields": { "slug": "/its-all-blue/" },
+            "fields": { "slug": "/vendXOR/" },
             "frontmatter": {
               "date": "May 06, 2019",
               "title": "VendXOR White Paper Lite",
@@ -77,7 +77,7 @@
         {
           "node": {
             "excerpt": "",
-            "fields": { "slug": "/clean-lines/" },
+            "fields": { "slug": "/cta-pull-up-banner/" },
             "frontmatter": {
               "date": "May 05, 2019",
               "title": "Pull-Up Banner",
@@ -99,7 +99,7 @@
         {
           "node": {
             "excerpt": "",
-            "fields": { "slug": "/all-spikes/" },
+            "fields": { "slug": "/afi-ciff-shanghai-signage/" },
             "frontmatter": {
               "date": "May 04, 2019",
               "title": "CIFF Shanghai, China Indoor & Outdoor Signage",
@@ -121,7 +121,7 @@
         {
           "node": {
             "excerpt": "",
-            "fields": { "slug": "/green/" },
+            "fields": { "slug": "/afi-email-teasers/" },
             "frontmatter": {
               "date": "May 03, 2019",
               "title": "Email Teasers for Ashley Furniture Industries",
@@ -143,7 +143,7 @@
         {
           "node": {
             "excerpt": "",
-            "fields": { "slug": "/get-fruity/" },
+            "fields": { "slug": "/air-asia-mag-ad/" },
             "frontmatter": {
               "date": "May 02, 2019",
               "title": "AirAsia Magazine Ad",
@@ -165,7 +165,7 @@
         {
           "node": {
             "excerpt": "",
-            "fields": { "slug": "/fur/" },
+            "fields": { "slug": "/ufa-russia-billboard/" },
             "frontmatter": {
               "date": "May 01, 2019",
               "title": "Billboard Design for Ufa, Russia",
@@ -187,7 +187,7 @@
         {
           "node": {
             "excerpt": "Far far away, behind the word mountains, far from the countries Vokalia and\nConsonantia, there live the blind texts. Separated they live in…",
-            "fields": { "slug": "/hi-folks/" },
+            "fields": { "slug": "/2fitfitness-web-design/" },
             "frontmatter": {
               "date": "May 28, 2015",
               "title": "2fitfitness Web Design",
@@ -209,7 +209,7 @@
         {
           "node": {
             "excerpt": "Blogging. Yes, there are so many reasons why you should start a blog. But starting a blog has its pros and pitfalls and no single size fits…",
-            "fields": { "slug": "/my-second-post/" },
+            "fields": { "slug": "/blog-post/" },
             "frontmatter": {
               "date": "May 06, 2015",
               "title": "Blog Post?",
@@ -221,7 +221,7 @@
         {
           "node": {
             "excerpt": "Thomas Ward’s Mills 50 District phenomenon is a hipster barbecue joint where global flavorings distinguish the grilled meat specialties. The…",
-            "fields": { "slug": "/hello-world/" },
+            "fields": { "slug": "/pig-floyds-urban-bbq-web-design/" },
             "frontmatter": {
               "date": "May 01, 2015",
               "title": "Pig Floyds Urban Barbakoa",

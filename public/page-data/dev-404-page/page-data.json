@@ -6,22 +6,22 @@
       "allSiteFunction": { "nodes": [{ "functionRoute": "FAKE" }] },
       "allSitePage": {
         "nodes": [
-          { "path": "/darkness/" },
-          { "path": "/dont-stop/" },
-          { "path": "/its-all-blue/" },
-          { "path": "/clean-lines/" },
-          { "path": "/all-spikes/" },
-          { "path": "/green/" },
-          { "path": "/get-fruity/" },
-          { "path": "/fur/" },
-          { "path": "/hi-folks/" },
-          { "path": "/my-second-post/" },
-          { "path": "/hello-world/" },
           { "path": "/404.html" },
           { "path": "/404/" },
           { "path": "/about/" },
           { "path": "/elements/" },
-          { "path": "/" }
+          { "path": "/" },
+          { "path": "/whats-for-dinner/" },
+          { "path": "/fitter/" },
+          { "path": "/vendXOR/" },
+          { "path": "/cta-pull-up-banner/" },
+          { "path": "/afi-ciff-shanghai-signage/" },
+          { "path": "/afi-email-teasers/" },
+          { "path": "/air-asia-mag-ad/" },
+          { "path": "/ufa-russia-billboard/" },
+          { "path": "/2fitfitness-web-design/" },
+          { "path": "/blog-post/" },
+          { "path": "/pig-floyds-urban-bbq-web-design/" }
         ]
       }
     },

@@ -1,7 +1,7 @@
 ---
 title: What's for Dinner?
 date: "2019-05-08"
-thumbnail: ./bbbb.jpg
+thumbnail: ./whats-for-dinner-feature-image.jpg
 description: A Full Stack Web Development Application
 ---
 
@@ -15,18 +15,18 @@ View the live project [here](https://deckiedevs.github.io/whats-for-dinner/).
 
 <div class="kg-card kg-image-card kg-width-full">
 
-![Darkness](./BLACK_II_desktop-1.jpg)
+![Darkness](./whats-for-dinner-iMac-mockup.jpg)
 
 </div>
 
 <div class="kg-card kg-image-card kg-width-full">
 
-![Darkness](./BLACK_IX_desktop-1.jpg)
+![Darkness](./whats-for-dinner-iPad-mockup.jpg)
 
 </div>
 
 <div class="kg-card kg-image-card kg-width-full">
 
-![Darkness](./BLACK_I_desktop-1.jpg)
+![Darkness](./whats-for-dinner-iPhones-mockup.jpg)
 
 </div>

@@ -1,6 +1,6 @@
 {
   "componentChunkName": "component---src-templates-blog-post-js",
-  "path": "/my-second-post/",
+  "path": "/blog-post/",
   "result": {
     "data": {
       "site": {
@@ -10,7 +10,7 @@
         }
       },
       "markdownRemark": {
-        "id": "7567104a-b39b-54f0-b5af-293466508ad7",
+        "id": "ebaeb920-3b80-5244-8222-789e2a9e86a7",
         "excerpt": "Blogging. Yes, there are so many reasons why you should start a blog. But starting a blog has its pros and pitfalls and no single size fits all.\nWhen…",
         "html": "<p>Blogging. Yes, there are so many reasons why you should start a blog.</p>\n<p>But starting a blog has its pros and pitfalls and no single size fits all.\nWhen considering whether to start a blog or not, consider both sides of the argument and weigh them against your own personality, lifestyle and ambitions. See what fits you and be honest about what you really want out of the experience.</p>\n<p>You’ll be the one doing the work and on the flip side, you’ll be the one reaping the rewards in the end.</p>\n<p>With that said, yes, I hope to have a blog here soon!</p>",
         "frontmatter": {
@@ -22,9 +22,9 @@
       }
     },
     "pageContext": {
-      "slug": "/my-second-post/",
+      "slug": "/blog-post/",
       "previous": {
-        "fields": { "slug": "/hello-world/" },
+        "fields": { "slug": "/pig-floyds-urban-bbq-web-design/" },
         "frontmatter": { "title": "Pig Floyds Urban Barbakoa" }
       },
       "next": {
