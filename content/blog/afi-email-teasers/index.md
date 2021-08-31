@@ -5,9 +5,15 @@ thumbnail: ./AFI-Guangzhou-Email-Teasers-Feature-Image.jpg
 description: Guangzhou, China's International Furniture Fair of 2017
 ---
 
-### A Full Stack Web Development group [project](https://github.com/valiantcreative33/whats-for-dinner) created during my coding Boot Camp at the University of Central Florida.
+### Introducing Augmented and Virtual Reality
 
-Are you stumped with the never-ending question of “What’s for dinner?” from your significant other or kids? We’ve all been there. Long commutes, even longer work days, shuttling your kids to and from school and extracurricular activities. The daily hustle and bustle of life. That’s where we come in! Let us save you the hassle of trying to figure it out. Head on over to our site and use the search bar to enter ingredients you already have on hand and we’ll give you a selection of recipes to choose from. Dietary restrictions? Picky eaters? We’ve got you covered there too! So leave your worries and stress behind and let us help you pick “What’s for Dinner?”
+Ashley Furniture Industries (AFI) is introducing and focusing their all new features of augmented and virtual reality in the majority of their HomeStores in the U.S. and throughout the globe. This is a new feature in the market, and Ashley is one of the first to take full advantage of this revolutionizing technology. For every month leading up to the event, a new teaser was sent to all of the store owners and guest of AFI.
+
+<div class="kg-card kg-image-card kg-width-full">
+
+![AFI-email-teasers](./AFI-Guangzhou-Email-Teasers-Feature-Image-Mockup.jpg)
+
+</div>
 
 <div class="kg-card kg-image-card kg-width-full">
 
@@ -17,12 +23,18 @@ Are you stumped with the never-ending question of “What’s for dinner?” fro
 
 <div class="kg-card kg-image-card kg-width-full">
 
-![AFI-email-teasers](./jazmin-quaynor-105210-unsplash.jpg)
+![AFI-email-teasers](./AFI_Guangzhou_Teaser1.jpg)
 
 </div>
 
 <div class="kg-card kg-image-card kg-width-full">
 
-![AFI-email-teasers](./whats-for-dinner-iMac-mockup.jpg)
+![AFI-email-teasers](./AFI_Guangzhou_Teaser2.jpg)
+
+</div>
+
+<div class="kg-card kg-image-card kg-width-full">
+
+![AFI-email-teasers](./AFI_Guangzhou_Teaser3.jpg)
 
 </div>
