@@ -2,7 +2,7 @@
 title: 2fitfitness Web Design
 date: "2015-05-28T22:40:32.169Z"
 description: UI/UX Design for a father & son fitness website
-thumbnail: ./2fitfitness-feature-image.jpg
+thumbnail: ./2fitfitness-featured-image.jpg
 ---
 
 Far far away, behind the word mountains, far from the countries Vokalia and

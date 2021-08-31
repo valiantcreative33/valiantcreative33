@@ -1,7 +1,7 @@
 ---
 title: AirAsia Magazine Ad
 date: "2019-05-02"
-thumbnail: ./AFHS_AirAsia_Featured_Image.jpg
+thumbnail: ./AFHS-AirAsia-Feature-Image.jpg
 description: Ashley Furniture HomeStore Asia
 ---
 
