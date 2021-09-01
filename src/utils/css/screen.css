@@ -401,6 +401,16 @@ body {
   counter-increment: posts;
 }
 
+.post-header-inside-image {
+  position: absolute;
+  top: 60%;
+  left: 70px;
+  color: var(--color-bg);
+  font-family: var(--font-serif);
+  font-size: 200px;
+  font-style: italic;
+}
+
 @media (max-width: 700px) {
   .post-card {
     flex: 1 1 100%;
@@ -555,8 +565,13 @@ body {
 }
 
 .post-content-body h1,
-.post-content-body h2,
-.post-content-body h3,
+.post-content-body h2 {
+  line-height: 0.1em;
+  color: var(--color-base);
+}
+.post-content-body h3 {
+  color: var(--color-primary);
+}
 .post-content-body h4,
 .post-content-body h5,
 .post-content-body h6 {

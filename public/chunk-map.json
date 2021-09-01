@@ -1,13 +1,26 @@
 {
-  "polyfill": ["/polyfill.js"],
-  "commons": ["/commons.css", "/commons.js"],
+  "polyfill": ["/polyfill.js", "/polyfill.ab605cf459b8b0471f3c.hot-update.js"],
+  "commons": [
+    "/commons.css",
+    "/commons.js",
+    "/commons.ab605cf459b8b0471f3c.hot-update.js"
+  ],
   "component---cache-dev-404-page-js": [
     "/component---cache-dev-404-page-js.js"
   ],
   "component---src-pages-404-js": ["/component---src-pages-404-js.js"],
-  "component---src-pages-about-js": ["/component---src-pages-about-js.js"],
-  "component---src-pages-contact-js": ["/component---src-pages-contact-js.js"],
-  "component---src-pages-index-js": ["/component---src-pages-index-js.js"],
+  "component---src-pages-about-js": [
+    "/component---src-pages-about-js.js",
+    "/component---src-pages-about-js.ab605cf459b8b0471f3c.hot-update.js"
+  ],
+  "component---src-pages-contact-js": [
+    "/component---src-pages-contact-js.js",
+    "/component---src-pages-contact-js.ab605cf459b8b0471f3c.hot-update.js"
+  ],
+  "component---src-pages-index-js": [
+    "/component---src-pages-index-js.js",
+    "/component---src-pages-index-js.ab605cf459b8b0471f3c.hot-update.js"
+  ],
   "component---src-templates-blog-post-js": [
     "/component---src-templates-blog-post-js.js"
   ]

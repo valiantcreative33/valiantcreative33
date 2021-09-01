@@ -18,18 +18,14 @@ const ContactPage = ({ data }, location) => {
         keywords={[`blog`, `gatsby`, `javascript`, `react`]}
       />
 
-      <article className="post-content page-template no-image">
+      <article className="post-content page-template">
         <div className="post-content-body">
-          <p>
+          {/* <p>
+            Like my{" "}
+            <strong>work? </strong>
+            See below and shoot me a{" "}
+              <strong>message! </strong>
             This is{" "}
-            <strong>
-              <strong>bold</strong>
-            </strong>{" "}
-            and this is{" "}
-            <strong>
-              <strong>strong</strong>
-            </strong>
-            . This is{" "}
             <em>
               <em>italic</em>
             </em>{" "}
@@ -44,10 +40,10 @@ const ContactPage = ({ data }, location) => {
               for (;;) {"{"} ... {"}"}
             </code>
             . Finally, this is a <a href="#">link</a>.
-          </p>
-          <h2 id="heading-level-2">Heading Level 2</h2>
-          <h3 id="heading-level-3">Heading Level 3</h3>
-          <h4 id="heading-level-4">Heading Level 4</h4>
+          </p> */}
+          <h2 id="heading-level-2">Like my work?</h2>
+          <h3 id="heading-level-3">See below and shoot me a message!</h3>
+          {/* <h4 id="heading-level-4">Heading Level 4</h4>
           <h5 id="heading-level-5">Heading Level 5</h5>
           <h6 id="heading-level-6">Heading Level 6</h6>
           <hr />
@@ -134,8 +130,8 @@ const ContactPage = ({ data }, location) => {
             adipiscing accumsan faucibus. Vestibulum ante ipsum primis in
             faucibus vestibulum. Blandit adipiscing eu felis.
           </blockquote>
-          <hr />
-          <h2 id="images">Images</h2>
+          <hr /> 
+          <h2 id="images">Images</h2> 
           <figure className="kg-card kg-image-card">
             <Img
               fluid={data.smallPic.childImageSharp.fluid}
@@ -149,15 +145,17 @@ const ContactPage = ({ data }, location) => {
               className="kg-image"
             />
             <figcaption>Large image</figcaption>
-          </figure>
-          <figure className="kg-card kg-image-card kg-width-full">
-            <Img
-              fluid={data.largePic.childImageSharp.fluid}
-              className="kg-image"
-            />
-            <figcaption>Full bleed image</figcaption>
-          </figure>
-          <hr />
+          </figure> */}
+          <div>
+            <figure className="kg-card kg-image-card kg-width-full">
+              <Img
+                fluid={data.largePic.childImageSharp.fluid}
+                className="kg-image"
+              />{" "}
+              <h7 class="post-header-inside-image">Hello!</h7>
+              {/* <figcaption>Full bleed image</figcaption> */}
+            </figure>
+          </div>
           <h2 id="table">Table</h2>
           <table>
             <thead>
@@ -549,9 +547,7 @@ const indexQuery = graphql`
         }
       }
     }
-    largePic: file(
-      relativePath: { eq: "vladimir-malyutin-98174-unsplash.jpg" }
-    ) {
+    largePic: file(relativePath: { eq: "home_artist_contact2.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1360) {
           ...GatsbyImageSharpFluid
