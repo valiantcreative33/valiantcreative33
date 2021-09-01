@@ -2,9 +2,12 @@
   "namedChunkGroups": {
     "polyfill": {
       "name": "polyfill",
-      "assets": [{ "name": "polyfill.js", "size": 756612 }],
+      "assets": [
+        { "name": "polyfill.js", "size": 756612 },
+        { "name": "polyfill.89838910721c2b909be5.hot-update.js", "size": 891 }
+      ],
       "filteredAssets": 0,
-      "assetsSize": 756612,
+      "assetsSize": 757503,
       "filteredAuxiliaryAssets": 0,
       "auxiliaryAssetsSize": 0
     },
@@ -13,10 +16,11 @@
       "assets": [
         { "name": "framework.js", "size": 2561395 },
         { "name": "commons.css", "size": 77133 },
-        { "name": "commons.js", "size": 2339033 }
+        { "name": "commons.js", "size": 2339023 },
+        { "name": "commons.89838910721c2b909be5.hot-update.js", "size": 890 }
       ],
       "filteredAssets": 0,
-      "assetsSize": 4977561,
+      "assetsSize": 4978441,
       "filteredAuxiliaryAssets": 100,
       "auxiliaryAssetsSize": 2319084
     },
@@ -32,9 +36,15 @@
     },
     "component---src-pages-404-js": {
       "name": "component---src-pages-404-js",
-      "assets": [{ "name": "component---src-pages-404-js.js", "size": 163665 }],
+      "assets": [
+        { "name": "component---src-pages-404-js.js", "size": 163659 },
+        {
+          "name": "component---src-pages-404-js.89838910721c2b909be5.hot-update.js",
+          "size": 19980
+        }
+      ],
       "filteredAssets": 0,
-      "assetsSize": 163665,
+      "assetsSize": 183639,
       "filteredAuxiliaryAssets": 0,
       "auxiliaryAssetsSize": 0
     },
@@ -43,24 +53,34 @@
       "assets": [
         { "name": "framework.js", "size": 2561395 },
         { "name": "commons.css", "size": 77133 },
-        { "name": "commons.js", "size": 2339033 },
-        { "name": "component---src-pages-about-js.js", "size": 252885 }
+        { "name": "commons.js", "size": 2339023 },
+        { "name": "commons.89838910721c2b909be5.hot-update.js", "size": 890 },
+        { "name": "component---src-pages-about-js.js", "size": 252879 },
+        {
+          "name": "component---src-pages-about-js.89838910721c2b909be5.hot-update.js",
+          "size": 19982
+        }
       ],
       "filteredAssets": 0,
-      "assetsSize": 5230446,
+      "assetsSize": 5251302,
       "filteredAuxiliaryAssets": 100,
       "auxiliaryAssetsSize": 2319084
     },
-    "component---src-pages-elements-js": {
-      "name": "component---src-pages-elements-js",
+    "component---src-pages-contact-js": {
+      "name": "component---src-pages-contact-js",
       "assets": [
         { "name": "framework.js", "size": 2561395 },
         { "name": "commons.css", "size": 77133 },
-        { "name": "commons.js", "size": 2339033 },
-        { "name": "component---src-pages-elements-js.js", "size": 327167 }
+        { "name": "commons.js", "size": 2339023 },
+        { "name": "commons.89838910721c2b909be5.hot-update.js", "size": 890 },
+        { "name": "component---src-pages-contact-js.js", "size": 327141 },
+        {
+          "name": "component---src-pages-contact-js.89838910721c2b909be5.hot-update.js",
+          "size": 19984
+        }
       ],
       "filteredAssets": 0,
-      "assetsSize": 5304728,
+      "assetsSize": 5325566,
       "filteredAuxiliaryAssets": 100,
       "auxiliaryAssetsSize": 2319084
     },
@@ -69,52 +89,76 @@
       "assets": [
         { "name": "framework.js", "size": 2561395 },
         { "name": "commons.css", "size": 77133 },
-        { "name": "commons.js", "size": 2339033 },
-        { "name": "component---src-pages-index-js.js", "size": 178723 }
+        { "name": "commons.js", "size": 2339023 },
+        { "name": "commons.89838910721c2b909be5.hot-update.js", "size": 890 },
+        { "name": "component---src-pages-index-js.js", "size": 178717 },
+        {
+          "name": "component---src-pages-index-js.89838910721c2b909be5.hot-update.js",
+          "size": 19982
+        }
       ],
       "filteredAssets": 0,
-      "assetsSize": 5156284,
+      "assetsSize": 5177140,
       "filteredAuxiliaryAssets": 100,
       "auxiliaryAssetsSize": 2319084
     },
     "component---src-templates-blog-post-js": {
       "name": "component---src-templates-blog-post-js",
       "assets": [
-        { "name": "component---src-templates-blog-post-js.js", "size": 243059 }
+        { "name": "component---src-templates-blog-post-js.js", "size": 243053 },
+        {
+          "name": "component---src-templates-blog-post-js.89838910721c2b909be5.hot-update.js",
+          "size": 19990
+        }
       ],
       "filteredAssets": 0,
-      "assetsSize": 243059,
+      "assetsSize": 263043,
       "filteredAuxiliaryAssets": 0,
       "auxiliaryAssetsSize": 0
     }
   },
   "assetsByChunkName": {
-    "polyfill": ["polyfill.js"],
-    "commons": ["framework.js", "commons.css", "commons.js"],
+    "polyfill": ["polyfill.js", "polyfill.89838910721c2b909be5.hot-update.js"],
+    "commons": [
+      "framework.js",
+      "commons.css",
+      "commons.js",
+      "commons.89838910721c2b909be5.hot-update.js"
+    ],
     "component---cache-dev-404-page-js": [
       "component---cache-dev-404-page-js.js"
     ],
-    "component---src-pages-404-js": ["component---src-pages-404-js.js"],
+    "component---src-pages-404-js": [
+      "component---src-pages-404-js.js",
+      "component---src-pages-404-js.89838910721c2b909be5.hot-update.js"
+    ],
     "component---src-pages-about-js": [
       "framework.js",
       "commons.css",
       "commons.js",
-      "component---src-pages-about-js.js"
+      "commons.89838910721c2b909be5.hot-update.js",
+      "component---src-pages-about-js.js",
+      "component---src-pages-about-js.89838910721c2b909be5.hot-update.js"
     ],
-    "component---src-pages-elements-js": [
+    "component---src-pages-contact-js": [
       "framework.js",
       "commons.css",
       "commons.js",
-      "component---src-pages-elements-js.js"
+      "commons.89838910721c2b909be5.hot-update.js",
+      "component---src-pages-contact-js.js",
+      "component---src-pages-contact-js.89838910721c2b909be5.hot-update.js"
     ],
     "component---src-pages-index-js": [
       "framework.js",
       "commons.css",
       "commons.js",
-      "component---src-pages-index-js.js"
+      "commons.89838910721c2b909be5.hot-update.js",
+      "component---src-pages-index-js.js",
+      "component---src-pages-index-js.89838910721c2b909be5.hot-update.js"
     ],
     "component---src-templates-blog-post-js": [
-      "component---src-templates-blog-post-js.js"
+      "component---src-templates-blog-post-js.js",
+      "component---src-templates-blog-post-js.89838910721c2b909be5.hot-update.js"
     ]
   },
   "childAssetsByChunkName": {}

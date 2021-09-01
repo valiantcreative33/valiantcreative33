@@ -1,7 +1,7 @@
 ---
 title: Pig Floyds Urban Barbakoa
 date: "2015-05-01T22:12:03.284Z"
-description: Web Design
+description: UI/UX Web Design for Pig Floyds Urban Barbakoa
 thumbnail: ./Pig_Floyds_Feature_Image.png
 ---
 
@@ -9,4 +9,8 @@ Thomas Ward's Mills 50 District phenomenon is a hipster barbecue joint where glo
 
 Handcrafted as the Digital Designer for Pivot Business Consulting
 
-![Chinese Salty Egg](./salty_egg.jpg)
+<div class="kg-card kg-image-card kg-width-full">
+
+![pig-floyds-bbq-website](./PigFloyds_Webdesign_Mockup.jpg)
+
+</div>

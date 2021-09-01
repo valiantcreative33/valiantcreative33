@@ -142,7 +142,7 @@
         },
         {
           "node": {
-            "excerpt": "Fruits Fruits",
+            "excerpt": "Given the opportunity here to design a magazine ad for AirAsia, for Ashley Furniture HomeStore in Asia. AirAsia is a Malaysian Low-cost…",
             "fields": { "slug": "/air-asia-mag-ad/" },
             "frontmatter": {
               "date": "May 02, 2019",
@@ -164,7 +164,7 @@
         },
         {
           "node": {
-            "excerpt": "",
+            "excerpt": "Ashley Furniture Industries is the #1 Furniture Manufacturer in the World, and the #1 furniture retailer in North America. There are now…",
             "fields": { "slug": "/ufa-russia-billboard/" },
             "frontmatter": {
               "date": "May 01, 2019",
@@ -173,10 +173,10 @@
               "thumbnail": {
                 "childImageSharp": {
                   "fluid": {
-                    "base64": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwUA/8QAFgEBAQEAAAAAAAAAAAAAAAAAAwEC/9oADAMBAAIQAxAAAAFFiqSWtC2L/8QAGRABAQADAQAAAAAAAAAAAAAAAgEAEBIT/9oACAEBAAEFAoq1089TjvNrWv/EABYRAQEBAAAAAAAAAAAAAAAAAAABEf/aAAgBAwEBPwGNj//EABYRAQEBAAAAAAAAAAAAAAAAAAACE//aAAgBAgEBPwGpYv/EABoQAAICAwAAAAAAAAAAAAAAAAABESEQEjL/2gAIAQEABj8C2Tg6LFArx//EABkQAAMBAQEAAAAAAAAAAAAAAAABESEx4f/aAAgBAQABPyHHesIeUTlbNGWZSBr4Nu9P/9oADAMBAAIAAwAAABB8H//EABcRAAMBAAAAAAAAAAAAAAAAAAABIWH/2gAIAQMBAT8Qt0xP/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAEhEf/aAAgBAgEBPxBOQqtn/8QAHBABAAMAAgMAAAAAAAAAAAAAAQARITFBUZHR/9oACAEBAAE/EFaD0FHOVqoGAsvj5SoM46ay6rmahNgluPSr3P/Z",
-                    "aspectRatio": 1.780104712041885,
-                    "src": "/static/078ce80536f176506dd187416ded56f2/ac53a/Billboard-Design-Ufa-Russia-Feature-Image.jpg",
-                    "srcSet": "/static/078ce80536f176506dd187416ded56f2/722c4/Billboard-Design-Ufa-Russia-Feature-Image.jpg 340w,\n/static/078ce80536f176506dd187416ded56f2/1d671/Billboard-Design-Ufa-Russia-Feature-Image.jpg 680w,\n/static/078ce80536f176506dd187416ded56f2/ac53a/Billboard-Design-Ufa-Russia-Feature-Image.jpg 1360w,\n/static/078ce80536f176506dd187416ded56f2/d8255/Billboard-Design-Ufa-Russia-Feature-Image.jpg 1920w",
+                    "base64": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAMABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEAv/EABUBAQEAAAAAAAAAAAAAAAAAAAMC/9oADAMBAAIQAxAAAAFjILyvQsFf/8QAGhAAAgMBAQAAAAAAAAAAAAAAAAECAxIQE//aAAgBAQABBQKyenuw9Zlcsib5/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAEC/9oACAEDAQE/AUxH/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQAREv/aAAgBAgEBPwHkly//xAAbEAACAQUAAAAAAAAAAAAAAAAAAQISICExQv/aAAgBAQAGPwJKD0ZpObP/xAAcEAEAAQQDAAAAAAAAAAAAAAABABEhQVExkaH/2gAIAQEAAT8hfaLhYY3RiGPUapKYI5bzc//aAAwDAQACAAMAAAAQ7x//xAAXEQEBAQEAAAAAAAAAAAAAAAABABEh/9oACAEDAQE/EN7KB2//xAAWEQEBAQAAAAAAAAAAAAAAAAABEQD/2gAIAQIBAT8QZTCkm//EABsQAQEAAwEBAQAAAAAAAAAAAAERACFBMaHR/9oACAEBAAE/EDebWlDqSYaRDs6fcjdy+frJ1pUp6XKPpXRg1Sdz/9k=",
+                    "aspectRatio": 1.7346938775510203,
+                    "src": "/static/4fdebd7fea81a2c1ce90cc26d633b829/ac53a/AFHS-Ufa-Russia-Billboard-Mockup-Feature-Image.jpg",
+                    "srcSet": "/static/4fdebd7fea81a2c1ce90cc26d633b829/722c4/AFHS-Ufa-Russia-Billboard-Mockup-Feature-Image.jpg 340w,\n/static/4fdebd7fea81a2c1ce90cc26d633b829/1d671/AFHS-Ufa-Russia-Billboard-Mockup-Feature-Image.jpg 680w,\n/static/4fdebd7fea81a2c1ce90cc26d633b829/ac53a/AFHS-Ufa-Russia-Billboard-Mockup-Feature-Image.jpg 1360w,\n/static/4fdebd7fea81a2c1ce90cc26d633b829/f16b5/AFHS-Ufa-Russia-Billboard-Mockup-Feature-Image.jpg 1425w",
                     "sizes": "(max-width: 1360px) 100vw, 1360px"
                   }
                 }
@@ -186,12 +186,12 @@
         },
         {
           "node": {
-            "excerpt": "Far far away, behind the word mountains, far from the countries Vokalia and\nConsonantia, there live the blind texts. Separated they live in…",
+            "excerpt": "2fitfitness was a father & son fitness website owned and operated by Franklin Ausler Sr & Jr., Certified personal trainers through the ISSA…",
             "fields": { "slug": "/2fitfitness-web-design/" },
             "frontmatter": {
               "date": "May 28, 2015",
               "title": "2fitfitness Web Design",
-              "description": "UI/UX Design for a father & son fitness website",
+              "description": "UI/UX Web Design for 2fitfitness",
               "thumbnail": {
                 "childImageSharp": {
                   "fluid": {
@@ -225,7 +225,7 @@
             "frontmatter": {
               "date": "May 01, 2015",
               "title": "Pig Floyds Urban Barbakoa",
-              "description": "Web Design",
+              "description": "UI/UX Web Design for Pig Floyds Urban Barbakoa",
               "thumbnail": {
                 "childImageSharp": {
                   "fluid": {

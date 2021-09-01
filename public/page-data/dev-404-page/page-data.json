@@ -20,8 +20,8 @@
           { "path": "/404.html" },
           { "path": "/404/" },
           { "path": "/about/" },
-          { "path": "/elements/" },
-          { "path": "/" }
+          { "path": "/" },
+          { "path": "/contact/" }
         ]
       }
     },
