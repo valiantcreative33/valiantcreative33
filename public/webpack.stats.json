@@ -4,7 +4,7 @@
       "name": "polyfill",
       "assets": [
         { "name": "polyfill.js", "size": 756612 },
-        { "name": "polyfill.ab605cf459b8b0471f3c.hot-update.js", "size": 891 }
+        { "name": "polyfill.9c4339c2e118e908528c.hot-update.js", "size": 891 }
       ],
       "filteredAssets": 0,
       "assetsSize": 757503,
@@ -15,12 +15,12 @@
       "name": "commons",
       "assets": [
         { "name": "framework.js", "size": 2561395 },
-        { "name": "commons.css", "size": 77371 },
+        { "name": "commons.css", "size": 77446 },
         { "name": "commons.js", "size": 2339023 },
-        { "name": "commons.ab605cf459b8b0471f3c.hot-update.js", "size": 2633 }
+        { "name": "commons.9c4339c2e118e908528c.hot-update.js", "size": 2633 }
       ],
       "filteredAssets": 0,
-      "assetsSize": 4980422,
+      "assetsSize": 4980497,
       "filteredAuxiliaryAssets": 100,
       "auxiliaryAssetsSize": 2319084
     },
@@ -46,17 +46,13 @@
       "name": "component---src-pages-about-js",
       "assets": [
         { "name": "framework.js", "size": 2561395 },
-        { "name": "commons.css", "size": 77371 },
+        { "name": "commons.css", "size": 77446 },
         { "name": "commons.js", "size": 2339023 },
-        { "name": "commons.ab605cf459b8b0471f3c.hot-update.js", "size": 2633 },
-        { "name": "component---src-pages-about-js.js", "size": 252979 },
-        {
-          "name": "component---src-pages-about-js.ab605cf459b8b0471f3c.hot-update.js",
-          "size": 2434
-        }
+        { "name": "commons.9c4339c2e118e908528c.hot-update.js", "size": 2633 },
+        { "name": "component---src-pages-about-js.js", "size": 252979 }
       ],
       "filteredAssets": 0,
-      "assetsSize": 5235835,
+      "assetsSize": 5233476,
       "filteredAuxiliaryAssets": 100,
       "auxiliaryAssetsSize": 2319084
     },
@@ -64,17 +60,17 @@
       "name": "component---src-pages-contact-js",
       "assets": [
         { "name": "framework.js", "size": 2561395 },
-        { "name": "commons.css", "size": 77371 },
+        { "name": "commons.css", "size": 77446 },
         { "name": "commons.js", "size": 2339023 },
-        { "name": "commons.ab605cf459b8b0471f3c.hot-update.js", "size": 2633 },
-        { "name": "component---src-pages-contact-js.js", "size": 307884 },
+        { "name": "commons.9c4339c2e118e908528c.hot-update.js", "size": 2633 },
+        { "name": "component---src-pages-contact-js.js", "size": 254397 },
         {
-          "name": "component---src-pages-contact-js.ab605cf459b8b0471f3c.hot-update.js",
-          "size": 2436
+          "name": "component---src-pages-contact-js.9c4339c2e118e908528c.hot-update.js",
+          "size": 21141
         }
       ],
       "filteredAssets": 0,
-      "assetsSize": 5290742,
+      "assetsSize": 5256035,
       "filteredAuxiliaryAssets": 100,
       "auxiliaryAssetsSize": 2319084
     },
@@ -82,17 +78,13 @@
       "name": "component---src-pages-index-js",
       "assets": [
         { "name": "framework.js", "size": 2561395 },
-        { "name": "commons.css", "size": 77371 },
+        { "name": "commons.css", "size": 77446 },
         { "name": "commons.js", "size": 2339023 },
-        { "name": "commons.ab605cf459b8b0471f3c.hot-update.js", "size": 2633 },
-        { "name": "component---src-pages-index-js.js", "size": 178817 },
-        {
-          "name": "component---src-pages-index-js.ab605cf459b8b0471f3c.hot-update.js",
-          "size": 2434
-        }
+        { "name": "commons.9c4339c2e118e908528c.hot-update.js", "size": 2633 },
+        { "name": "component---src-pages-index-js.js", "size": 178817 }
       ],
       "filteredAssets": 0,
-      "assetsSize": 5161673,
+      "assetsSize": 5159314,
       "filteredAuxiliaryAssets": 100,
       "auxiliaryAssetsSize": 2319084
     },
@@ -108,12 +100,12 @@
     }
   },
   "assetsByChunkName": {
-    "polyfill": ["polyfill.js", "polyfill.ab605cf459b8b0471f3c.hot-update.js"],
+    "polyfill": ["polyfill.js", "polyfill.9c4339c2e118e908528c.hot-update.js"],
     "commons": [
       "framework.js",
       "commons.css",
       "commons.js",
-      "commons.ab605cf459b8b0471f3c.hot-update.js"
+      "commons.9c4339c2e118e908528c.hot-update.js"
     ],
     "component---cache-dev-404-page-js": [
       "component---cache-dev-404-page-js.js"
@@ -123,25 +115,23 @@
       "framework.js",
       "commons.css",
       "commons.js",
-      "commons.ab605cf459b8b0471f3c.hot-update.js",
-      "component---src-pages-about-js.js",
-      "component---src-pages-about-js.ab605cf459b8b0471f3c.hot-update.js"
+      "commons.9c4339c2e118e908528c.hot-update.js",
+      "component---src-pages-about-js.js"
     ],
     "component---src-pages-contact-js": [
       "framework.js",
       "commons.css",
       "commons.js",
-      "commons.ab605cf459b8b0471f3c.hot-update.js",
+      "commons.9c4339c2e118e908528c.hot-update.js",
       "component---src-pages-contact-js.js",
-      "component---src-pages-contact-js.ab605cf459b8b0471f3c.hot-update.js"
+      "component---src-pages-contact-js.9c4339c2e118e908528c.hot-update.js"
     ],
     "component---src-pages-index-js": [
       "framework.js",
       "commons.css",
       "commons.js",
-      "commons.ab605cf459b8b0471f3c.hot-update.js",
-      "component---src-pages-index-js.js",
-      "component---src-pages-index-js.ab605cf459b8b0471f3c.hot-update.js"
+      "commons.9c4339c2e118e908528c.hot-update.js",
+      "component---src-pages-index-js.js"
     ],
     "component---src-templates-blog-post-js": [
       "component---src-templates-blog-post-js.js"

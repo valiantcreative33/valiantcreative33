@@ -566,7 +566,7 @@ body {
 
 .post-content-body h1,
 .post-content-body h2 {
-  line-height: 0.1em;
+  /* line-height: 0.1em; */
   color: var(--color-base);
 }
 .post-content-body h3 {
@@ -576,6 +576,11 @@ body {
 .post-content-body h5,
 .post-content-body h6 {
   color: var(--color-base);
+}
+
+.post-condensed-header {
+  line-height: 0.1em;
+  margin-top: 77px;
 }
 
 .post-content-body li {
