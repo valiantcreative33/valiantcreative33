@@ -1,141 +1,29 @@
 {
+  "errors": [],
+  "warnings": [
+    "./src/components/layout.js\nModule Warning (from ./node_modules/eslint-loader/index.js):\n\u001b[0m\u001b[0m\n\u001b[0m\u001b[4m/Users/rubenmatamoros/Freelance/Valiant Creative/Valiant_Website/portfolio-ruben-matamoros/src/components/layout.js\u001b[24m\u001b[0m\n\u001b[0m  \u001b[2m11:11\u001b[22m  \u001b[33mwarning\u001b[39m  The href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-is-valid.md  \u001b[2mjsx-a11y/anchor-is-valid\u001b[22m\u001b[0m\n\u001b[0m  \u001b[2m28:33\u001b[22m  \u001b[33mwarning\u001b[39m  Non-interactive elements should not be assigned interactive roles                                                                                                                                                                                                                                                                                                 \u001b[2mjsx-a11y/no-noninteractive-element-to-interactive-role\u001b[22m\u001b[0m\n\u001b[0m  \u001b[2m29:52\u001b[22m  \u001b[33mwarning\u001b[39m  Non-interactive elements should not be assigned interactive roles                                                                                                                                                                                                                                                                                                 \u001b[2mjsx-a11y/no-noninteractive-element-to-interactive-role\u001b[22m\u001b[0m\n\u001b[0m  \u001b[2m32:41\u001b[22m  \u001b[33mwarning\u001b[39m  Non-interactive elements should not be assigned interactive roles                                                                                                                                                                                                                                                                                                 \u001b[2mjsx-a11y/no-noninteractive-element-to-interactive-role\u001b[22m\u001b[0m\n\u001b[0m  \u001b[2m35:43\u001b[22m  \u001b[33mwarning\u001b[39m  Non-interactive elements should not be assigned interactive roles                                                                                                                                                                                                                                                                                                 \u001b[2mjsx-a11y/no-noninteractive-element-to-interactive-role\u001b[22m\u001b[0m\n\u001b[0m\u001b[0m\n\u001b[0m\u001b[33m\u001b[1m✖ 5 problems (0 errors, 5 warnings)\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m\u001b[33m\u001b[1m\u001b[22m\u001b[39m\u001b[0m"
+  ],
   "namedChunkGroups": {
     "polyfill": {
-      "name": "polyfill",
-      "assets": [
-        { "name": "polyfill.js", "size": 756612 },
-        { "name": "polyfill.9c4339c2e118e908528c.hot-update.js", "size": 891 }
-      ],
-      "filteredAssets": 0,
-      "assetsSize": 757503,
-      "filteredAuxiliaryAssets": 0,
-      "auxiliaryAssetsSize": 0
+      "chunks": ["polyfill"],
+      "assets": ["polyfill.js", "polyfill.js.map"],
+      "children": {},
+      "childAssets": {}
     },
     "commons": {
-      "name": "commons",
+      "chunks": ["commons"],
       "assets": [
-        { "name": "framework.js", "size": 2561395 },
-        { "name": "commons.css", "size": 77446 },
-        { "name": "commons.js", "size": 2339023 },
-        { "name": "commons.9c4339c2e118e908528c.hot-update.js", "size": 2633 }
+        "commons.css",
+        "commons.js",
+        "commons.css.map",
+        "commons.js.map"
       ],
-      "filteredAssets": 0,
-      "assetsSize": 4980497,
-      "filteredAuxiliaryAssets": 100,
-      "auxiliaryAssetsSize": 2319084
-    },
-    "component---cache-dev-404-page-js": {
-      "name": "component---cache-dev-404-page-js",
-      "assets": [
-        { "name": "component---cache-dev-404-page-js.js", "size": 77987 }
-      ],
-      "filteredAssets": 0,
-      "assetsSize": 77987,
-      "filteredAuxiliaryAssets": 0,
-      "auxiliaryAssetsSize": 0
-    },
-    "component---src-pages-404-js": {
-      "name": "component---src-pages-404-js",
-      "assets": [{ "name": "component---src-pages-404-js.js", "size": 163759 }],
-      "filteredAssets": 0,
-      "assetsSize": 163759,
-      "filteredAuxiliaryAssets": 0,
-      "auxiliaryAssetsSize": 0
-    },
-    "component---src-pages-about-js": {
-      "name": "component---src-pages-about-js",
-      "assets": [
-        { "name": "framework.js", "size": 2561395 },
-        { "name": "commons.css", "size": 77446 },
-        { "name": "commons.js", "size": 2339023 },
-        { "name": "commons.9c4339c2e118e908528c.hot-update.js", "size": 2633 },
-        { "name": "component---src-pages-about-js.js", "size": 252979 }
-      ],
-      "filteredAssets": 0,
-      "assetsSize": 5233476,
-      "filteredAuxiliaryAssets": 100,
-      "auxiliaryAssetsSize": 2319084
-    },
-    "component---src-pages-contact-js": {
-      "name": "component---src-pages-contact-js",
-      "assets": [
-        { "name": "framework.js", "size": 2561395 },
-        { "name": "commons.css", "size": 77446 },
-        { "name": "commons.js", "size": 2339023 },
-        { "name": "commons.9c4339c2e118e908528c.hot-update.js", "size": 2633 },
-        { "name": "component---src-pages-contact-js.js", "size": 254397 },
-        {
-          "name": "component---src-pages-contact-js.9c4339c2e118e908528c.hot-update.js",
-          "size": 21141
-        }
-      ],
-      "filteredAssets": 0,
-      "assetsSize": 5256035,
-      "filteredAuxiliaryAssets": 100,
-      "auxiliaryAssetsSize": 2319084
-    },
-    "component---src-pages-index-js": {
-      "name": "component---src-pages-index-js",
-      "assets": [
-        { "name": "framework.js", "size": 2561395 },
-        { "name": "commons.css", "size": 77446 },
-        { "name": "commons.js", "size": 2339023 },
-        { "name": "commons.9c4339c2e118e908528c.hot-update.js", "size": 2633 },
-        { "name": "component---src-pages-index-js.js", "size": 178817 }
-      ],
-      "filteredAssets": 0,
-      "assetsSize": 5159314,
-      "filteredAuxiliaryAssets": 100,
-      "auxiliaryAssetsSize": 2319084
-    },
-    "component---src-templates-blog-post-js": {
-      "name": "component---src-templates-blog-post-js",
-      "assets": [
-        { "name": "component---src-templates-blog-post-js.js", "size": 243153 }
-      ],
-      "filteredAssets": 0,
-      "assetsSize": 243153,
-      "filteredAuxiliaryAssets": 0,
-      "auxiliaryAssetsSize": 0
+      "children": {},
+      "childAssets": {}
     }
   },
   "assetsByChunkName": {
-    "polyfill": ["polyfill.js", "polyfill.9c4339c2e118e908528c.hot-update.js"],
-    "commons": [
-      "framework.js",
-      "commons.css",
-      "commons.js",
-      "commons.9c4339c2e118e908528c.hot-update.js"
-    ],
-    "component---cache-dev-404-page-js": [
-      "component---cache-dev-404-page-js.js"
-    ],
-    "component---src-pages-404-js": ["component---src-pages-404-js.js"],
-    "component---src-pages-about-js": [
-      "framework.js",
-      "commons.css",
-      "commons.js",
-      "commons.9c4339c2e118e908528c.hot-update.js",
-      "component---src-pages-about-js.js"
-    ],
-    "component---src-pages-contact-js": [
-      "framework.js",
-      "commons.css",
-      "commons.js",
-      "commons.9c4339c2e118e908528c.hot-update.js",
-      "component---src-pages-contact-js.js",
-      "component---src-pages-contact-js.9c4339c2e118e908528c.hot-update.js"
-    ],
-    "component---src-pages-index-js": [
-      "framework.js",
-      "commons.css",
-      "commons.js",
-      "commons.9c4339c2e118e908528c.hot-update.js",
-      "component---src-pages-index-js.js"
-    ],
-    "component---src-templates-blog-post-js": [
-      "component---src-templates-blog-post-js.js"
-    ]
-  },
-  "childAssetsByChunkName": {}
+    "polyfill": ["polyfill.js"],
+    "commons": ["commons.css", "commons.js"]
+  }
 }

@@ -3,7 +3,6 @@
   "path": "/dev-404-page/",
   "result": {
     "data": {
-      "allSiteFunction": { "nodes": [{ "functionRoute": "FAKE" }] },
       "allSitePage": {
         "nodes": [
           { "path": "/whats-for-dinner/" },
@@ -17,11 +16,11 @@
           { "path": "/2fitfitness-web-design/" },
           { "path": "/blog-post/" },
           { "path": "/pig-floyds-urban-bbq-web-design/" },
-          { "path": "/404.html" },
           { "path": "/404/" },
           { "path": "/about/" },
           { "path": "/contact/" },
-          { "path": "/" }
+          { "path": "/" },
+          { "path": "/404.html" }
         ]
       }
     },
