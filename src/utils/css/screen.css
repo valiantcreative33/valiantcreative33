@@ -269,7 +269,7 @@ body {
 
 @media (max-width: 850px) {
   .site-head {
-    padding: 0;
+    color: transparent;
   }
   .nav-burger {
     display: block;
