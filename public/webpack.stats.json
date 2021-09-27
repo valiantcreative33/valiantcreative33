@@ -15,10 +15,10 @@
       "assets": [
         "commons.css",
         "commons.js",
-        "commons.b4e3e96a1ccbd3d2a8e5.hot-update.js",
+        "commons.5ce2fc64e9f6136c60b8.hot-update.js",
         "commons.css.map",
         "commons.js.map",
-        "commons.b4e3e96a1ccbd3d2a8e5.hot-update.js.map"
+        "commons.5ce2fc64e9f6136c60b8.hot-update.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -29,7 +29,7 @@
     "commons": [
       "commons.css",
       "commons.js",
-      "commons.b4e3e96a1ccbd3d2a8e5.hot-update.js"
+      "commons.5ce2fc64e9f6136c60b8.hot-update.js"
     ]
   }
 }

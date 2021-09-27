@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { graphql, StaticQuery } from "gatsby";
 import Img from "gatsby-image";
 
@@ -10,6 +10,28 @@ import "../utils/css/screen.css";
 
 const ContactPage = ({ data }, location) => {
   const siteTitle = data.site.siteMetadata.title;
+
+  const [status, setStatus] = useState("Submit");
+  const handleSubmit = async e => {
+    e.preventDefault();
+    setStatus("Sending...");
+    const { name, email, message } = e.target.elements;
+    let details = {
+      name: name.value,
+      email: email.value,
+      message: message.value
+    };
+    let response = await fetch("http://localhost:8000/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json;charset=utf-8"
+      },
+      body: JSON.stringify(details)
+    });
+    setStatus("Submit");
+    let result = await response.json();
+    alert(result.status);
+  };
 
   return (
     <Layout title={siteTitle}>
@@ -40,50 +62,24 @@ const ContactPage = ({ data }, location) => {
           </div>
           {/* Form Content */}
           <h2 id="forms">Reach Out!</h2>
-          <form method="post" action="#">
+          <form onSubmit={handleSubmit}>
             <div className="row gtr-uniform">
-              <div className="col-6 col-12-xsmall">
-                <input
-                  type="text"
-                  name="demo-name"
-                  id="demo-name"
-                  defaultValue={""}
-                  placeholder="Full Name"
-                />
+              <div className="name-form">
+                <label htmlFor="name">Full Name:</label>
+                <input type="text" id="name" required />
               </div>
-              <div className="col-6 col-12-xsmall">
-                <input
-                  type="email"
-                  name="demo-email"
-                  id="demo-email"
-                  defaultValue={""}
-                  placeholder="Email"
-                />
+              <div className="email-form">
+                <label htmlFor="email">Email:</label>
+                <input type="email" id="email" required />
               </div>
               {/* Break */}
               <div className="col-12">
-                <textarea
-                  name="demo-message"
-                  id="demo-message"
-                  placeholder="Enter your message"
-                  rows={6}
-                  defaultValue={""}
-                />
+                <label htmlFor="message">Message:</label>
+                <textarea id="message" required />
               </div>
               {/* Break */}
-              <div className="col-12">
-                <ul className="actions">
-                  <li>
-                    <input
-                      type="submit"
-                      defaultValue="Send Message"
-                      className="primary"
-                    />
-                  </li>
-                  <li>
-                    <input type="reset" defaultValue="Reset" />
-                  </li>
-                </ul>
+              <div className="col-12" class="button primary">
+                <button type="submit">{status}</button>
               </div>
             </div>
           </form>
