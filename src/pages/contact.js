@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { graphql, StaticQuery } from "gatsby";
 import Img from "gatsby-image";
+import emailjs from "emailjs-com";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -8,29 +9,45 @@ import SEO from "../components/seo";
 import "../utils/normalize.css";
 import "../utils/css/screen.css";
 
+import { init } from "emailjs-com";
+init("user_p3ojVaJ2sI4XHCsG2wtSk");
+
+// const isValidEmail = email => {
+//   const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+//   return regex.test(String(email).toLowerCase());
+// };
+
 const ContactPage = ({ data }, location) => {
   const siteTitle = data.site.siteMetadata.title;
 
-  const [status, setStatus] = useState("Submit");
-  const handleSubmit = async e => {
-    e.preventDefault();
-    setStatus("Sending...");
-    const { name, email, message } = e.target.elements;
-    let details = {
-      name: name.value,
-      email: email.value,
-      message: message.value
-    };
-    let response = await fetch("http://localhost:8000/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8"
-      },
-      body: JSON.stringify(details)
-    });
-    setStatus("Submit");
-    let result = await response.json();
-    alert(result.status);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [emailSent, setEmailSent] = useState(false);
+
+  const submit = () => {
+    if (name && email && message) {
+      const serviceId = "service_id";
+      const templateId = "template_id";
+      const userId = "user_id";
+      const templateParams = {
+        name,
+        email,
+        message
+      };
+
+      emailjs
+        .send(serviceId, templateId, templateParams, userId)
+        .then(response => console.log(response))
+        .then(error => console.log(error));
+
+      setName("");
+      setEmail("");
+      setMessage("");
+      setEmailSent(true);
+    } else {
+      alert("Please fill in all fields.");
+    }
   };
 
   return (
@@ -62,27 +79,41 @@ const ContactPage = ({ data }, location) => {
           </div>
           {/* Form Content */}
           <h2 id="forms">Reach Out!</h2>
-          <form onSubmit={handleSubmit}>
+          <div id="contact-form">
+            {/* Break */}
             <div className="row gtr-uniform">
               <div className="name-form">
-                <label htmlFor="name">Full Name:</label>
-                <input type="text" id="name" required />
+                <input
+                  type="text"
+                  placeholder="Full Name"
+                  value={name}
+                  onChange={e => setName(e.target.value)}
+                />
               </div>
+              {/* Break */}
               <div className="email-form">
-                <label htmlFor="email">Email:</label>
-                <input type="email" id="email" required />
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  value={email}
+                  onChange={e => setEmail(e.target.value)}
+                />
               </div>
               {/* Break */}
               <div className="col-12">
-                <label htmlFor="message">Message:</label>
-                <textarea id="message" required />
+                <textarea
+                  placeholder="Your message"
+                  value={message}
+                  onChange={e => setMessage(e.target.value)}
+                ></textarea>
               </div>
               {/* Break */}
               <div className="col-12" class="button primary">
-                <button type="submit">{status}</button>
+                <button onClick={submit}>Send Message</button>
+                <span className={emailSent ? "visible" : null}></span>
               </div>
             </div>
-          </form>
+          </div>
         </div>
       </article>
     </Layout>

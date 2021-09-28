@@ -10,7 +10,7 @@ const Layout = props => {
         <div className="site-head-container">
           <a
             className="nav-burger"
-            href={`#`}
+            href="/#"
             onClick={() => setToggleNav(!toggleNav)}
           >
             <div
@@ -25,14 +25,14 @@ const Layout = props => {
             </div>
           </a>
           <nav id="swup" class="site-head-left">
-            <ul className="nav" role="menu">
-              <li className="nav-home nav-current" role="menuitem">
+            <ul className="nav">
+              <li className="nav-home nav-current">
                 <Link to={`/`}>Home</Link>
               </li>
-              <li className="nav-about" role="menuitem">
+              <li className="nav-about">
                 <Link to={`/about`}>About</Link>
               </li>
-              <li className="nav-contact" role="menuitem">
+              <li className="nav-contact">
                 <Link to={`/contact`}>Contact</Link>
               </li>
             </ul>
