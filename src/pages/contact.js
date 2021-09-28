@@ -12,11 +12,6 @@ import "../utils/css/screen.css";
 import { init } from "emailjs-com";
 init("user_p3ojVaJ2sI4XHCsG2wtSk");
 
-// const isValidEmail = email => {
-//   const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-//   return regex.test(String(email).toLowerCase());
-// };
-
 const ContactPage = ({ data }, location) => {
   const siteTitle = data.site.siteMetadata.title;
 
@@ -27,8 +22,8 @@ const ContactPage = ({ data }, location) => {
 
   const submit = () => {
     if (name && email && message) {
-      const serviceId = "service_id";
-      const templateId = "template_id";
+      const serviceId = "service_pjh9bi8";
+      const templateId = "template_nvfb4gb";
       const userId = "user_id";
       const templateParams = {
         name,
