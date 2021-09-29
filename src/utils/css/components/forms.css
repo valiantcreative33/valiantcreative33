@@ -17,6 +17,12 @@ form {
   padding-left: 5px;
 }
 
+.subject-form {
+  max-width: 100%;
+  padding: 20px 0 10px 0;
+  border: 0px;
+}
+
 fieldset {
   margin: 0;
   padding: 0;

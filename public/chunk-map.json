@@ -1,1 +1,8 @@
-{ "polyfill": ["/polyfill.js"], "commons": ["/commons.css", "/commons.js"] }
+{
+  "polyfill": ["/polyfill.js"],
+  "commons": [
+    "/commons.css",
+    "/commons.js",
+    "/commons.08691a7daf546d5fa51c.hot-update.js"
+  ]
+}

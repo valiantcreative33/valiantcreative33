@@ -17,17 +17,19 @@ const ContactPage = ({ data }, location) => {
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const [emailSent, setEmailSent] = useState(false);
 
   const submit = () => {
     if (name && email && message) {
       const serviceId = "service_pjh9bi8";
-      const templateId = "template_nvfb4gb";
-      const userId = "user_id";
+      const templateId = "template_oj9lxrq";
+      const userId = "user_p3ojVaJ2sI4XHCsG2wtSk";
       const templateParams = {
         name,
         email,
+        subject,
         message
       };
 
@@ -38,6 +40,7 @@ const ContactPage = ({ data }, location) => {
 
       setName("");
       setEmail("");
+      setSubject("");
       setMessage("");
       setEmailSent(true);
     } else {
@@ -92,6 +95,15 @@ const ContactPage = ({ data }, location) => {
                   placeholder="Email Address"
                   value={email}
                   onChange={e => setEmail(e.target.value)}
+                />
+              </div>
+              {/* Break */}
+              <div className="col-12 subject-form">
+                <input
+                  type="text"
+                  placeholder="Subject"
+                  value={subject}
+                  onChange={e => setSubject(e.target.value)}
                 />
               </div>
               {/* Break */}

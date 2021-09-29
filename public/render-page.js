@@ -233,6 +233,13 @@
                 )
               )
             ),
+            "component---src-pages-contact-js": hot(
+              preferDefault(
+                __webpack_require__(
+                  /*! ./src/pages/contact.js */ "./src/pages/contact.js"
+                )
+              )
+            ),
             "component---src-pages-index-js": hot(
               preferDefault(
                 __webpack_require__(
@@ -3916,6 +3923,359 @@ useStaticQuery(graphql\`${query}\`);
           /***/
         },
 
+      /***/ "./node_modules/emailjs-com/es/api/sendPost.js":
+        /*!*****************************************************!*\
+  !*** ./node_modules/emailjs-com/es/api/sendPost.js ***!
+  \*****************************************************/
+        /*! exports provided: sendPost */
+        /***/ function(module, __webpack_exports__, __webpack_require__) {
+          "use strict";
+          __webpack_require__.r(__webpack_exports__);
+          /* harmony export (binding) */ __webpack_require__.d(
+            __webpack_exports__,
+            "sendPost",
+            function() {
+              return sendPost;
+            }
+          );
+          /* harmony import */ var _models_EmailJSResponseStatus__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+            /*! ../models/EmailJSResponseStatus */ "./node_modules/emailjs-com/es/models/EmailJSResponseStatus.js"
+          );
+          /* harmony import */ var _store_store__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+            /*! ../store/store */ "./node_modules/emailjs-com/es/store/store.js"
+          );
+
+          const sendPost = (url, data, headers = {}) => {
+            return new Promise((resolve, reject) => {
+              const xhr = new XMLHttpRequest();
+              xhr.addEventListener("load", ({ target }) => {
+                const responseStatus = new _models_EmailJSResponseStatus__WEBPACK_IMPORTED_MODULE_0__[
+                  "EmailJSResponseStatus"
+                ](target);
+                if (
+                  responseStatus.status === 200 ||
+                  responseStatus.text === "OK"
+                ) {
+                  resolve(responseStatus);
+                } else {
+                  reject(responseStatus);
+                }
+              });
+              xhr.addEventListener("error", ({ target }) => {
+                reject(
+                  new _models_EmailJSResponseStatus__WEBPACK_IMPORTED_MODULE_0__[
+                    "EmailJSResponseStatus"
+                  ](target)
+                );
+              });
+              xhr.open(
+                "POST",
+                _store_store__WEBPACK_IMPORTED_MODULE_1__["store"]._origin +
+                  url,
+                true
+              );
+              Object.keys(headers).forEach(key => {
+                xhr.setRequestHeader(key, headers[key]);
+              });
+              xhr.send(data);
+            });
+          };
+
+          /***/
+        },
+
+      /***/ "./node_modules/emailjs-com/es/index.js":
+        /*!**********************************************!*\
+  !*** ./node_modules/emailjs-com/es/index.js ***!
+  \**********************************************/
+        /*! exports provided: init, send, sendForm, default */
+        /***/ function(module, __webpack_exports__, __webpack_require__) {
+          "use strict";
+          __webpack_require__.r(__webpack_exports__);
+          /* harmony import */ var _methods_init_init__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+            /*! ./methods/init/init */ "./node_modules/emailjs-com/es/methods/init/init.js"
+          );
+          /* harmony reexport (safe) */ __webpack_require__.d(
+            __webpack_exports__,
+            "init",
+            function() {
+              return _methods_init_init__WEBPACK_IMPORTED_MODULE_0__["init"];
+            }
+          );
+
+          /* harmony import */ var _methods_send_send__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+            /*! ./methods/send/send */ "./node_modules/emailjs-com/es/methods/send/send.js"
+          );
+          /* harmony reexport (safe) */ __webpack_require__.d(
+            __webpack_exports__,
+            "send",
+            function() {
+              return _methods_send_send__WEBPACK_IMPORTED_MODULE_1__["send"];
+            }
+          );
+
+          /* harmony import */ var _methods_sendForm_sendForm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+            /*! ./methods/sendForm/sendForm */ "./node_modules/emailjs-com/es/methods/sendForm/sendForm.js"
+          );
+          /* harmony reexport (safe) */ __webpack_require__.d(
+            __webpack_exports__,
+            "sendForm",
+            function() {
+              return _methods_sendForm_sendForm__WEBPACK_IMPORTED_MODULE_2__[
+                "sendForm"
+              ];
+            }
+          );
+
+          /* harmony default export */ __webpack_exports__["default"] = {
+            init: _methods_init_init__WEBPACK_IMPORTED_MODULE_0__["init"],
+            send: _methods_send_send__WEBPACK_IMPORTED_MODULE_1__["send"],
+            sendForm:
+              _methods_sendForm_sendForm__WEBPACK_IMPORTED_MODULE_2__[
+                "sendForm"
+              ]
+          };
+
+          /***/
+        },
+
+      /***/ "./node_modules/emailjs-com/es/methods/init/init.js":
+        /*!**********************************************************!*\
+  !*** ./node_modules/emailjs-com/es/methods/init/init.js ***!
+  \**********************************************************/
+        /*! exports provided: init */
+        /***/ function(module, __webpack_exports__, __webpack_require__) {
+          "use strict";
+          __webpack_require__.r(__webpack_exports__);
+          /* harmony export (binding) */ __webpack_require__.d(
+            __webpack_exports__,
+            "init",
+            function() {
+              return init;
+            }
+          );
+          /* harmony import */ var _store_store__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+            /*! ../../store/store */ "./node_modules/emailjs-com/es/store/store.js"
+          );
+
+          /**
+           * Initiation
+           * @param {string} userID - set the EmailJS user ID
+           * @param {string} origin - set the EmailJS origin
+           */
+          const init = (userID, origin = "https://api.emailjs.com") => {
+            _store_store__WEBPACK_IMPORTED_MODULE_0__["store"]._userID = userID;
+            _store_store__WEBPACK_IMPORTED_MODULE_0__["store"]._origin = origin;
+          };
+
+          /***/
+        },
+
+      /***/ "./node_modules/emailjs-com/es/methods/send/send.js":
+        /*!**********************************************************!*\
+  !*** ./node_modules/emailjs-com/es/methods/send/send.js ***!
+  \**********************************************************/
+        /*! exports provided: send */
+        /***/ function(module, __webpack_exports__, __webpack_require__) {
+          "use strict";
+          __webpack_require__.r(__webpack_exports__);
+          /* harmony export (binding) */ __webpack_require__.d(
+            __webpack_exports__,
+            "send",
+            function() {
+              return send;
+            }
+          );
+          /* harmony import */ var _store_store__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+            /*! ../../store/store */ "./node_modules/emailjs-com/es/store/store.js"
+          );
+          /* harmony import */ var _utils_validateParams__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+            /*! ../../utils/validateParams */ "./node_modules/emailjs-com/es/utils/validateParams.js"
+          );
+          /* harmony import */ var _api_sendPost__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+            /*! ../../api/sendPost */ "./node_modules/emailjs-com/es/api/sendPost.js"
+          );
+
+          /**
+           * Send a template to the specific EmailJS service
+           * @param {string} serviceID - the EmailJS service ID
+           * @param {string} templateID - the EmailJS template ID
+           * @param {object} templatePrams - the template params, what will be set to the EmailJS template
+           * @param {string} userID - the EmailJS user ID
+           * @returns {Promise<EmailJSResponseStatus>}
+           */
+          const send = (serviceID, templateID, templatePrams, userID) => {
+            const uID =
+              userID ||
+              _store_store__WEBPACK_IMPORTED_MODULE_0__["store"]._userID;
+            Object(
+              _utils_validateParams__WEBPACK_IMPORTED_MODULE_1__[
+                "validateParams"
+              ]
+            )(uID, serviceID, templateID);
+            const params = {
+              lib_version: "3.2.0",
+              user_id: uID,
+              service_id: serviceID,
+              template_id: templateID,
+              template_params: templatePrams
+            };
+            return Object(
+              _api_sendPost__WEBPACK_IMPORTED_MODULE_2__["sendPost"]
+            )("/api/v1.0/email/send", JSON.stringify(params), {
+              "Content-type": "application/json"
+            });
+          };
+
+          /***/
+        },
+
+      /***/ "./node_modules/emailjs-com/es/methods/sendForm/sendForm.js":
+        /*!******************************************************************!*\
+  !*** ./node_modules/emailjs-com/es/methods/sendForm/sendForm.js ***!
+  \******************************************************************/
+        /*! exports provided: sendForm */
+        /***/ function(module, __webpack_exports__, __webpack_require__) {
+          "use strict";
+          __webpack_require__.r(__webpack_exports__);
+          /* harmony export (binding) */ __webpack_require__.d(
+            __webpack_exports__,
+            "sendForm",
+            function() {
+              return sendForm;
+            }
+          );
+          /* harmony import */ var _store_store__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+            /*! ../../store/store */ "./node_modules/emailjs-com/es/store/store.js"
+          );
+          /* harmony import */ var _utils_validateParams__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+            /*! ../../utils/validateParams */ "./node_modules/emailjs-com/es/utils/validateParams.js"
+          );
+          /* harmony import */ var _api_sendPost__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+            /*! ../../api/sendPost */ "./node_modules/emailjs-com/es/api/sendPost.js"
+          );
+
+          const findHTMLForm = form => {
+            let currentForm;
+            if (typeof form === "string") {
+              currentForm = document.querySelector(form);
+            } else {
+              currentForm = form;
+            }
+            if (!currentForm || currentForm.nodeName !== "FORM") {
+              throw "The 3rd parameter is expected to be the HTML form element or the style selector of form";
+            }
+            return currentForm;
+          };
+          /**
+           * Send a form the specific EmailJS service
+           * @param {string} serviceID - the EmailJS service ID
+           * @param {string} templateID - the EmailJS template ID
+           * @param {string | HTMLFormElement} form - the form element or selector
+           * @param {string} userID - the EmailJS user ID
+           * @returns {Promise<EmailJSResponseStatus>}
+           */
+          const sendForm = (serviceID, templateID, form, userID) => {
+            const uID =
+              userID ||
+              _store_store__WEBPACK_IMPORTED_MODULE_0__["store"]._userID;
+            const currentForm = findHTMLForm(form);
+            Object(
+              _utils_validateParams__WEBPACK_IMPORTED_MODULE_1__[
+                "validateParams"
+              ]
+            )(uID, serviceID, templateID);
+            const formData = new FormData(currentForm);
+            formData.append("lib_version", "3.2.0");
+            formData.append("service_id", serviceID);
+            formData.append("template_id", templateID);
+            formData.append("user_id", uID);
+            return Object(
+              _api_sendPost__WEBPACK_IMPORTED_MODULE_2__["sendPost"]
+            )("/api/v1.0/email/send-form", formData);
+          };
+
+          /***/
+        },
+
+      /***/ "./node_modules/emailjs-com/es/models/EmailJSResponseStatus.js":
+        /*!*********************************************************************!*\
+  !*** ./node_modules/emailjs-com/es/models/EmailJSResponseStatus.js ***!
+  \*********************************************************************/
+        /*! exports provided: EmailJSResponseStatus */
+        /***/ function(module, __webpack_exports__, __webpack_require__) {
+          "use strict";
+          __webpack_require__.r(__webpack_exports__);
+          /* harmony export (binding) */ __webpack_require__.d(
+            __webpack_exports__,
+            "EmailJSResponseStatus",
+            function() {
+              return EmailJSResponseStatus;
+            }
+          );
+          class EmailJSResponseStatus {
+            constructor(httpResponse) {
+              this.status = httpResponse.status;
+              this.text = httpResponse.responseText;
+            }
+          }
+
+          /***/
+        },
+
+      /***/ "./node_modules/emailjs-com/es/store/store.js":
+        /*!****************************************************!*\
+  !*** ./node_modules/emailjs-com/es/store/store.js ***!
+  \****************************************************/
+        /*! exports provided: store */
+        /***/ function(module, __webpack_exports__, __webpack_require__) {
+          "use strict";
+          __webpack_require__.r(__webpack_exports__);
+          /* harmony export (binding) */ __webpack_require__.d(
+            __webpack_exports__,
+            "store",
+            function() {
+              return store;
+            }
+          );
+          const store = {
+            _origin: "https://api.emailjs.com"
+          };
+
+          /***/
+        },
+
+      /***/ "./node_modules/emailjs-com/es/utils/validateParams.js":
+        /*!*************************************************************!*\
+  !*** ./node_modules/emailjs-com/es/utils/validateParams.js ***!
+  \*************************************************************/
+        /*! exports provided: validateParams */
+        /***/ function(module, __webpack_exports__, __webpack_require__) {
+          "use strict";
+          __webpack_require__.r(__webpack_exports__);
+          /* harmony export (binding) */ __webpack_require__.d(
+            __webpack_exports__,
+            "validateParams",
+            function() {
+              return validateParams;
+            }
+          );
+          const validateParams = (userID, serviceID, templateID) => {
+            if (!userID) {
+              throw "The user ID is required. Visit https://dashboard.emailjs.com/admin/integration";
+            }
+            if (!serviceID) {
+              throw "The service ID is required. Visit https://dashboard.emailjs.com/admin";
+            }
+            if (!templateID) {
+              throw "The template ID is required. Visit https://dashboard.emailjs.com/admin/templates";
+            }
+            return true;
+          };
+
+          /***/
+        },
+
       /***/ "./node_modules/filter-obj/index.js":
         /*!******************************************!*\
   !*** ./node_modules/filter-obj/index.js ***!
@@ -3942,6 +4302,1023 @@ useStaticQuery(graphql\`${query}\`);
 
             return ret;
           };
+
+          /***/
+        },
+
+      /***/ "./node_modules/gatsby-image/index.js":
+        /*!********************************************!*\
+  !*** ./node_modules/gatsby-image/index.js ***!
+  \********************************************/
+        /*! no static exports found */
+        /***/ function(module, exports, __webpack_require__) {
+          "use strict";
+
+          var _interopRequireDefault = __webpack_require__(
+            /*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js"
+          );
+
+          exports.__esModule = true;
+          exports.default = void 0;
+
+          var _assertThisInitialized2 = _interopRequireDefault(
+            __webpack_require__(
+              /*! @babel/runtime/helpers/assertThisInitialized */ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js"
+            )
+          );
+
+          var _inheritsLoose2 = _interopRequireDefault(
+            __webpack_require__(
+              /*! @babel/runtime/helpers/inheritsLoose */ "./node_modules/@babel/runtime/helpers/inheritsLoose.js"
+            )
+          );
+
+          var _objectWithoutPropertiesLoose2 = _interopRequireDefault(
+            __webpack_require__(
+              /*! @babel/runtime/helpers/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js"
+            )
+          );
+
+          var _extends2 = _interopRequireDefault(
+            __webpack_require__(
+              /*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"
+            )
+          );
+
+          var _react = _interopRequireDefault(
+            __webpack_require__(/*! react */ "react")
+          );
+
+          var _propTypes = _interopRequireDefault(
+            __webpack_require__(
+              /*! prop-types */ "./node_modules/prop-types/index.js"
+            )
+          );
+
+          var logDeprecationNotice = function logDeprecationNotice(
+            prop,
+            replacement
+          ) {
+            if (false) {
+            }
+
+            console.log(
+              '\n    The "' +
+                prop +
+                '" prop is now deprecated and will be removed in the next major version\n    of "gatsby-image".\n    '
+            );
+
+            if (replacement) {
+              console.log(
+                "Please use " + replacement + ' instead of "' + prop + '".'
+              );
+            }
+          }; // Handle legacy props during their deprecation phase
+
+          var convertProps = function convertProps(props) {
+            var convertedProps = (0, _extends2.default)({}, props);
+            var resolutions = convertedProps.resolutions,
+              sizes = convertedProps.sizes,
+              critical = convertedProps.critical;
+
+            if (resolutions) {
+              convertedProps.fixed = resolutions;
+              logDeprecationNotice(
+                "resolutions",
+                'the gatsby-image v2 prop "fixed"'
+              );
+              delete convertedProps.resolutions;
+            }
+
+            if (sizes) {
+              convertedProps.fluid = sizes;
+              logDeprecationNotice("sizes", 'the gatsby-image v2 prop "fluid"');
+              delete convertedProps.sizes;
+            }
+
+            if (critical) {
+              logDeprecationNotice(
+                "critical",
+                'the native "loading" attribute'
+              );
+              convertedProps.loading = "eager";
+            } // convert fluid & fixed to arrays so we only have to work with arrays
+
+            if (convertedProps.fluid) {
+              convertedProps.fluid = groupByMedia(
+                [].concat(convertedProps.fluid)
+              );
+            }
+
+            if (convertedProps.fixed) {
+              convertedProps.fixed = groupByMedia(
+                [].concat(convertedProps.fixed)
+              );
+            }
+
+            return convertedProps;
+          };
+          /**
+           * Checks if fluid or fixed are art-direction arrays.
+           *
+           * @param currentData  {{media?: string}[]}   The props to check for images.
+           * @return {boolean}
+           */
+
+          var hasArtDirectionSupport = function hasArtDirectionSupport(
+            currentData
+          ) {
+            return (
+              !!currentData &&
+              Array.isArray(currentData) &&
+              currentData.some(function(image) {
+                return typeof image.media !== "undefined";
+              })
+            );
+          };
+          /**
+           * Tries to detect if a media query matches the current viewport.
+           * @property media   {{media?: string}}  A media query string.
+           * @return {boolean}
+           */
+
+          var matchesMedia = function matchesMedia(_ref) {
+            var media = _ref.media;
+            return media
+              ? isBrowser && !!window.matchMedia(media).matches
+              : false;
+          };
+          /**
+           * Find the source of an image to use as a key in the image cache.
+           * Use `the first image in either `fixed` or `fluid`
+           * @param {{fluid: {src: string, media?: string}[], fixed: {src: string, media?: string}[]}} args
+           * @return {string?} Returns image src or undefined it not given.
+           */
+
+          var getImageCacheKey = function getImageCacheKey(_ref2) {
+            var fluid = _ref2.fluid,
+              fixed = _ref2.fixed;
+            var srcData = getCurrentSrcData(fluid || fixed || []);
+            return srcData && srcData.src;
+          };
+          /**
+           * Returns the current src - Preferably with art-direction support.
+           * @param currentData  {{media?: string}[], maxWidth?: Number, maxHeight?: Number}   The fluid or fixed image array.
+           * @return {{src: string, media?: string, maxWidth?: Number, maxHeight?: Number}}
+           */
+
+          var getCurrentSrcData = function getCurrentSrcData(currentData) {
+            if (isBrowser && hasArtDirectionSupport(currentData)) {
+              // Do we have an image for the current Viewport?
+              var foundMedia = currentData.findIndex(matchesMedia);
+
+              if (foundMedia !== -1) {
+                return currentData[foundMedia];
+              } // No media matches, select first element without a media condition
+
+              var noMedia = currentData.findIndex(function(image) {
+                return typeof image.media === "undefined";
+              });
+
+              if (noMedia !== -1) {
+                return currentData[noMedia];
+              }
+            } // Else return the first image.
+
+            return currentData[0];
+          }; // Cache if we've seen an image before so we don't bother with
+          // lazy-loading & fading in on subsequent mounts.
+
+          var imageCache = Object.create({});
+
+          var inImageCache = function inImageCache(props) {
+            var convertedProps = convertProps(props);
+            var cacheKey = getImageCacheKey(convertedProps);
+            return imageCache[cacheKey] || false;
+          };
+
+          var activateCacheForImage = function activateCacheForImage(props) {
+            var convertedProps = convertProps(props);
+            var cacheKey = getImageCacheKey(convertedProps);
+
+            if (cacheKey) {
+              imageCache[cacheKey] = true;
+            }
+          }; // Native lazy-loading support: https://addyosmani.com/blog/lazy-loading/
+
+          var hasNativeLazyLoadSupport =
+            typeof HTMLImageElement !== "undefined" &&
+            "loading" in HTMLImageElement.prototype;
+          var isBrowser = typeof window !== "undefined";
+          var hasIOSupport = isBrowser && window.IntersectionObserver;
+          var io;
+          var listeners = new WeakMap();
+
+          function getIO() {
+            if (
+              typeof io === "undefined" &&
+              typeof window !== "undefined" &&
+              window.IntersectionObserver
+            ) {
+              io = new window.IntersectionObserver(
+                function(entries) {
+                  entries.forEach(function(entry) {
+                    if (listeners.has(entry.target)) {
+                      var cb = listeners.get(entry.target); // Edge doesn't currently support isIntersecting, so also test for an intersectionRatio > 0
+
+                      if (entry.isIntersecting || entry.intersectionRatio > 0) {
+                        io.unobserve(entry.target);
+                        listeners.delete(entry.target);
+                        cb();
+                      }
+                    }
+                  });
+                },
+                {
+                  rootMargin: "200px"
+                }
+              );
+            }
+
+            return io;
+          }
+
+          function generateImageSources(imageVariants) {
+            return imageVariants.map(function(_ref3) {
+              var src = _ref3.src,
+                srcSet = _ref3.srcSet,
+                srcSetWebp = _ref3.srcSetWebp,
+                media = _ref3.media,
+                sizes = _ref3.sizes;
+              return /*#__PURE__*/ _react.default.createElement(
+                _react.default.Fragment,
+                {
+                  key: src
+                },
+                srcSetWebp &&
+                  /*#__PURE__*/ _react.default.createElement("source", {
+                    type: "image/webp",
+                    media: media,
+                    srcSet: srcSetWebp,
+                    sizes: sizes
+                  }),
+                srcSet &&
+                  /*#__PURE__*/ _react.default.createElement("source", {
+                    media: media,
+                    srcSet: srcSet,
+                    sizes: sizes
+                  })
+              );
+            });
+          } // Return an array ordered by elements having a media prop, does not use
+          // native sort, as a stable sort is not guaranteed by all browsers/versions
+
+          function groupByMedia(imageVariants) {
+            var withMedia = [];
+            var without = [];
+            imageVariants.forEach(function(variant) {
+              return (variant.media ? withMedia : without).push(variant);
+            });
+
+            if (without.length > 1 && "development" !== "production") {
+              console.warn(
+                "We've found " +
+                  without.length +
+                  " sources without a media property. They might be ignored by the browser, see: https://www.gatsbyjs.org/packages/gatsby-image/#art-directing-multiple-images"
+              );
+            }
+
+            return [].concat(withMedia, without);
+          }
+
+          function generateTracedSVGSources(imageVariants) {
+            return imageVariants.map(function(_ref4) {
+              var src = _ref4.src,
+                media = _ref4.media,
+                tracedSVG = _ref4.tracedSVG;
+              return /*#__PURE__*/ _react.default.createElement("source", {
+                key: src,
+                media: media,
+                srcSet: tracedSVG
+              });
+            });
+          }
+
+          function generateBase64Sources(imageVariants) {
+            return imageVariants.map(function(_ref5) {
+              var src = _ref5.src,
+                media = _ref5.media,
+                base64 = _ref5.base64;
+              return /*#__PURE__*/ _react.default.createElement("source", {
+                key: src,
+                media: media,
+                srcSet: base64
+              });
+            });
+          }
+
+          function generateNoscriptSource(_ref6, isWebp) {
+            var srcSet = _ref6.srcSet,
+              srcSetWebp = _ref6.srcSetWebp,
+              media = _ref6.media,
+              sizes = _ref6.sizes;
+            var src = isWebp ? srcSetWebp : srcSet;
+            var mediaAttr = media ? 'media="' + media + '" ' : "";
+            var typeAttr = isWebp ? "type='image/webp' " : "";
+            var sizesAttr = sizes ? 'sizes="' + sizes + '" ' : "";
+            return (
+              "<source " +
+              typeAttr +
+              mediaAttr +
+              'srcset="' +
+              src +
+              '" ' +
+              sizesAttr +
+              "/>"
+            );
+          }
+
+          function generateNoscriptSources(imageVariants) {
+            return imageVariants
+              .map(function(variant) {
+                return (
+                  (variant.srcSetWebp
+                    ? generateNoscriptSource(variant, true)
+                    : "") + generateNoscriptSource(variant)
+                );
+              })
+              .join("");
+          }
+
+          var listenToIntersections = function listenToIntersections(el, cb) {
+            var observer = getIO();
+
+            if (observer) {
+              observer.observe(el);
+              listeners.set(el, cb);
+            }
+
+            return function() {
+              observer.unobserve(el);
+              listeners.delete(el);
+            };
+          };
+
+          var noscriptImg = function noscriptImg(props) {
+            // Check if prop exists before adding each attribute to the string output below to prevent
+            // HTML validation issues caused by empty values like width="" and height=""
+            var src = props.src ? 'src="' + props.src + '" ' : 'src="" '; // required attribute
+
+            var sizes = props.sizes ? 'sizes="' + props.sizes + '" ' : "";
+            var srcSet = props.srcSet ? 'srcset="' + props.srcSet + '" ' : "";
+            var title = props.title ? 'title="' + props.title + '" ' : "";
+            var alt = props.alt ? 'alt="' + props.alt + '" ' : 'alt="" '; // required attribute
+
+            var width = props.width ? 'width="' + props.width + '" ' : "";
+            var height = props.height ? 'height="' + props.height + '" ' : "";
+            var crossOrigin = props.crossOrigin
+              ? 'crossorigin="' + props.crossOrigin + '" '
+              : "";
+            var loading = props.loading
+              ? 'loading="' + props.loading + '" '
+              : "";
+            var draggable = props.draggable
+              ? 'draggable="' + props.draggable + '" '
+              : "";
+            var sources = generateNoscriptSources(props.imageVariants);
+            return (
+              "<picture>" +
+              sources +
+              "<img " +
+              loading +
+              width +
+              height +
+              sizes +
+              srcSet +
+              src +
+              alt +
+              title +
+              crossOrigin +
+              draggable +
+              'style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture>'
+            );
+          }; // Earlier versions of gatsby-image during the 2.x cycle did not wrap
+          // the `Img` component in a `picture` element. This maintains compatibility
+          // until a breaking change can be introduced in the next major release
+
+          var Placeholder = /*#__PURE__*/ _react.default.forwardRef(function(
+            props,
+            ref
+          ) {
+            var src = props.src,
+              imageVariants = props.imageVariants,
+              generateSources = props.generateSources,
+              spreadProps = props.spreadProps,
+              ariaHidden = props.ariaHidden;
+
+            var baseImage = /*#__PURE__*/ _react.default.createElement(
+              Img,
+              (0, _extends2.default)(
+                {
+                  ref: ref,
+                  src: src
+                },
+                spreadProps,
+                {
+                  ariaHidden: ariaHidden
+                }
+              )
+            );
+
+            return imageVariants.length > 1
+              ? /*#__PURE__*/ _react.default.createElement(
+                  "picture",
+                  null,
+                  generateSources(imageVariants),
+                  baseImage
+                )
+              : baseImage;
+          });
+
+          var Img = /*#__PURE__*/ _react.default.forwardRef(function(
+            props,
+            ref
+          ) {
+            var sizes = props.sizes,
+              srcSet = props.srcSet,
+              src = props.src,
+              style = props.style,
+              onLoad = props.onLoad,
+              onError = props.onError,
+              loading = props.loading,
+              draggable = props.draggable,
+              ariaHidden = props.ariaHidden,
+              otherProps = (0, _objectWithoutPropertiesLoose2.default)(props, [
+                "sizes",
+                "srcSet",
+                "src",
+                "style",
+                "onLoad",
+                "onError",
+                "loading",
+                "draggable",
+                "ariaHidden"
+              ]);
+            return /*#__PURE__*/ _react.default.createElement(
+              "img",
+              (0, _extends2.default)(
+                {
+                  "aria-hidden": ariaHidden,
+                  sizes: sizes,
+                  srcSet: srcSet,
+                  src: src
+                },
+                otherProps,
+                {
+                  onLoad: onLoad,
+                  onError: onError,
+                  ref: ref,
+                  loading: loading,
+                  draggable: draggable,
+                  style: (0, _extends2.default)(
+                    {
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      objectPosition: "center"
+                    },
+                    style
+                  )
+                }
+              )
+            );
+          });
+
+          Img.propTypes = {
+            style: _propTypes.default.object,
+            onError: _propTypes.default.func,
+            onLoad: _propTypes.default.func
+          };
+
+          var Image = /*#__PURE__*/ (function(_React$Component) {
+            (0, _inheritsLoose2.default)(Image, _React$Component);
+
+            function Image(props) {
+              var _this;
+
+              _this = _React$Component.call(this, props) || this; // If this image has already been loaded before then we can assume it's
+              // already in the browser cache so it's cheap to just show directly.
+
+              _this.seenBefore = isBrowser && inImageCache(props);
+              _this.isCritical = props.loading === "eager" || props.critical;
+              _this.addNoScript = !(_this.isCritical && !props.fadeIn);
+              _this.useIOSupport =
+                !hasNativeLazyLoadSupport &&
+                hasIOSupport &&
+                !_this.isCritical &&
+                !_this.seenBefore;
+              var isVisible =
+                _this.isCritical ||
+                (isBrowser &&
+                  (hasNativeLazyLoadSupport || !_this.useIOSupport));
+              _this.state = {
+                isVisible: isVisible,
+                imgLoaded: false,
+                imgCached: false,
+                fadeIn: !_this.seenBefore && props.fadeIn,
+                isHydrated: false
+              };
+              _this.imageRef = /*#__PURE__*/ _react.default.createRef();
+              _this.placeholderRef =
+                props.placeholderRef ||
+                /*#__PURE__*/ _react.default.createRef();
+              _this.handleImageLoaded = _this.handleImageLoaded.bind(
+                (0, _assertThisInitialized2.default)(_this)
+              );
+              _this.handleRef = _this.handleRef.bind(
+                (0, _assertThisInitialized2.default)(_this)
+              );
+              return _this;
+            }
+
+            var _proto = Image.prototype;
+
+            _proto.componentDidMount = function componentDidMount() {
+              this.setState({
+                isHydrated: isBrowser
+              });
+
+              if (
+                this.state.isVisible &&
+                typeof this.props.onStartLoad === "function"
+              ) {
+                this.props.onStartLoad({
+                  wasCached: inImageCache(this.props)
+                });
+              }
+
+              if (this.isCritical) {
+                var img = this.imageRef.current;
+
+                if (img && img.complete) {
+                  this.handleImageLoaded();
+                }
+              }
+            };
+
+            _proto.componentWillUnmount = function componentWillUnmount() {
+              if (this.cleanUpListeners) {
+                this.cleanUpListeners();
+              }
+            }; // Specific to IntersectionObserver based lazy-load support
+
+            _proto.handleRef = function handleRef(ref) {
+              var _this2 = this;
+
+              if (this.useIOSupport && ref) {
+                this.cleanUpListeners = listenToIntersections(ref, function() {
+                  var imageInCache = inImageCache(_this2.props);
+
+                  if (
+                    !_this2.state.isVisible &&
+                    typeof _this2.props.onStartLoad === "function"
+                  ) {
+                    _this2.props.onStartLoad({
+                      wasCached: imageInCache
+                    });
+                  } // imgCached and imgLoaded must update after isVisible,
+                  // Once isVisible is true, imageRef becomes accessible, which imgCached needs access to.
+                  // imgLoaded and imgCached are in a 2nd setState call to be changed together,
+                  // avoiding initiating unnecessary animation frames from style changes.
+
+                  _this2.setState(
+                    {
+                      isVisible: true
+                    },
+                    function() {
+                      _this2.setState({
+                        imgLoaded: imageInCache,
+                        // `currentSrc` should be a string, but can be `undefined` in IE,
+                        // !! operator validates the value is not undefined/null/""
+                        // for lazyloaded components this might be null
+                        // TODO fix imgCached behaviour as it's now false when it's lazyloaded
+                        imgCached: !!(
+                          _this2.imageRef.current &&
+                          _this2.imageRef.current.currentSrc
+                        )
+                      });
+                    }
+                  );
+                });
+              }
+            };
+
+            _proto.handleImageLoaded = function handleImageLoaded() {
+              activateCacheForImage(this.props);
+              this.setState({
+                imgLoaded: true
+              });
+
+              if (this.props.onLoad) {
+                this.props.onLoad();
+              }
+            };
+
+            _proto.render = function render() {
+              var _convertProps = convertProps(this.props),
+                title = _convertProps.title,
+                alt = _convertProps.alt,
+                className = _convertProps.className,
+                _convertProps$style = _convertProps.style,
+                style =
+                  _convertProps$style === void 0 ? {} : _convertProps$style,
+                _convertProps$imgStyl = _convertProps.imgStyle,
+                imgStyle =
+                  _convertProps$imgStyl === void 0 ? {} : _convertProps$imgStyl,
+                _convertProps$placeho = _convertProps.placeholderStyle,
+                placeholderStyle =
+                  _convertProps$placeho === void 0 ? {} : _convertProps$placeho,
+                placeholderClassName = _convertProps.placeholderClassName,
+                fluid = _convertProps.fluid,
+                fixed = _convertProps.fixed,
+                backgroundColor = _convertProps.backgroundColor,
+                durationFadeIn = _convertProps.durationFadeIn,
+                Tag = _convertProps.Tag,
+                itemProp = _convertProps.itemProp,
+                loading = _convertProps.loading,
+                draggable = _convertProps.draggable;
+
+              var imageVariants = fluid || fixed; // Abort early if missing image data (#25371)
+
+              if (!imageVariants) {
+                return null;
+              }
+
+              var shouldReveal =
+                this.state.fadeIn === false || this.state.imgLoaded;
+              var shouldFadeIn =
+                this.state.fadeIn === true && !this.state.imgCached;
+              var imageStyle = (0, _extends2.default)(
+                {
+                  opacity: shouldReveal ? 1 : 0,
+                  transition: shouldFadeIn
+                    ? "opacity " + durationFadeIn + "ms"
+                    : "none"
+                },
+                imgStyle
+              );
+              var bgColor =
+                typeof backgroundColor === "boolean"
+                  ? "lightgray"
+                  : backgroundColor;
+              var delayHideStyle = {
+                transitionDelay: durationFadeIn + "ms"
+              };
+              var imagePlaceholderStyle = (0, _extends2.default)(
+                {
+                  opacity: this.state.imgLoaded ? 0 : 1
+                },
+                shouldFadeIn && delayHideStyle,
+                imgStyle,
+                placeholderStyle
+              );
+              var placeholderImageProps = {
+                title: title,
+                alt: !this.state.isVisible ? alt : "",
+                style: imagePlaceholderStyle,
+                className: placeholderClassName,
+                itemProp: itemProp
+              }; // Initial client render state needs to match SSR until hydration finishes.
+              // Once hydration completes, render again to update to the correct image.
+              // `imageVariants` is always an Array type at this point due to `convertProps()`
+
+              var image = !this.state.isHydrated
+                ? imageVariants[0]
+                : getCurrentSrcData(imageVariants);
+
+              if (fluid) {
+                return /*#__PURE__*/ _react.default.createElement(
+                  Tag,
+                  {
+                    className:
+                      (className ? className : "") + " gatsby-image-wrapper",
+                    style: (0, _extends2.default)(
+                      {
+                        position: "relative",
+                        overflow: "hidden",
+                        maxWidth: image.maxWidth ? image.maxWidth + "px" : null,
+                        maxHeight: image.maxHeight
+                          ? image.maxHeight + "px"
+                          : null
+                      },
+                      style
+                    ),
+                    ref: this.handleRef,
+                    key: "fluid-" + JSON.stringify(image.srcSet)
+                  },
+                  /*#__PURE__*/ _react.default.createElement(Tag, {
+                    "aria-hidden": true,
+                    style: {
+                      width: "100%",
+                      paddingBottom: 100 / image.aspectRatio + "%"
+                    }
+                  }),
+                  bgColor &&
+                    /*#__PURE__*/ _react.default.createElement(Tag, {
+                      "aria-hidden": true,
+                      title: title,
+                      style: (0, _extends2.default)(
+                        {
+                          backgroundColor: bgColor,
+                          position: "absolute",
+                          top: 0,
+                          bottom: 0,
+                          opacity: !this.state.imgLoaded ? 1 : 0,
+                          right: 0,
+                          left: 0
+                        },
+                        shouldFadeIn && delayHideStyle
+                      )
+                    }),
+                  image.base64 &&
+                    /*#__PURE__*/ _react.default.createElement(Placeholder, {
+                      ariaHidden: true,
+                      ref: this.placeholderRef,
+                      src: image.base64,
+                      spreadProps: placeholderImageProps,
+                      imageVariants: imageVariants,
+                      generateSources: generateBase64Sources
+                    }),
+                  image.tracedSVG &&
+                    /*#__PURE__*/ _react.default.createElement(Placeholder, {
+                      ariaHidden: true,
+                      ref: this.placeholderRef,
+                      src: image.tracedSVG,
+                      spreadProps: placeholderImageProps,
+                      imageVariants: imageVariants,
+                      generateSources: generateTracedSVGSources
+                    }),
+                  this.state.isVisible &&
+                    /*#__PURE__*/ _react.default.createElement(
+                      "picture",
+                      null,
+                      generateImageSources(imageVariants),
+                      /*#__PURE__*/ _react.default.createElement(Img, {
+                        alt: alt,
+                        title: title,
+                        sizes: image.sizes,
+                        src: image.src,
+                        crossOrigin: this.props.crossOrigin,
+                        srcSet: image.srcSet,
+                        style: imageStyle,
+                        ref: this.imageRef,
+                        onLoad: this.handleImageLoaded,
+                        onError: this.props.onError,
+                        itemProp: itemProp,
+                        loading: loading,
+                        draggable: draggable
+                      })
+                    ),
+                  this.addNoScript &&
+                    /*#__PURE__*/ _react.default.createElement("noscript", {
+                      dangerouslySetInnerHTML: {
+                        __html: noscriptImg(
+                          (0, _extends2.default)(
+                            {
+                              alt: alt,
+                              title: title,
+                              loading: loading
+                            },
+                            image,
+                            {
+                              imageVariants: imageVariants
+                            }
+                          )
+                        )
+                      }
+                    })
+                );
+              }
+
+              if (fixed) {
+                var divStyle = (0, _extends2.default)(
+                  {
+                    position: "relative",
+                    overflow: "hidden",
+                    display: "inline-block",
+                    width: image.width,
+                    height: image.height
+                  },
+                  style
+                );
+
+                if (style.display === "inherit") {
+                  delete divStyle.display;
+                }
+
+                return /*#__PURE__*/ _react.default.createElement(
+                  Tag,
+                  {
+                    className:
+                      (className ? className : "") + " gatsby-image-wrapper",
+                    style: divStyle,
+                    ref: this.handleRef,
+                    key: "fixed-" + JSON.stringify(image.srcSet)
+                  },
+                  bgColor &&
+                    /*#__PURE__*/ _react.default.createElement(Tag, {
+                      "aria-hidden": true,
+                      title: title,
+                      style: (0, _extends2.default)(
+                        {
+                          backgroundColor: bgColor,
+                          width: image.width,
+                          opacity: !this.state.imgLoaded ? 1 : 0,
+                          height: image.height
+                        },
+                        shouldFadeIn && delayHideStyle
+                      )
+                    }),
+                  image.base64 &&
+                    /*#__PURE__*/ _react.default.createElement(Placeholder, {
+                      ariaHidden: true,
+                      ref: this.placeholderRef,
+                      src: image.base64,
+                      spreadProps: placeholderImageProps,
+                      imageVariants: imageVariants,
+                      generateSources: generateBase64Sources
+                    }),
+                  image.tracedSVG &&
+                    /*#__PURE__*/ _react.default.createElement(Placeholder, {
+                      ariaHidden: true,
+                      ref: this.placeholderRef,
+                      src: image.tracedSVG,
+                      spreadProps: placeholderImageProps,
+                      imageVariants: imageVariants,
+                      generateSources: generateTracedSVGSources
+                    }),
+                  this.state.isVisible &&
+                    /*#__PURE__*/ _react.default.createElement(
+                      "picture",
+                      null,
+                      generateImageSources(imageVariants),
+                      /*#__PURE__*/ _react.default.createElement(Img, {
+                        alt: alt,
+                        title: title,
+                        width: image.width,
+                        height: image.height,
+                        sizes: image.sizes,
+                        src: image.src,
+                        crossOrigin: this.props.crossOrigin,
+                        srcSet: image.srcSet,
+                        style: imageStyle,
+                        ref: this.imageRef,
+                        onLoad: this.handleImageLoaded,
+                        onError: this.props.onError,
+                        itemProp: itemProp,
+                        loading: loading,
+                        draggable: draggable
+                      })
+                    ),
+                  this.addNoScript &&
+                    /*#__PURE__*/ _react.default.createElement("noscript", {
+                      dangerouslySetInnerHTML: {
+                        __html: noscriptImg(
+                          (0, _extends2.default)(
+                            {
+                              alt: alt,
+                              title: title,
+                              loading: loading
+                            },
+                            image,
+                            {
+                              imageVariants: imageVariants
+                            }
+                          )
+                        )
+                      }
+                    })
+                );
+              }
+
+              return null;
+            };
+
+            return Image;
+          })(_react.default.Component);
+
+          Image.defaultProps = {
+            fadeIn: true,
+            durationFadeIn: 500,
+            alt: "",
+            Tag: "div",
+            // We set it to `lazy` by default because it's best to default to a performant
+            // setting and let the user "opt out" to `eager`
+            loading: "lazy"
+          };
+
+          var fixedObject = _propTypes.default.shape({
+            width: _propTypes.default.number.isRequired,
+            height: _propTypes.default.number.isRequired,
+            src: _propTypes.default.string.isRequired,
+            srcSet: _propTypes.default.string.isRequired,
+            base64: _propTypes.default.string,
+            tracedSVG: _propTypes.default.string,
+            srcWebp: _propTypes.default.string,
+            srcSetWebp: _propTypes.default.string,
+            media: _propTypes.default.string
+          });
+
+          var fluidObject = _propTypes.default.shape({
+            aspectRatio: _propTypes.default.number.isRequired,
+            src: _propTypes.default.string.isRequired,
+            srcSet: _propTypes.default.string.isRequired,
+            sizes: _propTypes.default.string.isRequired,
+            base64: _propTypes.default.string,
+            tracedSVG: _propTypes.default.string,
+            srcWebp: _propTypes.default.string,
+            srcSetWebp: _propTypes.default.string,
+            media: _propTypes.default.string,
+            maxWidth: _propTypes.default.number,
+            maxHeight: _propTypes.default.number
+          });
+
+          function requireFixedOrFluid(originalPropTypes) {
+            return function(props, propName, componentName) {
+              var _PropTypes$checkPropT;
+
+              if (!props.fixed && !props.fluid) {
+                throw new Error(
+                  "The prop `fluid` or `fixed` is marked as required in `" +
+                    componentName +
+                    "`, but their values are both `undefined`."
+                );
+              }
+
+              _propTypes.default.checkPropTypes(
+                ((_PropTypes$checkPropT = {}),
+                (_PropTypes$checkPropT[propName] = originalPropTypes),
+                _PropTypes$checkPropT),
+                props,
+                "prop",
+                componentName
+              );
+            };
+          } // If you modify these propTypes, please don't forget to update following files as well:
+          // https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-image/index.d.ts
+          // https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-image/README.md#gatsby-image-props
+          // https://github.com/gatsbyjs/gatsby/blob/master/docs/docs/gatsby-image.md#gatsby-image-props
+
+          Image.propTypes = {
+            resolutions: fixedObject,
+            sizes: fluidObject,
+            fixed: requireFixedOrFluid(
+              _propTypes.default.oneOfType([
+                fixedObject,
+                _propTypes.default.arrayOf(fixedObject)
+              ])
+            ),
+            fluid: requireFixedOrFluid(
+              _propTypes.default.oneOfType([
+                fluidObject,
+                _propTypes.default.arrayOf(fluidObject)
+              ])
+            ),
+            fadeIn: _propTypes.default.bool,
+            durationFadeIn: _propTypes.default.number,
+            title: _propTypes.default.string,
+            alt: _propTypes.default.string,
+            className: _propTypes.default.oneOfType([
+              _propTypes.default.string,
+              _propTypes.default.object
+            ]),
+            // Support Glamor's css prop.
+            critical: _propTypes.default.bool,
+            crossOrigin: _propTypes.default.oneOfType([
+              _propTypes.default.string,
+              _propTypes.default.bool
+            ]),
+            style: _propTypes.default.object,
+            imgStyle: _propTypes.default.object,
+            placeholderStyle: _propTypes.default.object,
+            placeholderClassName: _propTypes.default.string,
+            backgroundColor: _propTypes.default.oneOfType([
+              _propTypes.default.string,
+              _propTypes.default.bool
+            ]),
+            onLoad: _propTypes.default.func,
+            onError: _propTypes.default.func,
+            onStartLoad: _propTypes.default.func,
+            Tag: _propTypes.default.string,
+            itemProp: _propTypes.default.string,
+            loading: _propTypes.default.oneOf(["auto", "lazy", "eager"]),
+            draggable: _propTypes.default.bool
+          };
+          var _default = Image;
+          exports.default = _default;
 
           /***/
         },
@@ -42207,6 +43584,19 @@ object-assign
           /***/
         },
 
+      /***/ "./public/page-data/sq/d/1026452703.json":
+        /*!***********************************************!*\
+  !*** ./public/page-data/sq/d/1026452703.json ***!
+  \***********************************************/
+        /*! exports provided: data, default */
+        /***/ function(module) {
+          module.exports = JSON.parse(
+            '{"data":{"site":{"siteMetadata":{"title":"Valiant Creative"}},"smallPic":{"childImageSharp":{"fluid":{"base64":"data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAECAwX/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAAB5NZMmRC//8QAGBAAAgMAAAAAAAAAAAAAAAAAARAAETH/2gAIAQEAAQUCEOK1/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAFBABAAAAAAAAAAAAAAAAAAAAIP/aAAgBAQAGPwJf/8QAGRAAAwEBAQAAAAAAAAAAAAAAAAERIUFx/9oACAEBAAE/IZI9Dxl2jDd4f//aAAwDAQACAAMAAAAQf+//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAVEQEBAAAAAAAAAAAAAAAAAAAQEf/aAAgBAgEBPxCH/8QAHBABAAMAAgMAAAAAAAAAAAAAAQARITFhUXGR/9oACAEBAAE/EMCy8rqFIB1fohsDD7AhoZ1N3lHHzAVx/9k=","aspectRatio":1.3333333333333333,"src":"/static/7800fb9f812c54f56070e0e7fd5f0fee/ac53a/fabio-comparelli-696506-unsplash.jpg","srcSet":"/static/7800fb9f812c54f56070e0e7fd5f0fee/722c4/fabio-comparelli-696506-unsplash.jpg 340w,\\n/static/7800fb9f812c54f56070e0e7fd5f0fee/1d671/fabio-comparelli-696506-unsplash.jpg 680w,\\n/static/7800fb9f812c54f56070e0e7fd5f0fee/ac53a/fabio-comparelli-696506-unsplash.jpg 1360w,\\n/static/7800fb9f812c54f56070e0e7fd5f0fee/a41d1/fabio-comparelli-696506-unsplash.jpg 2000w","sizes":"(max-width: 1360px) 100vw, 1360px"}}},"medPic":{"childImageSharp":{"fluid":{"base64":"data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAUBAgT/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAv/aAAwDAQACEAMQAAAB0yhtFOBIH//EABoQAAICAwAAAAAAAAAAAAAAAAABAxQSEyH/2gAIAQEAAQUCtFkc7EzLmxn/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAgEBPwFH/8QAFBABAAAAAAAAAAAAAAAAAAAAIP/aAAgBAQAGPwJf/8QAGhABAAIDAQAAAAAAAAAAAAAAAQARECExUf/aAAgBAQABPyE9UON7kRBtjRagfKn/2gAMAwEAAgADAAAAEO8//8QAFxEBAAMAAAAAAAAAAAAAAAAAAAERIf/aAAgBAwEBPxCoY//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAECAQE/EFP/xAAaEAEAAwEBAQAAAAAAAAAAAAABABEhMUFh/9oACAEBAAE/EEoCjhsQpy53S5GpZvsR1Fq9gFAH0uf/2Q==","aspectRatio":1.5044247787610618,"src":"/static/f47bf10fcdc9d838e073f994d408cc23/ac53a/sophia-valkova-30139-unsplash.jpg","srcSet":"/static/f47bf10fcdc9d838e073f994d408cc23/722c4/sophia-valkova-30139-unsplash.jpg 340w,\\n/static/f47bf10fcdc9d838e073f994d408cc23/1d671/sophia-valkova-30139-unsplash.jpg 680w,\\n/static/f47bf10fcdc9d838e073f994d408cc23/ac53a/sophia-valkova-30139-unsplash.jpg 1360w,\\n/static/f47bf10fcdc9d838e073f994d408cc23/a41d1/sophia-valkova-30139-unsplash.jpg 2000w","sizes":"(max-width: 1360px) 100vw, 1360px"}}},"largePic":{"childImageSharp":{"fluid":{"base64":"data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAKABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAEDAgX/xAAWAQEBAQAAAAAAAAAAAAAAAAACAAH/2gAMAwEAAhADEAAAAeS8NipI2//EABYQAAMAAAAAAAAAAAAAAAAAABARIP/aAAgBAQABBQIKP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABQQAQAAAAAAAAAAAAAAAAAAACD/2gAIAQEABj8CX//EABkQAQEAAwEAAAAAAAAAAAAAAAEAEBFBgf/aAAgBAQABPyElfIXDO7//2gAMAwEAAgADAAAAECzf/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPxA//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAGxABAAICAwAAAAAAAAAAAAAAAQARECExQZH/2gAIAQEAAT8QdMQ27tEHTgYq+X2f/9k=","aspectRatio":1.9540229885057472,"src":"/static/60ac231e71017371d37ec5d47c14bc8f/ac53a/home_artist_contact2.jpg","srcSet":"/static/60ac231e71017371d37ec5d47c14bc8f/722c4/home_artist_contact2.jpg 340w,\\n/static/60ac231e71017371d37ec5d47c14bc8f/1d671/home_artist_contact2.jpg 680w,\\n/static/60ac231e71017371d37ec5d47c14bc8f/ac53a/home_artist_contact2.jpg 1360w,\\n/static/60ac231e71017371d37ec5d47c14bc8f/d8255/home_artist_contact2.jpg 1920w","sizes":"(max-width: 1360px) 100vw, 1360px"}}}}}'
+          );
+
+          /***/
+        },
+
       /***/ "./public/page-data/sq/d/3759772913.json":
         /*!***********************************************!*\
   !*** ./public/page-data/sq/d/3759772913.json ***!
@@ -42711,6 +44101,301 @@ object-assign
             "default"
           ] = NotFoundPage;
           const pageQuery = "3159585216";
+
+          /***/
+        },
+
+      /***/ "./src/pages/contact.js":
+        /*!******************************!*\
+  !*** ./src/pages/contact.js ***!
+  \******************************/
+        /*! exports provided: default */
+        /***/ function(module, __webpack_exports__, __webpack_require__) {
+          "use strict";
+          __webpack_require__.r(__webpack_exports__);
+          /* harmony import */ var _public_page_data_sq_d_1026452703_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+            /*! ../../public/page-data/sq/d/1026452703.json */ "./public/page-data/sq/d/1026452703.json"
+          );
+          var _public_page_data_sq_d_1026452703_json__WEBPACK_IMPORTED_MODULE_0___namespace = /*#__PURE__*/ __webpack_require__.t(
+            /*! ../../public/page-data/sq/d/1026452703.json */ "./public/page-data/sq/d/1026452703.json",
+            1
+          );
+          /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+            /*! react */ "react"
+          );
+          /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/ __webpack_require__.n(
+            react__WEBPACK_IMPORTED_MODULE_1__
+          );
+          /* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+            /*! gatsby */ "./.cache/gatsby-browser-entry.js"
+          );
+          /* harmony import */ var gatsby_image__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+            /*! gatsby-image */ "./node_modules/gatsby-image/index.js"
+          );
+          /* harmony import */ var gatsby_image__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/ __webpack_require__.n(
+            gatsby_image__WEBPACK_IMPORTED_MODULE_3__
+          );
+          /* harmony import */ var emailjs_com__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+            /*! emailjs-com */ "./node_modules/emailjs-com/es/index.js"
+          );
+          /* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+            /*! ../components/layout */ "./src/components/layout.js"
+          );
+          /* harmony import */ var _components_seo__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+            /*! ../components/seo */ "./src/components/seo.js"
+          );
+          /* harmony import */ var _utils_normalize_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+            /*! ../utils/normalize.css */ "./src/utils/normalize.css"
+          );
+          /* harmony import */ var _utils_normalize_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/ __webpack_require__.n(
+            _utils_normalize_css__WEBPACK_IMPORTED_MODULE_7__
+          );
+          /* harmony import */ var _utils_css_screen_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+            /*! ../utils/css/screen.css */ "./src/utils/css/screen.css"
+          );
+          /* harmony import */ var _utils_css_screen_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/ __webpack_require__.n(
+            _utils_css_screen_css__WEBPACK_IMPORTED_MODULE_8__
+          );
+
+          Object(emailjs_com__WEBPACK_IMPORTED_MODULE_4__["init"])(
+            "user_p3ojVaJ2sI4XHCsG2wtSk"
+          );
+
+          const ContactPage = ({ data }, location) => {
+            const siteTitle = data.site.siteMetadata.title;
+            const { 0: name, 1: setName } = Object(
+              react__WEBPACK_IMPORTED_MODULE_1__["useState"]
+            )("");
+            const { 0: email, 1: setEmail } = Object(
+              react__WEBPACK_IMPORTED_MODULE_1__["useState"]
+            )("");
+            const { 0: subject, 1: setSubject } = Object(
+              react__WEBPACK_IMPORTED_MODULE_1__["useState"]
+            )("");
+            const { 0: message, 1: setMessage } = Object(
+              react__WEBPACK_IMPORTED_MODULE_1__["useState"]
+            )("");
+            const { 0: emailSent, 1: setEmailSent } = Object(
+              react__WEBPACK_IMPORTED_MODULE_1__["useState"]
+            )(false);
+
+            const submit = () => {
+              if (name && email && message) {
+                const serviceId = "service_pjh9bi8";
+                const templateId = "template_oj9lxrq";
+                const userId = "user_p3ojVaJ2sI4XHCsG2wtSk";
+                const templateParams = {
+                  name,
+                  email,
+                  subject,
+                  message
+                };
+                emailjs_com__WEBPACK_IMPORTED_MODULE_4__["default"]
+                  .send(serviceId, templateId, templateParams, userId)
+                  .then(response => console.log(response))
+                  .then(error => console.log(error));
+                setName("");
+                setEmail("");
+                setSubject("");
+                setMessage("");
+                setEmailSent(true);
+              } else {
+                alert("Please fill in all fields.");
+              }
+            };
+
+            return /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(
+              _components_layout__WEBPACK_IMPORTED_MODULE_5__["default"],
+              {
+                title: siteTitle
+              },
+              /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(
+                _components_seo__WEBPACK_IMPORTED_MODULE_6__["default"],
+                {
+                  title: "All posts",
+                  keywords: [`blog`, `gatsby`, `javascript`, `react`]
+                }
+              ),
+              /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(
+                "article",
+                {
+                  className: "post-content page-template"
+                },
+                /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(
+                  "div",
+                  {
+                    className: "post-content-body"
+                  },
+                  /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(
+                    "h1",
+                    {
+                      class: "post-condensed-header"
+                    },
+                    "Like my work? "
+                  ),
+                  /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(
+                    "h2",
+                    null,
+                    "See below and shoot me a message! ",
+                    /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(
+                      "br",
+                      null
+                    ),
+                    "I\u2019m located in the Tampa Bay Area, Florida ",
+                    /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(
+                      "br",
+                      null
+                    ),
+                    "United States of America"
+                  ),
+                  /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(
+                    "div",
+                    null,
+                    /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(
+                      "figure",
+                      {
+                        className: "kg-card kg-image-card kg-width-full"
+                      },
+                      /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(
+                        gatsby_image__WEBPACK_IMPORTED_MODULE_3___default.a,
+                        {
+                          fluid: data.largePic.childImageSharp.fluid,
+                          className: "kg-image"
+                        }
+                      ),
+                      " ",
+                      /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(
+                        "h7",
+                        {
+                          class: "post-header-inside-image"
+                        },
+                        "Hello!"
+                      )
+                    )
+                  ),
+                  /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(
+                    "h2",
+                    {
+                      id: "forms"
+                    },
+                    "Reach Out!"
+                  ),
+                  /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(
+                    "div",
+                    {
+                      id: "contact-form"
+                    },
+                    /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(
+                      "div",
+                      {
+                        className: "row gtr-uniform"
+                      },
+                      /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(
+                        "div",
+                        {
+                          className: "name-form"
+                        },
+                        /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(
+                          "input",
+                          {
+                            type: "text",
+                            placeholder: "Full Name",
+                            value: name,
+                            onChange: e => setName(e.target.value)
+                          }
+                        )
+                      ),
+                      /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(
+                        "div",
+                        {
+                          className: "email-form"
+                        },
+                        /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(
+                          "input",
+                          {
+                            type: "email",
+                            placeholder: "Email Address",
+                            value: email,
+                            onChange: e => setEmail(e.target.value)
+                          }
+                        )
+                      ),
+                      /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(
+                        "div",
+                        {
+                          className: "col-12 subject-form"
+                        },
+                        /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(
+                          "input",
+                          {
+                            type: "subject",
+                            placeholder: "Subject",
+                            value: subject,
+                            onChange: e => setSubject(e.target.value)
+                          }
+                        )
+                      ),
+                      /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(
+                        "div",
+                        {
+                          className: "col-12"
+                        },
+                        /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(
+                          "textarea",
+                          {
+                            placeholder: "Your message",
+                            value: message,
+                            onChange: e => setMessage(e.target.value)
+                          }
+                        )
+                      ),
+                      /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(
+                        "div",
+                        {
+                          className: "col-12",
+                          class: "button primary"
+                        },
+                        /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(
+                          "button",
+                          {
+                            onClick: submit
+                          },
+                          "Send Message"
+                        ),
+                        /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(
+                          "span",
+                          {
+                            className: emailSent ? "visible" : null
+                          }
+                        )
+                      )
+                    )
+                  )
+                )
+              )
+            );
+          };
+
+          const indexQuery = "1026452703";
+          /* harmony default export */ __webpack_exports__["default"] = props =>
+            /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(
+              gatsby__WEBPACK_IMPORTED_MODULE_2__["StaticQuery"],
+              {
+                query: indexQuery,
+                render: data =>
+                  /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(
+                    ContactPage,
+                    Object.assign(
+                      {
+                        location: props.location,
+                        data: data
+                      },
+                      props
+                    )
+                  ),
+                data: _public_page_data_sq_d_1026452703_json__WEBPACK_IMPORTED_MODULE_0__
+              }
+            );
 
           /***/
         },
