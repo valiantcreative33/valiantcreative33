@@ -1,6 +1,6 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 
-# Valiant Creative by [Ruben Matamoros]("https://github.com/valiantcreative33") 👨🏻‍💻
+# Valiant Creative by [Ruben Matamoros](https://github.com/valiantcreative33) 👨🏻‍💻
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Issues](https://img.shields.io/github/issues/valiantcreative33/portfolio-ruben-matamoros)](https://github.com/valiantcreative33/portfolio-ruben-matamoros/issues) [![Issues](https://img.shields.io/github/contributors/valiantcreative33/portfolio-ruben-matamoros)](https://github.com/valiantcreative33/portfolio-ruben-matamoros/graphs/contributors)
 
