@@ -13,10 +13,8 @@
       "assets": [
         "commons.css",
         "commons.js",
-        "commons.08691a7daf546d5fa51c.hot-update.js",
         "commons.css.map",
-        "commons.js.map",
-        "commons.08691a7daf546d5fa51c.hot-update.js.map"
+        "commons.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -24,10 +22,6 @@
   },
   "assetsByChunkName": {
     "polyfill": ["polyfill.js"],
-    "commons": [
-      "commons.css",
-      "commons.js",
-      "commons.08691a7daf546d5fa51c.hot-update.js"
-    ]
+    "commons": ["commons.css", "commons.js"]
   }
 }
