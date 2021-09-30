@@ -9,7 +9,7 @@
 - [Introduction](#introduction)
 - [Built With](#Built-With)
 - [License](#License)
-- [Website & Screenshot](#Website-&-Screenshot)
+- [Live Website & Mockup](#Live-Website-&-Mockup)
 - [Contribution](#Contribution)
 
 ## Introduction
