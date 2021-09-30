@@ -9,7 +9,7 @@
 - [Introduction](#introduction)
 - [Built With](#built-with)
 - [License](#license)
-- [Live Website & Mockup](#live-website-&-mockup)
+- [Live Website + Mockup](#live-website-+-mockup)
 - [Contribution](#contribution)
 
 ## Introduction
@@ -32,7 +32,7 @@
 
 This application is under the [MIT](https://opensource.org/licenses/MIT) license.
 
-## Live Website & Mockup
+## Live Website + Mockup
 
 Visit the [Live Website Here](https://valiantcreative33.gatsbyjs.io/).
 
