@@ -16,7 +16,10 @@ const BlogIndex = ({ data }, location) => {
 
   return (
     <Layout title={siteTitle}>
-      <SEO title="" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
+      <SEO
+        title="Valiant Creative"
+        keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+      />
       {/* <Bio /> */}
       {data.site.siteMetadata.description && (
         <header className="page-head">
